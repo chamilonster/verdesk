@@ -1,11 +1,11 @@
 VERDESK - END USER LICENSE AGREEMENT
 
-Version 1.1 - Effective 2026-05-26
+Version 1.2 - Effective 2026-05-27
 
 This End User License Agreement ("Agreement") is a legal agreement between you
-("you", the "User") and clever.cat, operated by Camilo Brossard ("clever.cat",
-"we", "us"), for the Verdesk software, including its executable, libraries,
-documentation and any updates (the "Software").
+("you", the "User") and Camilo Brossard ("Verdesk", "we", "us"), for the
+Verdesk software, including its executable, libraries, documentation and any
+updates (the "Software").
 
 BY INSTALLING, COPYING OR USING THE SOFTWARE YOU AGREE TO BE BOUND BY THIS
 AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE.
@@ -13,7 +13,7 @@ AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE.
 
 1. LICENSE GRANT
 
-   1.1 Free tier. clever.cat grants you a personal, non-exclusive,
+   1.1 Free tier. Verdesk grants you a personal, non-exclusive,
        non-transferable license to install and use the Software free of charge
        for personal, educational and other NON-COMMERCIAL purposes.
 
@@ -25,7 +25,7 @@ AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE.
 
 2. OWNERSHIP
 
-The Software is licensed, not sold. clever.cat retains all right, title and
+The Software is licensed, not sold. Verdesk retains all right, title and
 interest in and to the Software, including all intellectual property rights.
 This Agreement grants you no rights other than the limited license set out
 above.
@@ -63,23 +63,21 @@ data without authorization, or in any way that infringes the rights of others.
 THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
 KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY AND
-NON-INFRINGEMENT. verdesk (clever.cat) DOES NOT WARRANT THAT THE SOFTWARE WILL BE
-ERROR-FREE, UNINTERRUPTED OR SECURE, OR THAT ANY DEFECTS OR BUGS WILL BE
-CORRECTED. YOU ASSUME THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF
-THE SOFTWARE.
+NON-INFRINGEMENT. VERDESK DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE,
+UNINTERRUPTED OR SECURE, OR THAT ANY DEFECTS OR BUGS WILL BE CORRECTED. YOU
+ASSUME THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THE SOFTWARE.
 
 
 6. LIMITATION OF LIABILITY
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, verdesk (clever.cat) AND
-Camilo Brossard SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
-CONSEQUENTIAL OR PUNITIVE DAMAGES, NOR FOR ANY LOSS OF DATA, PROFITS, REVENUE OR
-BUSINESS, NOR FOR ANY DAMAGE CAUSED BY OR THROUGH THE ACTIONS OF ANY AI AGENT OR
-SOFTWARE CONNECTED TO THE SOFTWARE, ARISING OUT OF OR RELATED TO THE SOFTWARE OR
-THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY
-EVENT, THE TOTAL AGGREGATE LIABILITY OF verdesk (clever.cat) UNDER THIS AGREEMENT SHALL
-NOT EXCEED THE AMOUNT YOU ACTUALLY PAID FOR THE SOFTWARE (OR ZERO, FOR THE FREE
-TIER).
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, VERDESK AND CAMILO BROSSARD
+SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR
+PUNITIVE DAMAGES, NOR FOR ANY LOSS OF DATA, PROFITS, REVENUE OR BUSINESS, NOR
+FOR ANY DAMAGE CAUSED BY OR THROUGH THE ACTIONS OF ANY AI AGENT OR SOFTWARE
+CONNECTED TO THE SOFTWARE, ARISING OUT OF OR RELATED TO THE SOFTWARE OR THIS
+AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY EVENT,
+THE TOTAL AGGREGATE LIABILITY OF VERDESK UNDER THIS AGREEMENT SHALL NOT EXCEED
+THE AMOUNT YOU ACTUALLY PAID FOR THE SOFTWARE (OR ZERO, FOR THE FREE TIER).
 
 
 7. TERMINATION
@@ -92,7 +90,7 @@ termination.
 
 8. UPDATES
 
-Any updates clever.cat provides become part of the Software and are governed by
+Any updates Verdesk provides become part of the Software and are governed by
 this Agreement unless accompanied by separate terms.
 
 
@@ -104,14 +102,14 @@ of law rules.
 
 10. ENTIRE AGREEMENT
 
-This Agreement is the entire agreement between you and clever.cat regarding the
+This Agreement is the entire agreement between you and Verdesk regarding the
 Software and supersedes any prior agreement or understanding. If any provision
 is found unenforceable, the remaining provisions remain in full force.
 
 
 CONTACT
 
-clever.cat - Camilo Brossard
+Verdesk - Camilo Brossard
 camilo.brossard@gmail.com
 https://verdesk.app
 
@@ -120,4 +118,6 @@ CHANGELOG (internal)
 
 v1.0 (2026-05-21) - Initial release.
 v1.1 (2026-05-26) - Clarified that liability disclaimers apply to the Verdesk
-                    product specifically (operated by clever.cat).
+                    product specifically.
+v1.2 (2026-05-27) - Removed "clever.cat" references; the licensor is named
+                    directly as Verdesk (operated by Camilo Brossard).

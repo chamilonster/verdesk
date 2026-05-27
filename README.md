@@ -1,10 +1,15 @@
 # Verdesk
 
+[![Scanned clean by VirusTotal](https://img.shields.io/badge/VirusTotal-clean-3D8AB3?style=flat-square&logo=virustotal&logoColor=white)](https://www.virustotal.com/gui/url/7adc1f04948e8a3c9485f8060714c0eaff9ecc7813fc467ceabf5093d4801520)
+[![Latest release](https://img.shields.io/github/v/release/chamilonster/verdesk?style=flat-square&color=28E08C)](https://github.com/chamilonster/verdesk/releases/latest)
+[![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-blue?style=flat-square)](#install)
+
 **The modulated vision and control layer for AI agents.** Verdesk is a local MCP server for Windows that hands AI agents *deltas* — not full screenshots — together with plain text and UI Automation. Result: **89–93% fewer vision tokens** on a typical session, with no loss of control.
 
 → Landing: **[verdesk.app](https://verdesk.app)**
 → EULA: [LICENSE](./LICENSE)
 → Skill for Claude Code: [chamilonster/verdesk-skill](https://github.com/chamilonster/verdesk-skill)
+→ **[VirusTotal scan report](https://www.virustotal.com/gui/url/7adc1f04948e8a3c9485f8060714c0eaff9ecc7813fc467ceabf5093d4801520)**
 
 ---
 
@@ -51,7 +56,7 @@ For **LAN** (same network) and **WAN** (over the internet via SSH tunnel or Tail
 | `run_command` tool | — | ✓ |
 | Commercial use | — | ✓ (1 developer · up to 3 devices) |
 
-→ **[Buy Pro](https://clevercat.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496)** — $49/year subscription. Pay with card, receive a license key by email, paste it in *Settings → Licencia*.
+→ **[Buy Pro](https://verdesk.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496)** — $49/year subscription. Pay with card, receive a license key by email, paste it in *Settings → Licencia*.
 
 ---
 
