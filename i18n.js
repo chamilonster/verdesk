@@ -12,7 +12,7 @@
 
       'hero.eyebrow': 'Local MCP server · Windows · single .exe',
       'hero.title': '<span class="grad">Your AI sees your screen.</span><br>You stop explaining.',
-      'hero.lede': "Stop pasting screenshots into the chat. Stop describing what you see. Verdesk gives your AI agent <strong>direct, modulated access</strong> to your Windows desktop — three layers (visual, plain text, layout) over a deterministic grid, <strong>89–93% fewer vision tokens</strong>. The agent <em>sees, reads and acts</em> in real time. You just ask.",
+      'hero.lede': "Stop pasting screenshots into the chat. Stop describing what you see. Verdesk gives your AI agent <strong>direct, modulated access</strong> to your desktop — three layers (visual, plain text, layout) over a deterministic grid, <strong>89–93% fewer vision tokens</strong>. The agent <em>sees, reads and acts</em> in real time. You just ask.",
       'hero.downloadFree': 'Download free',
       'hero.dl.windows': 'Windows',
       'hero.dl.mac': 'Mac',
@@ -164,8 +164,8 @@
     'nav.downloadFree': 'Descargar gratis',
 
     'hero.eyebrow': 'Servidor MCP local · Windows · un solo .exe',
-    'hero.title': '<span class="grad">Tu IA ve lo que vos ves.</span><br>Vos dejás de explicar.',
-    'hero.lede': 'Dejá de pegar screenshots en el chat. Dejá de describir lo que estás viendo. Verdesk le da a tu agente IA <strong>acceso directo y modulado</strong> a tu escritorio de Windows — tres capas (visual, texto plano, layout) sobre una grilla determinista, <strong>89–93% menos tokens de visión</strong>. El agente <em>ve, lee y actúa</em> en tiempo real. Vos solo pedís.',
+    'hero.title': '<span class="grad">Tu IA ve lo que tú ves.</span><br>Tú dejas de explicar.',
+    'hero.lede': 'Deja de pegar capturas en el chat. Deja de describir lo que estás viendo. Verdesk le da a tu agente IA <strong>acceso directo y modulado</strong> a tu escritorio — tres capas (visual, texto plano, layout) sobre una grilla determinista, <strong>89–93% menos tokens de visión</strong>. El agente <em>ve, lee y actúa</em> en tiempo real. Tú solo pides.',
     'hero.downloadFree': 'Descargar gratis',
     'hero.dl.windows': 'Windows',
     'hero.dl.mac': 'Mac',
@@ -236,7 +236,7 @@
     'usecases.uc6.body': 'Para personas que no pueden ver la pantalla o no pueden manejar un mouse, el agente es sus manos y sus ojos — voz adentro, operación real del escritorio afuera.',
     'tunnel.kicker': '02b — Remoto',
     'tunnel.title': 'Tu agente en una máquina. Verdesk en otra. <span class="grad">Un túnel SSH.</span>',
-    'tunnel.sub': 'En Pro, Verdesk bindea a LAN o corre por túnel SSH — llaves que generás vos, sin intermediario SaaS. Tailscale opcional para CGNAT.',
+    'tunnel.sub': 'En Pro, Verdesk se enlaza a LAN o corre por túnel SSH — claves que tú mismo generas, sin intermediario SaaS. Tailscale opcional para CGNAT.',
     'tunnel.client': 'Cliente IA',
     'tunnel.client.sub': 'Claude · GPT · local',
     'tunnel.server': 'Verdesk',
