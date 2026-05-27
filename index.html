@@ -54,12 +54,13 @@
           <span data-i18n="hero.eyebrow">Local MCP server · Windows · single .exe</span>
         </div>
         <h1 class="hero-title" data-i18n-html="hero.title">
-          <span class="grad">NO MORE</span> full screenshots<br>every single turn.
+          <span class="grad">Modulated vision</span><br>for AI agents that automate.
         </h1>
         <p class="hero-lede" data-i18n-html="hero.lede">
-          Your AI agent's eyes, <strong>89–93% cheaper.</strong> Verdesk sends agents
-          modulated visual <strong>deltas</strong> instead of full screenshots — same
-          result, a fraction of the vision tokens.
+          Three independent layers — <strong>visual, plain text, layout</strong> — over a deterministic
+          grid. Your AI agent <em>sees, reads and drives</em> any Windows app with
+          <strong>89–93% fewer vision tokens</strong>. MCP standard — the most efficient
+          way models can talk to a desktop.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://github.com/chamilonster/verdesk/releases/latest">
@@ -162,24 +163,23 @@
     <!-- ===================== 01 — HOW / WHY ===================== -->
     <section class="problem" id="how">
       <div class="section-head">
-        <span class="kicker" data-i18n="problem.kicker">01 — How it works</span>
-        <h2 data-i18n-html="problem.title">Not a screenshot. <span class="grad">A modulated visual system.</span></h2>
+        <span class="kicker" data-i18n="problem.kicker">01 — Why it matters</span>
+        <h2 data-i18n-html="problem.title"><span class="grad">NO MORE</span> full screenshots every single turn.</h2>
       </div>
       <div class="problem-grid">
         <div class="problem-text">
           <p data-i18n-html="problem.p1">
-            Verdesk maps the screen onto a deterministic <strong>12×8 grid</strong> and
-            exposes it to the agent as <strong>three independent layers</strong> —
-            <em>visual</em>, <em>plain text</em> and <em>layout</em>. Each layer, each
-            cell, modulated on its own: resolution, quality, color, granularity. The
-            agent composes the exact view it needs — nothing more.
+            Every vision agent today — Computer&nbsp;Use, Copilot&nbsp;Vision,
+            Browser&nbsp;Use — pushes a full frame on every turn. The model pays,
+            again and again, to re-read a navbar it has already seen forty times.
+            That's where the bill explodes.
           </p>
           <p data-i18n-html="problem.p2">
-            Perceptual hashing tags every cell as <em>new</em>, <em>changed</em> or
-            <em>cached</em> on every turn. <strong>Only the deltas travel.</strong> No
-            AI in the loop, no probabilistic detection — pure deterministic pipeline.
-            The model pays vision tokens for what actually moved, not for the navbar
-            it has already seen forty times.
+            Verdesk replaces that with three independent layers — visual, plain text,
+            layout — over a fixed grid. Perceptual hashing tags each cell <em>new</em>,
+            <em>changed</em> or <em>cached</em>. <strong>Only the deltas travel.</strong>
+            No AI in the loop, no probabilistic guessing — pure deterministic
+            pipeline. The model pays only for what actually moved.
           </p>
         </div>
         <div class="compare">
@@ -333,6 +333,64 @@
         <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet2">Your keys stay yours · no third-party broker, no telemetry</span></li>
         <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet3">Tailscale fallback for CGNAT — Verdesk picks the route automatically</span></li>
       </ul>
+    </section>
+
+    <!-- ===================== 02c — USE CASES (where it's a game changer) ===================== -->
+    <section class="usecases" id="usecases">
+      <div class="section-head">
+        <span class="kicker" data-i18n="usecases.kicker">02c — Where it changes the game</span>
+        <h2 data-i18n-html="usecases.title">Every place an AI needed <span class="grad">eyes and hands</span>.</h2>
+        <p class="section-sub" data-i18n="usecases.sub">Verdesk shows up where the agent has to actually see your screen, read it, and operate it — not just chat with an API.</p>
+      </div>
+      <div class="uc-grid">
+        <article class="uc-card">
+          <div class="uc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6l1.4 1.4m10 10 1.4 1.4M5.6 18.4l1.4-1.4m10-10 1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          </div>
+          <h3 data-i18n="usecases.uc1.title">Assisted debugging</h3>
+          <p data-i18n="usecases.uc1.body">The AI reads your IDE, your terminal, your devtools — looks at the actual error in context and proposes a fix you can apply with one click.</p>
+        </article>
+
+        <article class="uc-card">
+          <div class="uc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m15 17 2 2 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="usecases.uc2.title">Smoke tests &amp; QA</h3>
+          <p data-i18n="usecases.uc2.body">Walk the AI through your app once; from then on it runs the same flow on demand, snaps deltas, and tells you what broke — without rewriting any test.</p>
+        </article>
+
+        <article class="uc-card">
+          <div class="uc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12m0-12-4 4m4-4 4 4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="usecases.uc3.title">Bureaucratic uploads</h3>
+          <p data-i18n="usecases.uc3.body">SII, AFIP, government portals, custom invoice tools — those forms nobody reads. The AI fills them, attaches the file, hits send.</p>
+        </article>
+
+        <article class="uc-card">
+          <div class="uc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+          </div>
+          <h3 data-i18n="usecases.uc4.title">Visual web context</h3>
+          <p data-i18n="usecases.uc4.body">The agent reads any web page the way a human does — modal, cookie banner, paywall and all — instead of fighting with raw HTML scrapers.</p>
+        </article>
+
+        <article class="uc-card">
+          <div class="uc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="m4.4 4.4 1.5 1.5m12.2 0 1.5-1.5M4.4 19.6l1.5-1.5m12.2 0 1.5 1.5M2 12h2m16 0h2M12 2v2m0 16v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="usecases.uc5.title">OS configuration</h3>
+          <p data-i18n="usecases.uc5.body">Settings, Group Policy, Device Manager, the deep registry edits nobody remembers. The AI walks the dialogs and reports back what it changed.</p>
+        </article>
+
+        <article class="uc-card">
+          <div class="uc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M9 11h6m-3 0v9m-2-5 2-2 2 2m-5 5 3-3 3 3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="usecases.uc6.title">Accessibility companion</h3>
+          <p data-i18n="usecases.uc6.body">For users who can't see the screen or can't drive a mouse, the agent becomes their hands and eyes — voice in, real desktop operation out.</p>
+        </article>
+      </div>
     </section>
 
     <!-- ===================== 03 — PRICING ===================== -->
