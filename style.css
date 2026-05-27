@@ -962,3 +962,37 @@ main, .nav, .footer { position: relative; z-index: 2; }
 @media (max-width: 540px) {
   .qs-steps { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Nav right cluster (lang selector + CTA)
+   ============================================================ */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 26px 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
+  background-position: calc(100% - 12px) 50%, calc(100% - 7px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  transition: border-color .2s var(--ease);
+}
+.lang-select:hover { border-color: var(--cyan); }
+.lang-select:focus { outline: 2px solid var(--cyan); outline-offset: 1px; }
+.lang-select option { background: var(--bg); color: var(--ink); }
+
+@media (max-width: 680px) {
+  .nav-right { margin-left: auto; gap: 8px; }
+  .lang-select { padding: 7px 22px 7px 10px; font-size: 11px; }
+}

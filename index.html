@@ -18,6 +18,7 @@
   <meta name="twitter:image" content="https://verdesk.app/og-image.png" />
   <link rel="stylesheet" href="fonts.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -30,62 +31,67 @@
       <span class="brand-name">Verdesk</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#how">How it works</a>
-      <a href="#features">Capabilities</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#features" data-i18n="nav.capabilities">Capabilities</a>
+      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
     </nav>
-    <a class="btn btn-ghost nav-cta" href="https://github.com/chamilonster/verdesk/releases/latest">Download free</a>
+    <div class="nav-right">
+      <select class="lang-select" id="lang-select" aria-label="Language">
+        <!-- options injected by i18n.js -->
+      </select>
+      <a class="btn btn-ghost nav-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="nav.downloadFree">Download free</a>
+    </div>
   </header>
 
   <main id="top">
-    <!-- ===================== HERO — the pitch + get it now ===================== -->
+    <!-- ===================== HERO ===================== -->
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
-          Local MCP server · Windows · single .exe
+          <span data-i18n="hero.eyebrow">Local MCP server · Windows · single .exe</span>
         </div>
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-i18n-html="hero.title">
           <span class="grad">NO MORE</span> full screenshots<br>every single turn.
         </h1>
-        <p class="hero-lede">
+        <p class="hero-lede" data-i18n-html="hero.lede">
           Your AI agent's eyes, <strong>89–93% cheaper.</strong> Verdesk sends agents
           modulated visual <strong>deltas</strong> instead of full screenshots — same
           result, a fraction of the vision tokens.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://github.com/chamilonster/verdesk/releases/latest">
-            Download free
+            <span data-i18n="hero.downloadFree">Download free</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M8 1.5v9m0 0L4.5 7M8 10.5 11.5 7M2 13.5h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <a class="btn btn-line" href="#pricing">Buy Verdesk Pro</a>
+          <a class="btn btn-line" href="#pricing" data-i18n="hero.buyPro">Buy Verdesk Pro</a>
         </div>
-        <p class="hero-meta">
+        <p class="hero-meta" data-i18n="hero.meta">
           Free &amp; full-featured · No account · No telemetry · Works with Claude, GPT &amp; local models
         </p>
         <div class="hero-badges" aria-label="Trust signals">
-          <a class="badge-vt" href="https://www.virustotal.com/gui/url/7adc1f04948e8a3c9485f8060714c0eaff9ecc7813fc467ceabf5093d4801520" target="_blank" rel="noopener" title="Scanned by VirusTotal — click to view report">
+          <a class="badge-vt" href="https://www.virustotal.com/gui/url/7adc1f04948e8a3c9485f8060714c0eaff9ecc7813fc467ceabf5093d4801520" target="_blank" rel="noopener" title="Scanned by VirusTotal">
             <img class="vt-mark" src="virustotal.svg" alt="" width="22" height="22" />
-            <span class="badge-text">Scanned clean by <strong>VirusTotal</strong></span>
+            <span class="badge-text" data-i18n-html="hero.badge.vt">Scanned clean by <strong>VirusTotal</strong></span>
           </a>
           <span class="badge-platform">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h8v8H3V4zm10 0h8v8h-8V4zM3 14h8v8H3v-8zm10 0h8v8h-8v-8z" fill="currentColor"/></svg>
-            Windows 10/11
-            <span class="badge-soon">macOS &amp; Linux soon</span>
+            <span data-i18n="hero.badge.windows">Windows 10/11</span>
+            <span class="badge-soon" data-i18n="hero.badge.soon">macOS &amp; Linux soon</span>
           </span>
           <span class="badge-tested">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Tested on <strong>Claude Code</strong>
+            <span data-i18n-html="hero.badge.tested">Tested on <strong>Claude Code</strong></span>
           </span>
         </div>
       </div>
 
-      <!-- prism diagram: one beam in, modulated bands out -->
+      <!-- prism diagram -->
       <div class="hero-viz" aria-hidden="true">
         <div class="viz-frame">
-          <span class="viz-tag">capture grid · 12 × 8</span>
+          <span class="viz-tag" data-i18n="hero.viz.tag">capture grid · 12 × 8</span>
           <div class="prism-stage">
             <span class="beam-in"></span>
             <svg class="prism-svg" viewBox="0 0 120 120" fill="none">
@@ -113,40 +119,40 @@
             <span class="cell"></span><span class="cell"></span><span class="cell"></span>
           </div>
           <div class="viz-legend">
-            <span><i class="dot dot-new"></i>new</span>
-            <span><i class="dot dot-chg"></i>changed</span>
-            <span><i class="dot dot-unc"></i>cached</span>
+            <span><i class="dot dot-new"></i><span data-i18n="hero.viz.new">new</span></span>
+            <span><i class="dot dot-chg"></i><span data-i18n="hero.viz.changed">changed</span></span>
+            <span><i class="dot dot-unc"></i><span data-i18n="hero.viz.cached">cached</span></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== QUICKSTART — 4 steps ===================== -->
+    <!-- ===================== QUICKSTART ===================== -->
     <section class="quickstart" id="quickstart">
       <div class="section-head">
-        <span class="kicker">Ultrafast install</span>
-        <h2>Running in 60 seconds. <span class="grad">4 steps.</span></h2>
+        <span class="kicker" data-i18n="quickstart.kicker">Ultrafast install</span>
+        <h2 data-i18n-html="quickstart.title">Running in 60 seconds. <span class="grad">4 steps.</span></h2>
       </div>
       <ol class="qs-steps">
         <li class="qs-step">
           <span class="qs-num">1</span>
-          <h3>Download</h3>
-          <p>Grab the setup from <a href="https://github.com/chamilonster/verdesk/releases/latest">GitHub Releases</a> — 198 MB, single .exe, WebView2 bundled offline.</p>
+          <h3 data-i18n="quickstart.step1.title">Download</h3>
+          <p data-i18n-html="quickstart.step1.body">Grab the setup from <a href="https://github.com/chamilonster/verdesk/releases/latest">GitHub Releases</a> — 198 MB, single .exe, WebView2 bundled offline.</p>
         </li>
         <li class="qs-step">
           <span class="qs-num">2</span>
-          <h3>Install</h3>
-          <p>Run <code>Verdesk_x.y.z_x64-setup.exe</code>. No admin needed, no telemetry. The tray icon lands quietly in the system tray.</p>
+          <h3 data-i18n="quickstart.step2.title">Install</h3>
+          <p data-i18n-html="quickstart.step2.body">Run <code>Verdesk_x.y.z_x64-setup.exe</code>. No admin needed, no telemetry. The tray icon lands quietly in the system tray.</p>
         </li>
         <li class="qs-step">
           <span class="qs-num">3</span>
-          <h3>Copy the prompt</h3>
-          <p>Tray icon → <em>Settings</em> → <em>Acceso</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
+          <h3 data-i18n="quickstart.step3.title">Copy the prompt</h3>
+          <p data-i18n-html="quickstart.step3.body">Tray icon → <em>Settings</em> → <em>Acceso</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
         </li>
         <li class="qs-step">
           <span class="qs-num">4</span>
-          <h3>Restart the terminal</h3>
-          <p>Close and reopen your terminal (Claude Code, etc.) so it picks up the new MCP server. Done — your agent now sees deltas, not screenshots.</p>
+          <h3 data-i18n="quickstart.step4.title">Restart the terminal</h3>
+          <p data-i18n="quickstart.step4.body">Close and reopen your terminal (Claude Code, etc.) so it picks up the new MCP server. Done — your agent now sees deltas, not screenshots.</p>
         </li>
       </ol>
     </section>
@@ -154,17 +160,17 @@
     <!-- ===================== 01 — HOW / WHY ===================== -->
     <section class="problem" id="how">
       <div class="section-head">
-        <span class="kicker">01 — How it works</span>
-        <h2>Most of the screen doesn't change. So don't re-send it.</h2>
+        <span class="kicker" data-i18n="problem.kicker">01 — How it works</span>
+        <h2 data-i18n="problem.title">Most of the screen doesn't change. So don't re-send it.</h2>
       </div>
       <div class="problem-grid">
         <div class="problem-text">
-          <p>
+          <p data-i18n-html="problem.p1">
             Today every vision agent — Computer&nbsp;Use, Copilot&nbsp;Vision,
             Browser&nbsp;Use — ships a <em>full screenshot</em> on every turn. The model
             pays, again and again, to re-read a navbar it has already seen forty times.
           </p>
-          <p>
+          <p data-i18n-html="problem.p2">
             Verdesk watches the screen on a fixed grid and hands the agent only the
             cells that actually changed. <strong>One full capture, then just the
             deltas</strong> — that is where the saving comes from.
@@ -173,25 +179,25 @@
         <div class="compare">
           <div class="compare-row compare-bad">
             <div class="compare-label">
-              <span class="compare-tag tag-bad">Baseline</span>
-              <span>screenshot agent</span>
+              <span class="compare-tag tag-bad" data-i18n="problem.baseline.tag">Baseline</span>
+              <span data-i18n="problem.baseline.sub">screenshot agent</span>
             </div>
             <div class="frames">
               <span class="fr fr-full"></span><span class="fr fr-full"></span>
               <span class="fr fr-full"></span><span class="fr fr-full"></span>
             </div>
-            <p class="compare-note">full frame × 4 turns — 100% vision cost</p>
+            <p class="compare-note" data-i18n="problem.baseline.note">full frame × 4 turns — 100% vision cost</p>
           </div>
           <div class="compare-row compare-good">
             <div class="compare-label">
-              <span class="compare-tag tag-good">Verdesk</span>
-              <span>modulated deltas</span>
+              <span class="compare-tag tag-good" data-i18n="problem.verdesk.tag">Verdesk</span>
+              <span data-i18n="problem.verdesk.sub">modulated deltas</span>
             </div>
             <div class="frames">
               <span class="fr fr-full"></span><span class="fr fr-delta"></span>
               <span class="fr fr-delta fr-sm"></span><span class="fr fr-cached"></span>
             </div>
-            <p class="compare-note">1 full, then only what changed — 89–93% fewer vision tokens on a typical session</p>
+            <p class="compare-note" data-i18n="problem.verdesk.note">1 full, then only what changed — 89–93% fewer vision tokens on a typical session</p>
           </div>
         </div>
       </div>
@@ -200,15 +206,15 @@
     <!-- ===================== 02 — CAPABILITIES ===================== -->
     <section class="features" id="features">
       <div class="section-head">
-        <span class="kicker">02 — What you get</span>
-        <h2>A vision layer the agent can <span class="grad">steer</span>.</h2>
+        <span class="kicker" data-i18n="features.kicker">02 — What you get</span>
+        <h2 data-i18n-html="features.title">A vision layer the agent can <span class="grad">steer</span>.</h2>
       </div>
       <div class="feat-grid">
 
         <article class="feat feat-wide">
           <div class="feat-idx">F1</div>
-          <h3>Modulated capture</h3>
-          <p>
+          <h3 data-i18n="features.f1.title">Modulated capture</h3>
+          <p data-i18n-html="features.f1.body">
             The agent picks resolution, quality and color <em>per region</em> — a cheap
             grayscale glance across the whole screen, a crisp 1× color crop only where
             the decision actually lives.
@@ -223,8 +229,8 @@
 
         <article class="feat">
           <div class="feat-idx">F2</div>
-          <h3>Deterministic delta detection</h3>
-          <p>
+          <h3 data-i18n="features.f2.title">Deterministic delta detection</h3>
+          <p data-i18n-html="features.f2.body">
             A fixed 12×8 grid + perceptual hashing tags every cell
             <span class="hl-new">new</span>, <span class="hl-chg">changed</span> or
             unchanged. Only the deltas travel — no AI in the loop.
@@ -233,8 +239,8 @@
 
         <article class="feat feat-wide feat-chips">
           <div class="feat-idx">F3</div>
-          <h3>It doesn't just watch — it drives the desktop.</h3>
-          <p>
+          <h3 data-i18n="features.f3.title">It doesn't just watch — it drives the desktop.</h3>
+          <p data-i18n-html="features.f3.body">
             Verdesk operates any Windows app for the agent: <strong>click, type,
             scroll, fire key combos</strong> — Win32, WPF, UWP, Electron, browsers.
             It acts <em>semantically</em> through the accessibility tree, and falls
@@ -251,8 +257,8 @@
 
         <article class="feat">
           <div class="feat-idx">F4</div>
-          <h3>Live visual buffer</h3>
-          <p>
+          <h3 data-i18n="features.f4.title">Live visual buffer</h3>
+          <p data-i18n="features.f4.body">
             Verdesk keeps a visual model for the agent — inspect it, refine a cell,
             query by hash. Every reset archives to a navigable history.
           </p>
@@ -260,8 +266,8 @@
 
         <article class="feat feat-wide feat-chips">
           <div class="feat-idx">F5</div>
-          <h3>MCP-standard, model-agnostic</h3>
-          <p>
+          <h3 data-i18n="features.f5.title">MCP-standard, model-agnostic</h3>
+          <p data-i18n="features.f5.body">
             Around 40 versioned tools over the Model Context Protocol. Verdesk assumes
             nothing about the model that drives it — Claude, GPT, a local model, any
             MCP client.
@@ -275,8 +281,8 @@
 
         <article class="feat">
           <div class="feat-idx">F6</div>
-          <h3>Plain-text reading</h3>
-          <p>
+          <h3 data-i18n="features.f6.title">Plain-text reading</h3>
+          <p data-i18n="features.f6.body">
             The agent pulls plain text straight from any region of the screen — no
             vision tokens spent just to read.
           </p>
@@ -285,22 +291,20 @@
       </div>
     </section>
 
-    <!-- ===================== 02.5 — REMOTE / TUNNEL ANIMATION ===================== -->
+    <!-- ===================== 02b — REMOTE / TUNNEL ===================== -->
     <section class="tunnel-section" id="tunnel">
       <div class="section-head">
-        <span class="kicker">02b — Remote</span>
-        <h2>Your agent on one machine. Verdesk on another. <span class="grad">One SSH tunnel.</span></h2>
-        <p class="section-sub">In Pro, Verdesk binds to LAN or runs through an SSH tunnel — keys you generate, no SaaS broker. Tailscale optional for CGNAT.</p>
+        <span class="kicker" data-i18n="tunnel.kicker">02b — Remote</span>
+        <h2 data-i18n-html="tunnel.title">Your agent on one machine. Verdesk on another. <span class="grad">One SSH tunnel.</span></h2>
+        <p class="section-sub" data-i18n="tunnel.sub">In Pro, Verdesk binds to LAN or runs through an SSH tunnel — keys you generate, no SaaS broker. Tailscale optional for CGNAT.</p>
       </div>
       <div class="tunnel-stage" aria-hidden="true">
-        <!-- left endpoint: client AI -->
         <div class="t-endpoint t-client">
           <div class="t-ep-glow"></div>
           <svg class="t-ep-icon" viewBox="0 0 32 32"><circle cx="16" cy="11" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 26c2-5 6-7 11-7s9 2 11 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-          <span class="t-ep-label">AI client</span>
-          <span class="t-ep-sub">Claude · GPT · local</span>
+          <span class="t-ep-label" data-i18n="tunnel.client">AI client</span>
+          <span class="t-ep-sub" data-i18n="tunnel.client.sub">Claude · GPT · local</span>
         </div>
-        <!-- tunnel pipe -->
         <div class="t-pipe">
           <span class="t-pipe-edge t-pipe-top"></span>
           <span class="t-pipe-edge t-pipe-bottom"></span>
@@ -309,78 +313,77 @@
           <span class="t-packet t-packet-2"></span>
           <span class="t-packet t-packet-3"></span>
           <span class="t-packet t-packet-4"></span>
-          <span class="t-pipe-tag">SSH · port-forward · ed25519</span>
+          <span class="t-pipe-tag" data-i18n="tunnel.pipe.tag">SSH · port-forward · ed25519</span>
         </div>
-        <!-- right endpoint: Verdesk server -->
         <div class="t-endpoint t-server">
           <div class="t-ep-glow t-ep-glow-server"></div>
           <svg class="t-ep-icon" viewBox="0 0 32 32"><path d="M6 10h20v5H6zM6 18h20v5H6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="10" cy="12.5" r="0.8" fill="currentColor"/><circle cx="10" cy="20.5" r="0.8" fill="currentColor"/></svg>
-          <span class="t-ep-label">Verdesk</span>
+          <span class="t-ep-label" data-i18n="tunnel.server">Verdesk</span>
           <span class="t-ep-sub">localhost:47802</span>
         </div>
       </div>
       <ul class="tunnel-bullets">
-        <li><span class="t-check">✓</span> One-button setup — Verdesk audits SSH, firewall and config in 15 checks</li>
-        <li><span class="t-check">✓</span> Your keys stay yours · no third-party broker, no telemetry</li>
-        <li><span class="t-check">✓</span> Tailscale fallback for CGNAT — Verdesk picks the route automatically</li>
+        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet1">One-button setup — Verdesk audits SSH, firewall and config in 15 checks</span></li>
+        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet2">Your keys stay yours · no third-party broker, no telemetry</span></li>
+        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet3">Tailscale fallback for CGNAT — Verdesk picks the route automatically</span></li>
       </ul>
     </section>
 
-    <!-- ===================== 03 — PRICING — the two options ===================== -->
+    <!-- ===================== 03 — PRICING ===================== -->
     <section class="pricing" id="pricing">
       <div class="section-head">
-        <span class="kicker">03 — Two ways to get it</span>
-        <h2>Free to run. Pro to ship.</h2>
+        <span class="kicker" data-i18n="pricing.kicker">03 — Two ways to get it</span>
+        <h2 data-i18n="pricing.title">Free to run. Pro to ship.</h2>
       </div>
       <div class="plans">
 
         <article class="plan plan-free">
           <div class="plan-top">
-            <span class="plan-name">Free</span>
+            <span class="plan-name" data-i18n="pricing.free.name">Free</span>
             <span class="plan-price">$0</span>
           </div>
-          <p class="plan-desc">The complete Verdesk vision layer, free for personal and non-commercial use.</p>
+          <p class="plan-desc" data-i18n="pricing.free.desc">The complete Verdesk vision layer, free for personal and non-commercial use.</p>
           <ul class="plan-list">
-            <li>Full modulated vision pipeline</li>
-            <li>Local-mode MCP server</li>
-            <li>All base tools — capture, buffer, history, UIA</li>
-            <li>Modulation profiles</li>
-            <li>Single .exe · no install · no telemetry</li>
+            <li data-i18n="pricing.free.item1">Full modulated vision pipeline</li>
+            <li data-i18n="pricing.free.item2">Local-mode MCP server</li>
+            <li data-i18n="pricing.free.item3">All base tools — capture, buffer, history, UIA</li>
+            <li data-i18n="pricing.free.item4">Modulation profiles</li>
+            <li data-i18n="pricing.free.item5">Single .exe · no install · no telemetry</li>
           </ul>
-          <a class="btn btn-primary plan-cta" href="https://github.com/chamilonster/verdesk/releases/latest">Download free</a>
+          <a class="btn btn-primary plan-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="pricing.free.cta">Download free</a>
         </article>
 
         <article class="plan plan-pro">
-          <div class="plan-flag">For shipping</div>
+          <div class="plan-flag" data-i18n="pricing.pro.flag">For shipping</div>
           <div class="plan-top">
-            <span class="plan-name">Pro</span>
-            <span class="plan-price">$49<span class="plan-period">/year</span></span>
+            <span class="plan-name" data-i18n="pricing.pro.name">Pro</span>
+            <span class="plan-price">$49<span class="plan-period" data-i18n="pricing.period.year">/year</span></span>
           </div>
-          <p class="plan-desc">Yearly subscription, one developer. Everything in Free, plus what you need to ship.</p>
+          <p class="plan-desc" data-i18n="pricing.pro.desc">Yearly subscription, one developer. Everything in Free, plus what you need to ship.</p>
           <ul class="plan-list">
-            <li><span class="plan-plus">+</span> Remote access over LAN / WAN</li>
-            <li><span class="plan-plus">+</span> The <code>run_command</code> tool</li>
-            <li><span class="plan-plus">+</span> Commercial-use license — 1 developer</li>
-            <li><span class="plan-plus">+</span> Up to 3 device activations</li>
-            <li><span class="plan-plus">+</span> Updates included while subscribed</li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item1">Remote access over LAN / WAN</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n-html="pricing.pro.item2">The <code>run_command</code> tool</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item3">Commercial-use license — 1 developer</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item4">Up to 3 device activations</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item5">Updates included while subscribed</span></li>
           </ul>
-          <a class="btn btn-line plan-cta" href="https://verdesk.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496" target="_blank" rel="noopener">Buy Verdesk Pro</a>
+          <a class="btn btn-line plan-cta" href="https://verdesk.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496" target="_blank" rel="noopener" data-i18n="pricing.pro.cta">Buy Verdesk Pro</a>
         </article>
 
         <article class="plan plan-team">
-          <div class="plan-flag plan-flag-soon">Coming soon</div>
+          <div class="plan-flag plan-flag-soon" data-i18n="pricing.team.flag">Coming soon</div>
           <div class="plan-top">
-            <span class="plan-name">Team</span>
-            <span class="plan-price">$199<span class="plan-period">/year</span></span>
+            <span class="plan-name" data-i18n="pricing.team.name">Team</span>
+            <span class="plan-price">$199<span class="plan-period" data-i18n="pricing.period.year">/year</span></span>
           </div>
-          <p class="plan-desc">Yearly subscription, up to 5 developers. Shared license keys and centralized billing.</p>
+          <p class="plan-desc" data-i18n="pricing.team.desc">Yearly subscription, up to 5 developers. Shared license keys and centralized billing.</p>
           <ul class="plan-list">
-            <li><span class="plan-plus">+</span> Everything in Pro</li>
-            <li><span class="plan-plus">+</span> Up to 5 developer seats</li>
-            <li><span class="plan-plus">+</span> Centralized billing &amp; activations</li>
-            <li><span class="plan-plus">+</span> Priority email support</li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item1">Everything in Pro</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item2">Up to 5 developer seats</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item3">Centralized billing &amp; activations</span></li>
+            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item4">Priority email support</span></li>
           </ul>
-          <button class="btn btn-line plan-cta" type="button" disabled>Notify me</button>
+          <button class="btn btn-line plan-cta" type="button" disabled data-i18n="pricing.team.cta">Notify me</button>
         </article>
 
       </div>
@@ -389,14 +392,17 @@
     <!-- ===================== CLOSER ===================== -->
     <section class="closer">
       <div class="closer-inner">
-        <h2>Stop paying vision tokens for pixels that didn't move.</h2>
+        <h2 data-i18n="closer.title">Stop paying vision tokens for pixels that didn't move.</h2>
         <a class="btn btn-primary btn-lg" href="https://github.com/chamilonster/verdesk/releases/latest">
-          Download free
+          <span data-i18n="closer.cta">Download free</span>
           <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M8 1.5v9m0 0L4.5 7M8 10.5 11.5 7M2 13.5h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <p class="closer-meta">Windows 10 / 11 · 64-bit · single executable <span class="closer-soon">· macOS &amp; Linux soon</span></p>
+        <p class="closer-meta">
+          <span data-i18n="closer.meta">Windows 10 / 11 · 64-bit · single executable</span>
+          <span class="closer-soon" data-i18n="closer.soon">· macOS &amp; Linux soon</span>
+        </p>
       </div>
     </section>
   </main>
@@ -407,23 +413,23 @@
       <img src="logo.svg" alt="" width="28" height="28" />
       <div>
         <span class="brand-name">Verdesk</span>
-        <span class="footer-tag">The modulated vision and control layer for AI agents</span>
+        <span class="footer-tag" data-i18n="footer.tag">The modulated vision and control layer for AI agents</span>
       </div>
     </div>
     <div class="footer-links">
-      <a href="https://github.com/chamilonster/verdesk/releases/latest">Download</a>
-      <a href="https://github.com/chamilonster/verdesk">GitHub</a>
-      <a href="https://github.com/chamilonster/verdesk-skill">Skill</a>
-      <a href="#features">Capabilities</a>
-      <a href="#pricing">Pricing</a>
+      <a href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="footer.download">Download</a>
+      <a href="https://github.com/chamilonster/verdesk" data-i18n="footer.github">GitHub</a>
+      <a href="https://github.com/chamilonster/verdesk-skill" data-i18n="footer.skill">Skill</a>
+      <a href="#features" data-i18n="footer.capabilities">Capabilities</a>
+      <a href="#pricing" data-i18n="footer.pricing">Pricing</a>
     </div>
     <div class="footer-meta">
       <span>verdesk.app</span>
       <span class="footer-sep">·</span>
-      <span>Windows 10 / 11</span>
-      <span class="footer-soon">macOS &amp; Linux soon</span>
+      <span data-i18n="footer.windows">Windows 10 / 11</span>
+      <span class="footer-soon" data-i18n="footer.soon">macOS &amp; Linux soon</span>
       <span class="footer-sep">·</span>
-      <span>No telemetry</span>
+      <span data-i18n="footer.noTelemetry">No telemetry</span>
     </div>
   </footer>
 </body>
