@@ -163,19 +163,23 @@
     <section class="problem" id="how">
       <div class="section-head">
         <span class="kicker" data-i18n="problem.kicker">01 — How it works</span>
-        <h2 data-i18n="problem.title">Most of the screen doesn't change. So don't re-send it.</h2>
+        <h2 data-i18n-html="problem.title">Not a screenshot. <span class="grad">A modulated visual system.</span></h2>
       </div>
       <div class="problem-grid">
         <div class="problem-text">
           <p data-i18n-html="problem.p1">
-            Today every vision agent — Computer&nbsp;Use, Copilot&nbsp;Vision,
-            Browser&nbsp;Use — ships a <em>full screenshot</em> on every turn. The model
-            pays, again and again, to re-read a navbar it has already seen forty times.
+            Verdesk maps the screen onto a deterministic <strong>12×8 grid</strong> and
+            exposes it to the agent as <strong>three independent layers</strong> —
+            <em>visual</em>, <em>plain text</em> and <em>layout</em>. Each layer, each
+            cell, modulated on its own: resolution, quality, color, granularity. The
+            agent composes the exact view it needs — nothing more.
           </p>
           <p data-i18n-html="problem.p2">
-            Verdesk watches the screen on a fixed grid and hands the agent only the
-            cells that actually changed. <strong>One full capture, then just the
-            deltas</strong> — that is where the saving comes from.
+            Perceptual hashing tags every cell as <em>new</em>, <em>changed</em> or
+            <em>cached</em> on every turn. <strong>Only the deltas travel.</strong> No
+            AI in the loop, no probabilistic detection — pure deterministic pipeline.
+            The model pays vision tokens for what actually moved, not for the navbar
+            it has already seen forty times.
           </p>
         </div>
         <div class="compare">
