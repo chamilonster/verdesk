@@ -1118,3 +1118,43 @@ main, .nav, .footer { position: relative; z-index: 2; }
   transform: translateY(-2px);
   box-shadow: 0 0 0 1px rgba(40,224,140,.4), 0 18px 42px -12px rgba(34,211,238,.7);
 }
+
+/* ============================================================
+   Hero — 3-button platform row (Windows / Mac / Linux + soon)
+   ============================================================ */
+.btn-platform {
+  gap: 8px;
+  padding: 11px 18px;
+}
+.btn-platform svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.btn-platform[disabled] {
+  opacity: .55;
+  cursor: not-allowed;
+  background: transparent;
+  color: var(--ink-2);
+  border-color: var(--line);
+}
+.btn-platform[disabled]:hover {
+  transform: none;
+  border-color: var(--line);
+  color: var(--ink-2);
+}
+.btn-soon {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 2px 7px;
+  font-size: 10px;
+  text-transform: lowercase;
+  letter-spacing: .05em;
+  color: var(--amber);
+  border: 1px solid rgba(242, 181, 68, 0.4);
+  border-radius: 2px;
+}
+.hero-buy-pro {
+  margin-top: 14px;
+  display: inline-flex;
+}
