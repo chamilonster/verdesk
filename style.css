@@ -979,6 +979,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   color: var(--ink);
   font-family: var(--font-mono);
   font-size: 12px;
+  min-width: 120px;
   padding: 8px 26px 8px 12px;
   border-radius: 4px;
   cursor: pointer;

@@ -37,7 +37,9 @@
     </nav>
     <div class="nav-right">
       <select class="lang-select" id="lang-select" aria-label="Language">
-        <!-- options injected by i18n.js -->
+        <!-- Fallback visible mientras i18n.js (defer) no carga; el JS lo
+             reemplaza al boot con las 14 opciones del SUPPORTED array. -->
+        <option value="en" selected>English</option>
       </select>
       <a class="btn btn-ghost nav-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="nav.downloadFree">Download free</a>
     </div>
