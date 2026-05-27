@@ -11,8 +11,8 @@
       'nav.downloadFree': 'Download free',
 
       'hero.eyebrow': 'Local MCP server · Windows · single .exe',
-      'hero.title': '<span class="grad">Modulated vision</span><br>for AI agents that automate.',
-      'hero.lede': "Three independent layers — <strong>visual, plain text, layout</strong> — over a deterministic grid. Your AI agent <em>sees, reads and drives</em> any Windows app with <strong>89–93% fewer vision tokens</strong>. MCP standard — the most efficient way models can talk to a desktop.",
+      'hero.title': '<span class="grad">Your AI sees your screen.</span><br>You stop explaining.',
+      'hero.lede': "Stop pasting screenshots into the chat. Stop describing what you see. Verdesk gives your AI agent <strong>direct, modulated access</strong> to your Windows desktop — three layers (visual, plain text, layout) over a deterministic grid, <strong>89–93% fewer vision tokens</strong>. The agent <em>sees, reads and acts</em> in real time. You just ask.",
       'hero.downloadFree': 'Download free',
       'hero.buyPro': 'Buy Verdesk Pro',
       'hero.meta': 'Free & full-featured · No account · No telemetry · Works with Claude, GPT & local models',
@@ -160,8 +160,8 @@
     'nav.downloadFree': 'Descargar gratis',
 
     'hero.eyebrow': 'Servidor MCP local · Windows · un solo .exe',
-    'hero.title': '<span class="grad">Visión modulada</span><br>para agentes IA que automatizan.',
-    'hero.lede': 'Tres capas independientes — <strong>visual, texto plano, layout</strong> — sobre una grilla determinista. Tu agente IA <em>ve, lee y opera</em> cualquier app de Windows con <strong>89–93% menos tokens de visión</strong>. MCP estándar — la forma más eficiente que tienen los modelos para hablar con un desktop.',
+    'hero.title': '<span class="grad">Tu IA ve lo que vos ves.</span><br>Vos dejás de explicar.',
+    'hero.lede': 'Dejá de pegar screenshots en el chat. Dejá de describir lo que estás viendo. Verdesk le da a tu agente IA <strong>acceso directo y modulado</strong> a tu escritorio de Windows — tres capas (visual, texto plano, layout) sobre una grilla determinista, <strong>89–93% menos tokens de visión</strong>. El agente <em>ve, lee y actúa</em> en tiempo real. Vos solo pedís.',
     'hero.downloadFree': 'Descargar gratis',
     'hero.buyPro': 'Comprar Verdesk Pro',
     'hero.meta': 'Gratis y completo · Sin cuenta · Sin telemetría · Funciona con Claude, GPT y modelos locales',
