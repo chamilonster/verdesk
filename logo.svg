@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Verdesk prism logo">
+  <defs>
+    <linearGradient id="vd-prism" x1="8" y1="40" x2="40" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#28E08C"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="vd-edge" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5BFFB0"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+  <!-- prism body: equilateral triangle -->
+  <path d="M24 5 L43 39 L5 39 Z" fill="url(#vd-prism)" fill-opacity="0.16" stroke="url(#vd-edge)" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- incoming beam -->
+  <path d="M0 24 L18 24" stroke="#7C8A9A" stroke-width="2" stroke-linecap="round"/>
+  <!-- refracted spectrum bands exiting the prism -->
+  <path d="M27 27 L48 18" stroke="#28E08C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M27 29 L48 26" stroke="#22D3EE" stroke-width="2" stroke-linecap="round"/>
+  <path d="M27 31 L48 34" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+</svg>

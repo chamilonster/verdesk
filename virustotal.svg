@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLACEHOLDER. Replace this file with the official VirusTotal logo when uploading the landing.
+  Source: https://www.virustotal.com/  (download the brand mark and overwrite this file).
+  The HTML refers to it as <img src="virustotal.svg">.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-label="VirusTotal">
+  <defs>
+    <linearGradient id="vt-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3D8AB3"/>
+      <stop offset="1" stop-color="#2C6F94"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield outline -->
+  <path d="M12 2 L20 5 V11 C20 16 16.5 20 12 22 C7.5 20 4 16 4 11 V5 Z"
+        fill="url(#vt-grad)" stroke="#1F5A7A" stroke-width="0.6"/>
+  <!-- Inner mark (concentric circles, suggestive of "scan target") -->
+  <circle cx="12" cy="11.5" r="4" fill="none" stroke="#E8F4FB" stroke-width="1.1"/>
+  <circle cx="12" cy="11.5" r="1.5" fill="#E8F4FB"/>
+</svg>
