@@ -1,0 +1,123 @@
+VERDESK - END USER LICENSE AGREEMENT
+
+Version 1.1 - Effective 2026-05-26
+
+This End User License Agreement ("Agreement") is a legal agreement between you
+("you", the "User") and clever.cat, operated by Camilo Brossard ("clever.cat",
+"we", "us"), for the Verdesk software, including its executable, libraries,
+documentation and any updates (the "Software").
+
+BY INSTALLING, COPYING OR USING THE SOFTWARE YOU AGREE TO BE BOUND BY THIS
+AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE.
+
+
+1. LICENSE GRANT
+
+   1.1 Free tier. clever.cat grants you a personal, non-exclusive,
+       non-transferable license to install and use the Software free of charge
+       for personal, educational and other NON-COMMERCIAL purposes.
+
+   1.2 Pro tier. A valid Verdesk Pro license key unlocks the Pro features and
+       grants a license for COMMERCIAL use, limited to the number of developers
+       and device activations stated at the time of purchase. The license key
+       is personal to you and must not be shared, published or resold.
+
+
+2. OWNERSHIP
+
+The Software is licensed, not sold. clever.cat retains all right, title and
+interest in and to the Software, including all intellectual property rights.
+This Agreement grants you no rights other than the limited license set out
+above.
+
+
+3. RESTRICTIONS
+
+You may NOT, in whole or in part:
+   (a) reverse engineer, decompile or disassemble the Software, except to the
+       extent this restriction is prohibited by applicable law;
+   (b) sell, rent, lease, sublicense, redistribute or otherwise make the
+       Software available to any third party;
+   (c) remove, disable, bypass or circumvent the license verification, or use
+       the Pro features without a valid license key;
+   (d) use the Free tier for any commercial purpose;
+   (e) remove or alter any proprietary notices in the Software.
+
+
+4. NATURE OF THE SOFTWARE - USE AT YOUR OWN RISK
+
+Verdesk is infrastructure that lets AI agents and other software OBSERVE and
+CONTROL the desktop on the machine where it runs - including clicking, typing,
+sending keystrokes and, in the Pro tier, running commands. You are solely
+responsible for:
+   (a) which clients, AI agents or models you connect to Verdesk;
+   (b) every action those agents or clients perform through Verdesk; and
+   (c) operating Verdesk only on machines and accounts you are authorized to
+       use.
+You must not use the Software for any unlawful purpose, to access systems or
+data without authorization, or in any way that infringes the rights of others.
+
+
+5. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY AND
+NON-INFRINGEMENT. verdesk (clever.cat) DOES NOT WARRANT THAT THE SOFTWARE WILL BE
+ERROR-FREE, UNINTERRUPTED OR SECURE, OR THAT ANY DEFECTS OR BUGS WILL BE
+CORRECTED. YOU ASSUME THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF
+THE SOFTWARE.
+
+
+6. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, verdesk (clever.cat) AND
+Camilo Brossard SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL OR PUNITIVE DAMAGES, NOR FOR ANY LOSS OF DATA, PROFITS, REVENUE OR
+BUSINESS, NOR FOR ANY DAMAGE CAUSED BY OR THROUGH THE ACTIONS OF ANY AI AGENT OR
+SOFTWARE CONNECTED TO THE SOFTWARE, ARISING OUT OF OR RELATED TO THE SOFTWARE OR
+THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY
+EVENT, THE TOTAL AGGREGATE LIABILITY OF verdesk (clever.cat) UNDER THIS AGREEMENT SHALL
+NOT EXCEED THE AMOUNT YOU ACTUALLY PAID FOR THE SOFTWARE (OR ZERO, FOR THE FREE
+TIER).
+
+
+7. TERMINATION
+
+This Agreement is effective until terminated. It terminates automatically,
+without notice, if you breach any of its terms. Upon termination you must stop
+using the Software and remove all copies. Sections 2 through 6 survive
+termination.
+
+
+8. UPDATES
+
+Any updates clever.cat provides become part of the Software and are governed by
+this Agreement unless accompanied by separate terms.
+
+
+9. GOVERNING LAW
+
+This Agreement is governed by the laws of Chile, without regard to its conflict
+of law rules.
+
+
+10. ENTIRE AGREEMENT
+
+This Agreement is the entire agreement between you and clever.cat regarding the
+Software and supersedes any prior agreement or understanding. If any provision
+is found unenforceable, the remaining provisions remain in full force.
+
+
+CONTACT
+
+clever.cat - Camilo Brossard
+camilo.brossard@gmail.com
+https://verdesk.app
+
+
+CHANGELOG (internal)
+
+v1.0 (2026-05-21) - Initial release.
+v1.1 (2026-05-26) - Clarified that liability disclaimers apply to the Verdesk
+                    product specifically (operated by clever.cat).
