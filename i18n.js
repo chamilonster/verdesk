@@ -11,7 +11,7 @@
       'nav.downloadFree': 'Download free',
 
       'hero.eyebrow': 'Local MCP server · Windows · single .exe',
-      'hero.title': '<span class="grad">Now your AI also sees</span> what you see.<br>No need to explain.',
+      'hero.title': '<span class="grad">Now your AI also sees</span> what you see.<br>No more explaining.',
       'hero.lede': "Stop pasting screenshots into the chat. Stop describing what you see. Verdesk gives your AI agent <strong>direct, modulated access</strong> to your desktop — three layers (visual, plain text, layout) over a deterministic grid, <strong>89–93% fewer vision tokens</strong>. The agent <em>sees, reads and acts</em> in real time. You just ask.",
       'hero.downloadFree': 'Download free',
       'hero.dl.windows': 'Windows',
@@ -164,7 +164,7 @@
     'nav.downloadFree': 'Descargar gratis',
 
     'hero.eyebrow': 'Servidor MCP local · Windows · un solo .exe',
-    'hero.title': '<span class="grad">Ahora tu IA también ve</span> lo que tú ves.<br>No necesitas explicar.',
+    'hero.title': '<span class="grad">Ahora tu IA también ve</span> lo que tú ves.<br>Ya no necesitas explicar.',
     'hero.lede': 'Deja de pegar capturas en el chat. Deja de describir lo que estás viendo. Verdesk le da a tu agente IA <strong>acceso directo y modulado</strong> a tu escritorio — tres capas (visual, texto plano, layout) sobre una grilla determinista, <strong>89–93% menos tokens de visión</strong>. El agente <em>ve, lee y actúa</em> en tiempo real. Tú solo pides.',
     'hero.downloadFree': 'Descargar gratis',
     'hero.dl.windows': 'Windows',
