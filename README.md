@@ -1,8 +1,14 @@
-# Verdesk
+<p align="center">
+  <img src="./docs/logo.png" alt="Verdesk" width="120" height="120" />
+</p>
 
-[![VirusTotal 0/72](https://img.shields.io/badge/VirusTotal-0%2F72%20clean-3D8AB3?style=flat-square&logo=virustotal&logoColor=white)](https://www.virustotal.com/gui/file/c86bdb8dfbef34150809ea601affcdb3d2f08b8603958c1f87b21d257ea250b3)
-[![Latest release](https://img.shields.io/github/v/release/chamilonster/verdesk?style=flat-square&color=28E08C)](https://github.com/chamilonster/verdesk/releases/latest)
-[![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-blue?style=flat-square)](#install)
+<h1 align="center">Verdesk</h1>
+
+<p align="center">
+  <a href="https://www.virustotal.com/gui/file/c86bdb8dfbef34150809ea601affcdb3d2f08b8603958c1f87b21d257ea250b3"><img alt="VirusTotal 0/72" src="https://img.shields.io/badge/VirusTotal-0%2F72%20clean-3D8AB3?style=flat-square&logo=virustotal&logoColor=white" /></a>
+  <a href="https://github.com/chamilonster/verdesk/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/chamilonster/verdesk?style=flat-square&color=28E08C" /></a>
+  <a href="#install"><img alt="Platform" src="https://img.shields.io/badge/Windows-10%20%7C%2011-blue?style=flat-square" /></a>
+</p>
 
 **Verdesk is a program for intelligent, efficient control of your desktop — local or remote — by an AI agent**, plus the ability to **record, save and replay automated tasks**. Windows today; **macOS and Linux coming**.
 
