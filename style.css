@@ -1262,9 +1262,10 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
 /* tree: 2-col layout (tree + reused capture-grid visual) + tool chips */
 .tree-layout {
   max-width: var(--maxw); margin: 0 auto;
-  display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: stretch;
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: stretch;
 }
-.tree-layout .tree { max-width: none; margin: 0; text-align: left; }
+.tree-layout .tree { max-width: none; margin: 0; text-align: left; order: 2; }
+.tree-layout .tree-viz { order: 1; }
 .tw-body { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 7px; min-width: 0; }
 .tw-tools { display: inline-flex; flex-wrap: wrap; gap: 5px; margin-left: 2px; }
 .tw-tools code {
