@@ -1487,3 +1487,13 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
   .pillar-rev .pillar-viz  { order: 2; }
   .pillar-text { max-width: none; }
 }
+
+/* ============================================================
+   LARGE DISPLAYS — la web queda diminuta en 2K/4K con margen
+   muerto a los lados. Escalamos TODO en proporción con `zoom`
+   (tipografía, gaps, imágenes, SVG — todo a la vez).
+   2K (≥2000px CSS) → 120% · 4K (≥3400px CSS) → ~180% (proporción).
+   No afecta FHD (1920) ni laptops 2K a DPI alto (viewport < 2000).
+   ============================================================ */
+@media (min-width: 2000px) { :root { zoom: 1.2; } }
+@media (min-width: 3400px) { :root { zoom: 1.8; } }
