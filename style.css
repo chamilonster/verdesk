@@ -291,6 +291,43 @@ main, .nav, .footer { position: relative; z-index: 2; }
 .dot-chg { background: var(--amber); }
 .dot-unc { background: var(--line-2); }
 
+/* HERO — efficiency punch (reemplaza la grilla 12×8 del header) */
+.eff-wow {
+  position: relative; margin-top: 6px; padding-top: 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  border-top: 1px solid var(--line);
+}
+.eff-figure { display: flex; align-items: baseline; gap: 10px; }
+.eff-up {
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--ink-3);
+}
+.eff-num {
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(4rem, 10.5vw, 5.4rem);
+  line-height: .85; letter-spacing: -.02em;
+  background: var(--spectrum); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.eff-pct { font-size: .5em; }
+.eff-lbl { font-size: 12.5px; color: var(--ink-2); text-align: center; max-width: 22em; line-height: 1.4; }
+
+/* SEE — eyebrow "up to" sobre el stat del pilar */
+.pillar-stat-up {
+  font-family: var(--font-mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: .12em; color: var(--ink-3); margin-bottom: 3px;
+}
+
+/* SEE — solo el fruto que cambió viaja (metáfora del árbol) */
+.tree-stage { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+.tree-svg { width: 100%; max-width: 280px; height: auto; }
+.tree-svg .fr { fill: var(--line-2); }
+.tree-svg .fr-new { fill: var(--green); filter: drop-shadow(0 0 7px var(--green)); animation: frpulse 2.6s var(--ease) infinite; }
+.tree-svg .ai-tx { font-family: var(--font-mono); font-size: 12px; fill: var(--green); letter-spacing: .04em; }
+@keyframes frpulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+.tree-tag {
+  font-family: var(--font-mono); font-size: 11px; color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: .05em; text-align: center; max-width: 26em;
+}
+
 /* ============================================================
    SECTION SCAFFOLD
    ============================================================ */
@@ -1417,11 +1454,12 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
   color: var(--ink-3); line-height: 1.55;
 }
 .pillar-stat {
-  display: flex; align-items: baseline; gap: 11px;
+  display: flex; align-items: center; gap: 18px;
   margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line);
 }
-.pillar-stat-num { font-family: var(--font-display); font-weight: 800; font-size: 2.1rem; color: var(--cyan); line-height: 1; }
-.pillar-stat-lbl { font-size: 13px; color: var(--ink-2); max-width: 17em; }
+.pillar-stat-fig { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+.pillar-stat-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(3.6rem, 9vw, 6.3rem); color: var(--cyan); line-height: .9; letter-spacing: -.02em; }
+.pillar-stat-lbl { font-size: 13px; color: var(--ink-2); max-width: 15em; line-height: 1.45; }
 
 /* shared visual frame */
 .pillar-viz {
@@ -1452,18 +1490,41 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
 .ladder code { font-family: var(--font-mono); font-size: 12px; color: var(--cyan); }
 .ladder li span { color: var(--ink-3); font-size: 10.5px; white-space: nowrap; }
 
-/* REMEMBER — object re-found after the window moved */
-.pv-track { flex-direction: row; flex-wrap: wrap; gap: 4px; }
-.track-obj {
-  width: 66px; height: 66px; flex: 0 0 auto;
-  border: 1px solid var(--line-2); border-radius: 11px; background: var(--bg-2);
-  display: flex; align-items: center; justify-content: center;
+/* REMEMBER — a learned element (object) card, re-found after the window moved */
+.obj-card {
+  width: 100%; max-width: 290px;
+  background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 13px;
+  padding: 14px 15px; display: flex; flex-direction: column; gap: 12px;
+  box-shadow: 0 0 0 1px rgba(40,224,140,.10), 0 18px 44px -26px var(--green);
 }
-.track-obj-a { opacity: .5; }
-.track-obj-b { border-color: var(--green); box-shadow: 0 0 0 1px var(--green), 0 0 18px -4px var(--green); transform: translateY(-12px); }
-.to-glyph { font-size: 30px; line-height: 1; }
-.track-arrow { width: 92px; height: 30px; }
-.track-tag { width: 100%; margin-top: 6px; color: var(--green); }
+.obj-card-row { display: flex; align-items: center; gap: 13px; }
+.obj-thumb {
+  flex: 0 0 auto; width: 48px; height: 48px; border-radius: 10px;
+  border: 1px solid var(--line-2);
+  background: radial-gradient(120% 120% at 50% 0%, rgba(40,224,140,.14), transparent 70%), var(--bg-2);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+}
+.obj-thumb svg { width: 26px; height: 26px; }
+.obj-meta { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.obj-id { font-family: var(--font-mono); font-size: 13px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+.obj-anchor {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--green); border: 1px solid var(--green-dim); border-radius: 5px;
+  padding: 2px 6px; background: rgba(40,224,140,.08);
+}
+.obj-sub { font-size: 11.5px; color: var(--ink-3); }
+.obj-trains {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+  padding-top: 11px; border-top: 1px solid var(--line);
+}
+.obj-trains-lbl { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-right: 2px; }
+.obj-chip {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--cyan);
+  border: 1px solid var(--line-2); border-radius: 999px; padding: 3px 10px; background: var(--panel);
+}
+.obj-chip::before { content: "▸ "; color: var(--green); }
+.track-tag { width: 100%; margin-top: 4px; color: var(--green); }
 
 /* REPEAT — a recorded train */
 .train { width: 100%; max-width: 280px; display: flex; flex-direction: column; gap: 7px; }

@@ -17,8 +17,8 @@
   <meta name="twitter:description" content="Deltas, not screenshots. 89–93% fewer vision tokens on a typical session." />
   <meta name="twitter:image" content="https://verdesk.app/og-image.png" />
   <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="style.css?v=13" />
-  <script src="i18n.js?v=13" defer></script>
+  <link rel="stylesheet" href="style.css?v=18" />
+  <script src="i18n.js?v=18" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -57,12 +57,12 @@
           <span data-i18n="hero.eyebrow">Local MCP server · Windows · single .exe</span>
         </div>
         <h1 class="hero-title" data-i18n-html="hero.h1">
-          More power <span class="grad">for your AIs</span>.
+          Unleash the full power of <span class="grad">your AI</span>.
         </h1>
         <p class="hero-lede" data-i18n-html="hero.sub">
-          A local MCP server that gives your AI <strong>eyes, hands and memory</strong> on your
-          Windows desktop. It <em>sees</em>, <em>acts</em>, <em>remembers</em> and <em>repeats</em> —
-          sending only <strong>what changed</strong>, not full screenshots.
+          Turn your PC into a <strong>local MCP server</strong>: vision, execution and memory over your
+          Windows desktop. <em>See</em>, <em>act</em>, <em>remember</em> and <em>repeat</em> — sending
+          only <strong>what changed</strong>, not full screenshots.
         </p>
         <p class="hero-mcp" data-i18n-html="hero.mcp">
           <em>MCP</em> is the open standard AI agents use to call tools — think USB-C, or LSP for editors. Verdesk is the one that controls your desktop.
@@ -87,7 +87,7 @@
       <!-- prism diagram -->
       <div class="hero-viz">
         <div class="viz-frame" aria-hidden="true">
-          <span class="viz-tag" data-i18n="hero.viz.tag">capture grid · 12 × 8</span>
+          <span class="viz-tag" data-i18n="hero.viz.tag">modulated vision · deltas, not screenshots</span>
           <div class="prism-stage">
             <span class="beam-in"></span>
             <svg class="prism-svg" viewBox="0 0 120 120" fill="none">
@@ -106,18 +106,12 @@
             <span class="band band-3"></span>
             <span class="band band-4"></span>
           </div>
-          <div class="viz-grille">
-            <span class="cell c-new"></span><span class="cell"></span><span class="cell"></span>
-            <span class="cell"></span><span class="cell c-chg"></span><span class="cell"></span>
-            <span class="cell"></span><span class="cell"></span><span class="cell c-new"></span>
-            <span class="cell"></span><span class="cell"></span><span class="cell"></span>
-            <span class="cell"></span><span class="cell c-chg"></span><span class="cell"></span>
-            <span class="cell"></span><span class="cell"></span><span class="cell"></span>
-          </div>
-          <div class="viz-legend">
-            <span><i class="dot dot-new"></i><span data-i18n="hero.viz.new">new</span></span>
-            <span><i class="dot dot-chg"></i><span data-i18n="hero.viz.changed">changed</span></span>
-            <span><i class="dot dot-unc"></i><span data-i18n="hero.viz.cached">cached</span></span>
+          <div class="eff-wow">
+            <div class="eff-figure">
+              <span class="eff-up" data-i18n="hero.eff.up">up to</span>
+              <span class="eff-num">99<span class="eff-pct">%</span></span>
+            </div>
+            <span class="eff-lbl" data-i18n="hero.eff.lbl">less vision sent — a macro runs the whole task</span>
           </div>
         </div>
       </div>
@@ -140,11 +134,17 @@
             </span>
             <h3 data-i18n="loop.see.k">See</h3>
           </div>
-          <p data-i18n-html="loop.see.t">The screen arrives as <strong>text and layout</strong>, not raw pixels. A 12×8 grid hashes every cell each turn — only the <b class="hl-new">new</b> and <b class="hl-chg">changed</b> ones travel, the rest stays cached.</p>
-          <div class="pillar-stat"><span class="pillar-stat-num">91%</span><span class="pillar-stat-lbl" data-i18n="loop.see.stat">fewer vision tokens than a screenshot tool</span></div>
+          <p data-i18n-html="loop.see.t">The screen arrives as <strong>text and layout</strong>, not raw pixels. Every region is <strong>perceptually hashed</strong> each turn — only the <b class="hl-new">new</b> and <b class="hl-chg">changed</b> ones travel, <strong>deduplicated and compressed</strong>; the rest stays cached.</p>
+          <div class="pillar-stat">
+            <div class="pillar-stat-fig">
+              <span class="pillar-stat-up" data-i18n="hero.eff.up">up to</span>
+              <span class="pillar-stat-num">93%</span>
+            </div>
+            <span class="pillar-stat-lbl" data-i18n="loop.see.stat">fewer vision tokens — deltas, compressed &amp; deduped</span>
+          </div>
         </div>
         <div class="pillar-viz" aria-hidden="true">
-          <span class="pv-tag" data-i18n="hero.viz.tag">capture grid · 12 × 8</span>
+          <span class="pv-tag" data-i18n="hero.viz.tag">modulated vision · deltas, not screenshots</span>
           <div class="viz-grille">
             <span class="cell c-new"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span>
             <span class="cell"></span><span class="cell c-chg"></span><span class="cell"></span><span class="cell"></span>
@@ -194,10 +194,26 @@
           <p data-i18n-html="loop.rec.t">Teach a button by its <strong>visual fingerprint</strong> and Verdesk re-finds it later — <em>even after the window moved</em>. A live index links every object to the actions that use it.</p>
           <p class="pillar-note" data-i18n="loop.rec.note">Deterministic, on CPU — works where the accessibility tree is blind (games, custom UIs).</p>
         </div>
-        <div class="pillar-viz pv-track" aria-hidden="true">
-          <div class="track-obj track-obj-a"><span class="to-glyph">🖌️</span></div>
-          <svg class="track-arrow" viewBox="0 0 120 40"><path d="M6 20 H104" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M98 14 L110 20 L98 26" fill="none" stroke="var(--green)" stroke-width="1.5"/></svg>
-          <div class="track-obj track-obj-b"><span class="to-glyph">🖌️</span></div>
+        <div class="pillar-viz" aria-hidden="true">
+          <div class="obj-card">
+            <div class="obj-card-row">
+              <span class="obj-thumb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#28E08C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 20h3.6L18.6 9a1.8 1.8 0 0 0-2.6-2.6L5 16.4z"/>
+                  <path d="M13.4 7 17 10.6"/>
+                </svg>
+              </span>
+              <div class="obj-meta">
+                <div class="obj-id">brush_tool <span class="obj-anchor">Pixel</span></div>
+                <div class="obj-sub">🪟 Paint · 36 × 26 px</div>
+              </div>
+            </div>
+            <div class="obj-trains">
+              <span class="obj-trains-lbl">used by</span>
+              <span class="obj-chip">smiley in paint</span>
+              <span class="obj-chip">draw logo</span>
+            </div>
+          </div>
           <span class="track-tag" data-i18n="loop.rec.tag">re-found · pixel match 100%</span>
         </div>
       </article>
@@ -429,7 +445,7 @@
         <li class="qs-step">
           <span class="qs-num">3</span>
           <h3 data-i18n="quickstart.step3.title">Copy the prompt</h3>
-          <p data-i18n-html="quickstart.step3.body">Tray icon → <em>Settings</em> → <em>Acceso</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
+          <p data-i18n-html="quickstart.step3.body">Tray icon → <em>Settings</em> → <em>Connection</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
         </li>
         <li class="qs-step">
           <span class="qs-num">4</span>
