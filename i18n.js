@@ -1885,6 +1885,10 @@
   // I18N_INJECT_MARK
 
   function detectLocale() {
+    // SEO: la URL por idioma manda (/es/, /de/, …) para que el contenido coincida
+    // con el <title>/hreflang pre-renderizado de esa página.
+    const seg = (location.pathname.split('/').filter(Boolean)[0] || '').toLowerCase();
+    if (seg && STRINGS[seg] && SUPPORTED.some((s) => s.code === seg)) return seg;
     const stored = (() => {
       try { return localStorage.getItem('verdesk.lang'); } catch (_) { return null; }
     })();
@@ -1926,7 +1930,10 @@
     sel.addEventListener('change', () => {
       const v = sel.value;
       try { localStorage.setItem('verdesk.lang', v); } catch (_) { /* noop */ }
-      apply(v);
+      // SEO: cambiar idioma = navegar a su URL propia (/es/, /de/, …; en = raíz).
+      const target = (v === 'en') ? '/' : '/' + v + '/';
+      const cur = location.pathname.endsWith('/') ? location.pathname : location.pathname + '/';
+      if (cur !== target) location.href = target; else apply(v);
     });
   }
 
