@@ -17,8 +17,8 @@
   <meta name="twitter:description" content="PC'ni bir yerel MCP sunucusuna dönüştür: Windows masaüstünde vizyon, yürütme ve bellek. Gör, davran, hatırla ve tekrar et — yalnızca değişeni göndererek, tam ekran görüntüsü değil." />
   <meta name="twitter:image" content="https://verdesk.app/og-image.png" />
   <link rel="stylesheet" href="/fonts.css" />
-  <link rel="stylesheet" href="/style.css?v=19" />
-  <script src="/i18n.js?v=19" defer></script>
+  <link rel="stylesheet" href="/style.css?v=20" />
+  <script src="/i18n.js?v=20" defer></script>
   <!-- I18N-SEO:START -->
   <link rel="canonical" href="https://verdesk.app/tr/" />
   <meta property="og:locale" content="tr_TR" />
@@ -52,6 +52,7 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="#loop" data-i18n="nav.how">How it works</a>
       <a href="#tree" data-i18n="nav.capabilities">Capabilities</a>
+      <a href="#versus" data-i18n="nav.compare">Compare</a>
       <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
     </nav>
     <div class="nav-right">
@@ -73,21 +74,16 @@
       <div class="hero-copy">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
-          <span data-i18n="hero.eyebrow">Local MCP server · Windows · single .exe</span>
+          <span data-i18n="hero.eyebrow">Vision + control for AI agents</span>
         </div>
         <h1 class="hero-title" data-i18n-html="hero.h1">
-          Unleash the full power of <span class="grad">your AI</span>.
+          Give your AI the <span class="grad">whole machine</span> — browser and desktop.
         </h1>
         <p class="hero-lede" data-i18n-html="hero.sub">
-          Turn your PC into a <strong>local MCP server</strong>: vision, execution and memory over your
-          Windows desktop. <em>See</em>, <em>act</em>, <em>remember</em> and <em>repeat</em> — sending
-          only <strong>what changed</strong>, not full screenshots.
-        </p>
-        <p class="hero-mcp" data-i18n-html="hero.mcp">
-          <em>MCP</em> is the open standard AI agents use to call tools — think USB-C, or LSP for editors. Verdesk is the one that controls your desktop.
+          A <strong>free, local MCP server</strong> that gives your AI eyes and hands on <strong>any browser tab and any Windows app</strong> — driving the web by the <strong>DOM</strong>, not pixel-guessing, and sending only <strong>what changed</strong>. 100% on your PC, any model.
         </p>
         <div class="hero-badges" aria-label="Trust signals">
-          <a class="badge-vt" href="https://www.virustotal.com/gui/url/125745de0499721a26417ec70d07cf7a7d89d237225528b1bc0c135d4913dad7" target="_blank" rel="noopener" title="Verdesk 2.38.0 — installer scanned clean on VirusTotal">
+          <a class="badge-vt" href="https://www.virustotal.com/gui/url/776d7d0e27d48f0277ff4db5832bebe36bf601799933a36d5147846813303e61" target="_blank" rel="noopener" title="Verdesk 2.45.0 — installer scanned clean on VirusTotal">
             <img class="vt-mark" src="/virustotal.svg" alt="" width="22" height="22" />
             <span class="badge-text" data-i18n-html="hero.badge.vt">Scanned clean by <strong>VirusTotal</strong></span>
           </a>
@@ -106,7 +102,7 @@
       <!-- prism diagram -->
       <div class="hero-viz">
         <div class="viz-frame" aria-hidden="true">
-          <span class="viz-tag" data-i18n="hero.viz.tag">modulated vision · deltas, not screenshots</span>
+          <span class="viz-tag" data-i18n="hero.viz.tag">modulated vision</span>
           <div class="prism-stage">
             <span class="beam-in"></span>
             <svg class="prism-svg" viewBox="0 0 120 120" fill="none">
@@ -128,9 +124,9 @@
           <div class="eff-wow">
             <div class="eff-figure">
               <span class="eff-up" data-i18n="hero.eff.up">up to</span>
-              <span class="eff-num">99<span class="eff-pct">%</span></span>
+              <span class="eff-num">93<span class="eff-pct">%</span></span>
             </div>
-            <span class="eff-lbl" data-i18n="hero.eff.lbl">less vision sent — a macro runs the whole task</span>
+            <span class="eff-lbl" data-i18n="hero.eff.lbl">less vision sent — deltas, not a screenshot every turn</span>
           </div>
         </div>
       </div>
@@ -139,7 +135,7 @@
     <!-- ===================== 01 — THE LOOP (see · act · remember · repeat) ===================== -->
     <section class="loop" id="loop">
       <div class="section-head">
-        <span class="kicker" data-i18n="loop.kicker">01 — How it works</span>
+        <span class="kicker" data-i18n="loop.kicker">How it works</span>
         <h2 data-i18n-html="loop.title">One loop: <span class="grad">see · act · remember · repeat</span>.</h2>
         <p class="section-sub" data-i18n="loop.sub">Everything Verdesk does is the same four-step loop. Each step costs the model less than a screenshot tool would.</p>
       </div>
@@ -154,16 +150,9 @@
             <h3 data-i18n="loop.see.k">See</h3>
           </div>
           <p data-i18n-html="loop.see.t">The screen arrives as <strong>text and layout</strong>, not raw pixels. Every region is <strong>perceptually hashed</strong> each turn — only the <b class="hl-new">new</b> and <b class="hl-chg">changed</b> ones travel, <strong>deduplicated and compressed</strong>; the rest stays cached.</p>
-          <div class="pillar-stat">
-            <div class="pillar-stat-fig">
-              <span class="pillar-stat-up" data-i18n="hero.eff.up">up to</span>
-              <span class="pillar-stat-num">93%</span>
-            </div>
-            <span class="pillar-stat-lbl" data-i18n="loop.see.stat">fewer vision tokens — deltas, compressed &amp; deduped</span>
-          </div>
         </div>
         <div class="pillar-viz" aria-hidden="true">
-          <span class="pv-tag" data-i18n="hero.viz.tag">modulated vision · deltas, not screenshots</span>
+          <span class="pv-tag" data-i18n="hero.viz.tag">modulated vision</span>
           <div class="viz-grille">
             <span class="cell c-new"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span>
             <span class="cell"></span><span class="cell c-chg"></span><span class="cell"></span><span class="cell"></span>
@@ -261,106 +250,86 @@
       </article>
     </section>
 
-    <!-- ===================== 02 — USE CASES (where it's a game changer) ===================== -->
-    <section class="usecases" id="usecases">
+    <!-- ===================== 05 — VERSUS ===================== -->
+    <section class="versus" id="versus">
       <div class="section-head">
-        <span class="kicker" data-i18n="usecases.kicker">02 — Where it changes the game</span>
-        <h2 data-i18n-html="usecases.title">Every place an AI needed <span class="grad">eyes and hands</span>.</h2>
-        <p class="section-sub" data-i18n="usecases.sub">Verdesk shows up where the agent has to actually see your screen, read it, and operate it — not just chat with an API.</p>
+        <span class="kicker" data-i18n="versus.kicker">How it compares</span>
+        <h2 data-i18n-html="versus.title">Everything they do — <span class="grad">plus what only Verdesk brings</span>.</h2>
+        <p class="section-sub" data-i18n="versus.sub">The browser control of Playwright and Browser Use, the whole-desktop reach of Computer Use, and a stack of things none of them have — on a local MCP server, with any model, free.</p>
       </div>
-      <div class="uc-grid">
-        <article class="uc-card">
-          <div class="uc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="8" y="8" width="8" height="11" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 6a2.5 2.5 0 0 1 5 0M4 11h4m8 0h4M4 16h4m8 0h4M5.5 7 8 9.2m10.5-2.2L16 9.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
-          </div>
-          <h3 data-i18n="usecases.uc1.title">Assisted debugging</h3>
-          <p data-i18n="usecases.uc1.body">The AI reads your IDE, your terminal, your devtools — looks at the actual error in context and proposes a fix you can apply with one click.</p>
-        </article>
 
-        <article class="uc-card">
-          <div class="uc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m15 17 2 2 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="usecases.uc2.title">Smoke tests &amp; QA</h3>
-          <p data-i18n="usecases.uc2.body">Walk the AI through your app once; from then on it runs the same flow on demand, snaps deltas, and tells you what broke — without rewriting any test.</p>
-        </article>
-
-        <article class="uc-card">
-          <div class="uc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3v12m0-12-4 4m4-4 4 4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="usecases.uc3.title">Bureaucratic uploads</h3>
-          <p data-i18n="usecases.uc3.body">SII, AFIP, government portals, custom invoice tools — those forms nobody reads. The AI fills them, attaches the file, hits send.</p>
-        </article>
-
-        <article class="uc-card">
-          <div class="uc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
-          </div>
-          <h3 data-i18n="usecases.uc4.title">Visual web context</h3>
-          <p data-i18n="usecases.uc4.body">The agent reads any web page the way a human does — modal, cookie banner, paywall and all — instead of fighting with raw HTML scrapers.</p>
-        </article>
-
-        <article class="uc-card">
-          <div class="uc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h7M15 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="15" cy="7" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="12" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="13" cy="17" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-          </div>
-          <h3 data-i18n="usecases.uc5.title">OS configuration</h3>
-          <p data-i18n="usecases.uc5.body">Settings, Group Policy, Device Manager, the deep registry edits nobody remembers. The AI walks the dialogs and reports back what it changed.</p>
-        </article>
-
-        <article class="uc-card">
-          <div class="uc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M9 11h6m-3 0v9m-2-5 2-2 2 2m-5 5 3-3 3 3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 data-i18n="usecases.uc6.title">Accessibility companion</h3>
-          <p data-i18n="usecases.uc6.body">For users who can't see the screen or can't drive a mouse, the agent becomes their hands and eyes — voice in, real desktop operation out.</p>
-        </article>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th class="cmp-cap" data-i18n="versus.col.cap">Capability</th>
+              <th><span class="cmp-eng">Puppeteer</span><span class="cmp-desc" data-i18n="versus.h.pup">Google · Chrome</span></th>
+              <th><span class="cmp-eng">Playwright</span><span class="cmp-desc" data-i18n="versus.h.pw">Microsoft · cross-browser</span></th>
+              <th><span class="cmp-eng">Browser Use</span><span class="cmp-desc" data-i18n="versus.h.bu">open source · web</span></th>
+              <th><span class="cmp-eng">agent-browser</span><span class="cmp-desc" data-i18n="versus.h.ab">Vercel · web</span></th>
+              <th><span class="cmp-eng">Computer Use</span><span class="cmp-desc" data-i18n="versus.h.cu">Anthropic · full screen</span></th>
+              <th class="vt-us"><span class="cmp-eng">Verdesk</span><span class="cmp-desc" data-i18n="versus.h.vk">indie · browser + desktop</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="versus.r.browser">Drives a real browser</td>
+              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.dom">Navigates by DOM, not pixel-guessing</td>
+              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.xb">Cross-browser — Firefox &amp; WebKit</td>
+              <td class="n">✗</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us n">✗</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.desk">Any desktop app — Win32, Electron, games</td>
+              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.delta">Sends deltas, not a screenshot each turn</td>
+              <td class="na">—</td><td class="na">—</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.ocr">Reads text for free — native OCR</td>
+              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.train">Record once, replay with a cheaper model</td>
+              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.secret">Moves secrets the model never sees</td>
+              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.profile">A browser profile per project</td>
+              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.local">Runs 100% local — no vendor cloud</td>
+              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.model">Works with any AI model</td>
+              <td class="na">—</td><td class="na">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+            <tr>
+              <td data-i18n="versus.r.free">Free</td>
+              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
-
-    <!-- ===================== 03 — REMOTE / TUNNEL ===================== -->
-    <section class="tunnel-section" id="tunnel">
-      <div class="section-head">
-        <span class="kicker" data-i18n="tunnel.kicker">03 — Remote</span>
-        <h2 data-i18n-html="tunnel.title">Remote vision and control. <span class="grad">Through an encrypted tunnel.</span></h2>
-        <p class="section-sub" data-i18n="tunnel.sub">Your AI agent on one machine, Verdesk on another — everything travels end-to-end encrypted. You generate the keys; no SaaS broker in the middle. Under the hood: an SSH port-forward, with Tailscale as an optional fallback for CGNAT.</p>
-      </div>
-      <div class="tunnel-stage" aria-hidden="true">
-        <div class="t-endpoint t-client">
-          <div class="t-ep-glow"></div>
-          <svg class="t-ep-icon" viewBox="0 0 32 32"><circle cx="16" cy="11" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 26c2-5 6-7 11-7s9 2 11 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-          <span class="t-ep-label" data-i18n="tunnel.client">AI client</span>
-          <span class="t-ep-sub" data-i18n="tunnel.client.sub">Claude · GPT · local</span>
-        </div>
-        <div class="t-pipe">
-          <span class="t-pipe-edge t-pipe-top"></span>
-          <span class="t-pipe-edge t-pipe-bottom"></span>
-          <span class="t-pipe-shimmer"></span>
-          <span class="t-packet t-packet-1"></span>
-          <span class="t-packet t-packet-2"></span>
-          <span class="t-packet t-packet-3"></span>
-          <span class="t-packet t-packet-4"></span>
-          <span class="t-pipe-tag" data-i18n="tunnel.pipe.tag">encrypted · SSH port-forward · ed25519</span>
-        </div>
-        <div class="t-endpoint t-server">
-          <div class="t-ep-glow t-ep-glow-server"></div>
-          <svg class="t-ep-icon" viewBox="0 0 32 32"><path d="M6 10h20v5H6zM6 18h20v5H6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="10" cy="12.5" r="0.8" fill="currentColor"/><circle cx="10" cy="20.5" r="0.8" fill="currentColor"/></svg>
-          <span class="t-ep-label" data-i18n="tunnel.server">Verdesk</span>
-          <span class="t-ep-sub">localhost:47802</span>
-        </div>
-      </div>
-      <ul class="tunnel-bullets">
-        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet1">One-button setup — Verdesk audits SSH, firewall and config in 15 checks</span></li>
-        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet2">Your keys stay yours · no third-party broker, no telemetry</span></li>
-        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet3">Tailscale fallback for CGNAT — Verdesk picks the route automatically</span></li>
-      </ul>
+      <p class="versus-foot" data-i18n-html="versus.foot"><span class="y">✓</span> yes&nbsp;·&nbsp; <span class="n">✗</span> no&nbsp;·&nbsp; <span class="na">—</span> not applicable. Each tool is great at its job; Verdesk is the only one that does all of it.</p>
     </section>
 
     <!-- ===================== 05 — CAPABILITY TREE ===================== -->
     <section class="captree" id="tree">
       <div class="section-head">
-        <span class="kicker" data-i18n="tree.kicker">04 — The toolbox, as a tree</span>
+        <span class="kicker" data-i18n="tree.kicker">The toolbox, as a tree</span>
         <h2 data-i18n-html="tree.title">Everything your agent can <span class="grad">do</span>.</h2>
         <p class="section-sub" data-i18n="tree.sub">~60 tools, organized as a tree so even a small model jumps straight to the one it needs — no scanning a flat list.</p>
       </div>
@@ -391,6 +360,11 @@
               <span class="tw-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="6.7" r=".7" fill="currentColor"/><circle cx="8.4" cy="6.7" r=".7" fill="currentColor"/></svg></span>
               <span class="tw-body"><b data-i18n="tree.win.k">Windows</b> <span data-i18n="tree.win.v">— pick, focus, resize</span>
                 <span class="tw-tools"><code>focus_window</code><code>set_window_size</code></span></span>
+            </li>
+            <li>
+              <span class="tw-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span>
+              <span class="tw-body"><b data-i18n="tree.browser.k">Browser</b> <span data-i18n="tree.browser.v">— navigate, switch tabs, read the page</span>
+                <span class="tw-tools"><code>navigate</code><code>browser_tabs</code><code>browser_snapshot</code></span></span>
             </li>
             <li>
               <span class="tw-ico tw-ico-rec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></span>
@@ -444,40 +418,10 @@
       </div>
     </section>
 
-    <!-- ===================== QUICKSTART ===================== -->
-    <section class="quickstart" id="quickstart">
-      <div class="section-head">
-        <span class="kicker" data-i18n="quickstart.kicker">Ultrafast install</span>
-        <h2 data-i18n-html="quickstart.title">Running in 60 seconds. <span class="grad">4 steps.</span></h2>
-      </div>
-      <ol class="qs-steps">
-        <li class="qs-step">
-          <span class="qs-num">1</span>
-          <h3 data-i18n="quickstart.step1.title">Download</h3>
-          <p data-i18n-html="quickstart.step1.body">Grab the setup from <a href="https://github.com/chamilonster/verdesk/releases/latest">GitHub Releases</a> — 198 MB, single .exe, WebView2 bundled offline.</p>
-        </li>
-        <li class="qs-step">
-          <span class="qs-num">2</span>
-          <h3 data-i18n="quickstart.step2.title">Install</h3>
-          <p data-i18n-html="quickstart.step2.body">Run <code>Verdesk_x.y.z_x64-setup.exe</code>. No admin needed, no telemetry. The tray icon lands quietly in the system tray.</p>
-        </li>
-        <li class="qs-step">
-          <span class="qs-num">3</span>
-          <h3 data-i18n="quickstart.step3.title">Copy the prompt</h3>
-          <p data-i18n-html="quickstart.step3.body">Tray icon → <em>Settings</em> → <em>Connection</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
-        </li>
-        <li class="qs-step">
-          <span class="qs-num">4</span>
-          <h3 data-i18n="quickstart.step4.title">Restart the terminal</h3>
-          <p data-i18n="quickstart.step4.body">Close and reopen your terminal (Claude Code, etc.) so it picks up the new MCP server. Done — your agent now sees deltas, not screenshots.</p>
-        </li>
-      </ol>
-    </section>
-
     <!-- ===================== 06 — PRICING ===================== -->
     <section class="pricing" id="pricing">
       <div class="section-head">
-        <span class="kicker" data-i18n="pricing.kicker">05 — Two ways to get it</span>
+        <span class="kicker" data-i18n="pricing.kicker">Plans</span>
         <h2 data-i18n="pricing.title">Free to run. Pro to ship.</h2>
       </div>
       <div class="plans">
@@ -535,10 +479,78 @@
       </div>
     </section>
 
+    <!-- ===================== QUICKSTART ===================== -->
+    <section class="quickstart" id="quickstart">
+      <div class="section-head">
+        <span class="kicker" data-i18n="quickstart.kicker">Ultrafast install</span>
+        <h2 data-i18n-html="quickstart.title">Running in 60 seconds. <span class="grad">4 steps.</span></h2>
+      </div>
+      <ol class="qs-steps">
+        <li class="qs-step">
+          <span class="qs-num">1</span>
+          <h3 data-i18n="quickstart.step1.title">Download</h3>
+          <p data-i18n-html="quickstart.step1.body">Grab the setup from <a href="https://github.com/chamilonster/verdesk/releases/latest">GitHub Releases</a> — 210 MB, single .exe, WebView2 bundled offline.</p>
+        </li>
+        <li class="qs-step">
+          <span class="qs-num">2</span>
+          <h3 data-i18n="quickstart.step2.title">Install</h3>
+          <p data-i18n-html="quickstart.step2.body">Run <code>Verdesk_x.y.z_x64-setup.exe</code>. No admin needed, no telemetry. The tray icon lands quietly in the system tray.</p>
+        </li>
+        <li class="qs-step">
+          <span class="qs-num">3</span>
+          <h3 data-i18n="quickstart.step3.title">Copy the prompt</h3>
+          <p data-i18n-html="quickstart.step3.body">Tray icon → <em>Settings</em> → <em>Connection</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
+        </li>
+        <li class="qs-step">
+          <span class="qs-num">4</span>
+          <h3 data-i18n="quickstart.step4.title">Restart the terminal</h3>
+          <p data-i18n="quickstart.step4.body">Close and reopen your terminal (Claude Code, etc.) so it picks up the new MCP server. Done.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===================== 03 — REMOTE / TUNNEL ===================== -->
+    <section class="tunnel-section" id="tunnel">
+      <div class="section-head">
+        <span class="kicker" data-i18n="tunnel.kicker">Remote</span>
+        <h2 data-i18n-html="tunnel.title">Remote vision and control. <span class="grad">Through an encrypted tunnel.</span></h2>
+        <p class="section-sub" data-i18n="tunnel.sub">Your AI agent on one machine, Verdesk on another — everything travels end-to-end encrypted. You generate the keys; no SaaS broker in the middle. Under the hood: an SSH port-forward, with Tailscale as an optional fallback for CGNAT.</p>
+      </div>
+      <div class="tunnel-stage" aria-hidden="true">
+        <div class="t-endpoint t-client">
+          <div class="t-ep-glow"></div>
+          <svg class="t-ep-icon" viewBox="0 0 32 32"><circle cx="16" cy="11" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 26c2-5 6-7 11-7s9 2 11 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          <span class="t-ep-label" data-i18n="tunnel.client">AI client</span>
+          <span class="t-ep-sub" data-i18n="tunnel.client.sub">Claude · GPT · local</span>
+        </div>
+        <div class="t-pipe">
+          <span class="t-pipe-edge t-pipe-top"></span>
+          <span class="t-pipe-edge t-pipe-bottom"></span>
+          <span class="t-pipe-shimmer"></span>
+          <span class="t-packet t-packet-1"></span>
+          <span class="t-packet t-packet-2"></span>
+          <span class="t-packet t-packet-3"></span>
+          <span class="t-packet t-packet-4"></span>
+          <span class="t-pipe-tag" data-i18n="tunnel.pipe.tag">encrypted · SSH port-forward · ed25519</span>
+        </div>
+        <div class="t-endpoint t-server">
+          <div class="t-ep-glow t-ep-glow-server"></div>
+          <svg class="t-ep-icon" viewBox="0 0 32 32"><path d="M6 10h20v5H6zM6 18h20v5H6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="10" cy="12.5" r="0.8" fill="currentColor"/><circle cx="10" cy="20.5" r="0.8" fill="currentColor"/></svg>
+          <span class="t-ep-label" data-i18n="tunnel.server">Verdesk</span>
+          <span class="t-ep-sub">localhost:47802</span>
+        </div>
+      </div>
+      <ul class="tunnel-bullets">
+        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet1">One-button setup — Verdesk audits SSH, firewall and config in 15 checks</span></li>
+        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet2">Your keys stay yours · no third-party broker, no telemetry</span></li>
+        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet3">Tailscale fallback for CGNAT — Verdesk picks the route automatically</span></li>
+      </ul>
+    </section>
+
     <!-- ===================== CLOSER ===================== -->
     <section class="closer">
       <div class="closer-inner">
-        <h2 data-i18n="closer.title">Stop paying vision tokens for pixels that didn't move.</h2>
+        <h2 data-i18n="closer.title">Your AI. Your machine. Free.</h2>
         <a class="btn btn-primary btn-lg" href="https://github.com/chamilonster/verdesk/releases/latest">
           <span data-i18n="closer.cta">Download free</span>
           <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -576,7 +588,6 @@
               GitHub
             </a>
           </div>
-          <p class="maker-more" data-i18n-html="maker.more">Also building <a href="https://clever.cat" target="_blank" rel="noopener">clever.cat</a> · <a href="https://clevercoder.app" target="_blank" rel="noopener">clevercoder.app</a></p>
         </div>
       </div>
     </section>

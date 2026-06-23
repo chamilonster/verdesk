@@ -1265,7 +1265,7 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
 .maker-more a:hover { color: var(--green); border-color: var(--green); }
 
 /* ===================== capability tree (the toolbox, simplified) ===================== */
-.captree { max-width: var(--maxw); margin: 0 auto; padding: 10px 24px 84px; }
+.captree { max-width: var(--maxw); margin: 0 auto; padding: 80px 24px 84px; }
 .tree { max-width: 600px; margin: 0 auto; text-align: center; }
 .tree-root {
   display: inline-block; padding: 13px 24px; border-radius: 14px;
@@ -1549,6 +1549,77 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
   .pillar-rev .pillar-viz  { order: 2; }
   .pillar-text { max-width: none; }
 }
+
+/* ============================================================
+   VERSUS — comparison table (v2.47.0). Dark theme, instrument feel.
+   Verdesk column tinted green; ✓ green · ~ cyan · ✗/— dim.
+   ============================================================ */
+/* VERSUS — one clean Excel-style comparison table. Verdesk column wins; one
+   honest concession (cross-browser) keeps it credible. */
+.cmp-wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+}
+.cmp {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 14px;
+  min-width: 1000px;
+  background: var(--panel);
+}
+.cmp th,
+.cmp td {
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid var(--line);        /* full gridlines = Excel look */
+}
+.cmp thead th {
+  background: var(--panel-2);
+  border-bottom: 2px solid var(--line-2);
+  vertical-align: bottom;
+  padding: 14px 16px;
+}
+.cmp-eng { display: block; font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--ink); }
+.cmp-desc {
+  display: block; margin-top: 5px;
+  font-family: var(--font-mono); font-size: 9.5px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3);
+}
+.cmp-cap,
+.cmp tbody td:first-child {
+  text-align: left;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+.cmp tbody td:first-child { font-size: 13.5px; }
+.cmp tbody tr:nth-child(even) td { background: rgba(255, 255, 255, 0.018); }   /* zebra */
+.cmp tbody tr:hover td { background: rgba(255, 255, 255, 0.04); }
+.cmp .y  { color: var(--green); font-weight: 700; font-size: 15px; }
+.cmp .n  { color: var(--ink-3); }
+.cmp .na { color: var(--ink-3); }
+/* Verdesk column highlighted across header + body */
+.cmp .vt-us { background: rgba(40, 224, 140, 0.07); }
+.cmp thead th.vt-us { background: rgba(40, 224, 140, 0.11); border-bottom-color: var(--green-dim); }
+.cmp thead th.vt-us .cmp-eng { color: var(--green); }
+.cmp thead th.vt-us .cmp-desc { color: var(--green-dim); }
+.cmp tbody td.vt-us.y { color: var(--green); }
+.cmp tbody td.vt-us.n { color: var(--ink-2); }
+.cmp tbody tr:nth-child(even) td.vt-us { background: rgba(40, 224, 140, 0.09); }
+.cmp tbody tr:hover td.vt-us { background: rgba(40, 224, 140, 0.14); }
+.versus-foot {
+  max-width: var(--maxw);
+  margin: 18px auto 0;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+.versus-foot .y { color: var(--green); font-weight: 700; }
+.versus-foot .n,
+.versus-foot .na { color: var(--ink-3); font-weight: 700; }
 
 /* ============================================================
    LARGE DISPLAYS — la web queda diminuta en 2K/4K con margen
