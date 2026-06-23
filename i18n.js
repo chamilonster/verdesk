@@ -39,6 +39,7 @@
       'inst.chart.cap': 'vision tokens per turn',
       'inst.chart.base': 'baseline',
       'inst.scope.cap': 'visual deltas — only what moved',
+      'inst.method': 'Vision tokens for a 1080p screenshot, measured on Claude — paid every turn. Verdesk sends only the cells that changed; other vision models scale the same way.',
 
       'loop.kicker': 'How it works',
       'loop.title': 'One loop: <span class="grad">see · act · remember · repeat</span>.',
@@ -286,6 +287,7 @@
     'inst.chart.cap': 'tokens de visión por turno',
     'inst.chart.base': 'baseline',
     'inst.scope.cap': 'deltas visuales — solo lo que se movió',
+    'inst.method': 'Tokens de visión de un screenshot 1080p, medidos en Claude — pagados cada turno. Verdesk manda solo las celdas que cambiaron; otros modelos de visión escalan igual.',
 
     'loop.kicker': 'Cómo funciona',
     'loop.title': 'Un solo loop: <span class="grad">ve · actúa · recuerda · repite</span>.',
