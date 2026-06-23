@@ -1418,7 +1418,7 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
 .plan-team { border-color: var(--amber); box-shadow: 0 0 26px rgba(242, 181, 68, .14); }
 
 /* redundant sections removed (absorbed into the loop) */
-.problem, .features, .instruments { display: none; }
+.problem, .features { display: none; }
 
 /* ============================================================
    THE LOOP — 4 pillars (see · act · remember · repeat)
@@ -1620,6 +1620,55 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
 .versus-foot .y { color: var(--green); font-weight: 700; }
 .versus-foot .n,
 .versus-foot .na { color: var(--ink-3); font-weight: 700; }
+
+/* ============================================================
+   MEASURED — evidence: gauge ring + token bar chart
+   ============================================================ */
+.instruments { max-width: var(--maxw); margin: 0 auto; padding: 80px 32px; }
+.inst-grid {
+  display: grid; grid-template-columns: 240px 1fr; gap: 44px; align-items: center;
+  max-width: 860px; margin: 0 auto;
+}
+.inst-gauge { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.inst-ring { position: relative; width: 188px; height: 188px; }
+.inst-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-bg { fill: none; stroke: var(--line); stroke-width: 9; }
+.ring-fg {
+  fill: none; stroke: var(--green); stroke-width: 9; stroke-linecap: round;
+  stroke-dasharray: 327; stroke-dashoffset: 30;
+  filter: drop-shadow(0 0 6px rgba(40, 224, 140, 0.5));
+}
+.inst-ring-num {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--ink);
+}
+.inst-pct { font-size: 1rem; color: var(--green); margin-left: 1px; }
+.inst-gauge-cap {
+  font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--ink-3); text-align: center;
+}
+.inst-chart { display: flex; flex-direction: column; gap: 20px; }
+.inst-chart-cap {
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink-3);
+}
+.ibar { display: flex; flex-direction: column; gap: 8px; }
+.ibar-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ibar-name { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--ink); }
+.ibar-us-name { color: var(--green); }
+.ibar-sub { font-size: 12px; color: var(--ink-3); }
+.ibar-track {
+  height: 34px; background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+}
+.ibar-fill {
+  display: flex; align-items: center; justify-content: flex-end;
+  height: 100%; padding: 0 12px; min-width: 58px;
+}
+.ibar-base { background: linear-gradient(90deg, var(--line-2), var(--ink-3)); }
+.ibar-us { background: var(--spectrum); box-shadow: 0 0 20px -4px var(--green); }
+.ibar-val { font-family: var(--font-mono); font-weight: 700; font-size: 13px; color: var(--bg); white-space: nowrap; }
+@media (max-width: 720px) { .inst-grid { grid-template-columns: 1fr; gap: 30px; } .inst-ring { width: 160px; height: 160px; } }
 
 /* ============================================================
    LARGE DISPLAYS — la web queda diminuta en 2K/4K con margen
