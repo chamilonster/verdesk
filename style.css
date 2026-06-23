@@ -309,6 +309,14 @@ main, .nav, .footer { position: relative; z-index: 2; }
 }
 .eff-pct { font-size: .5em; }
 .eff-lbl { font-size: 12.5px; color: var(--ink-2); text-align: center; max-width: 22em; line-height: 1.4; }
+/* optimization line: deltas 93% → recorded train 99% */
+.eff-opt { display: flex; align-items: baseline; gap: 6px; }
+.eff-opt-arrow { font-family: var(--font-mono); font-weight: 700; font-size: 15px; color: var(--green); }
+.eff-opt-num {
+  font-family: var(--font-display); font-weight: 800; font-size: 19px; line-height: 1;
+  background: var(--spectrum); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.eff-opt-cond { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); align-self: center; }
 
 /* SEE — eyebrow "up to" sobre el stat del pilar */
 .pillar-stat-up {
