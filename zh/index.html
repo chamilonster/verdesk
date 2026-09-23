@@ -475,9 +475,10 @@
           <ul class="plan-list">
             <li data-i18n="pricing.free.item1">Full modulated vision pipeline</li>
             <li data-i18n="pricing.free.item2">Local-mode MCP server</li>
-            <li data-i18n="pricing.free.item3">All base tools — capture, buffer, history, UIA</li>
+            <li data-i18n="pricing.free.item3">Delta capture — only what changed, never the whole screen</li>
             <li data-i18n="pricing.free.item4">Modulation profiles</li>
             <li data-i18n="pricing.free.item5">Offline installer · no account · no telemetry</li>
+            <li data-i18n="pricing.free.item6">Visual memory — search everything you've seen, across sessions</li>
           </ul>
           <a class="btn btn-primary plan-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="pricing.free.cta">Download free</a>
         </article>
@@ -497,7 +498,12 @@
             <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item4">Up to 3 device activations</span></li>
             <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item5">Updates included while subscribed</span></li>
           </ul>
-          <a class="btn btn-line plan-cta" href="https://verdesk.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496" target="_blank" rel="noopener" data-i18n="pricing.pro.cta">Buy Verdesk Pro</a>
+          <!-- ct-2026-09-19 beta gratuita: LemonSqueezy deshabilitado por ahora (boss verbatim). CTA comentado, no borrado. Ver docs/contracts/2026-09-19-diseno-beta-gratuita-caducidad.md -->
+          <!--
+          <a class="btn btn-line plan-cta lemonsqueezy-button" href="https://clevercat.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496?embed=1&amp;media=0&amp;logo=0&amp;desc=0&amp;discount=0" target="_blank" rel="noopener" data-i18n="pricing.pro.buy">Buy Verdesk Pro</a>
+          -->
+          <a class="btn btn-primary plan-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="pricing.pro.cta">Download and try Pro</a>
+          <button class="btn btn-line plan-cta" type="button" disabled data-i18n="pricing.pro.soon">Buying &mdash; coming soon</button>
         </article>
 
         <article class="plan plan-team">
@@ -585,6 +591,111 @@
         <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet2">Your keys stay yours · no third-party broker, no telemetry</span></li>
         <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet3">Tailscale fallback for CGNAT — Verdesk picks the route automatically</span></li>
       </ul>
+      <div class="topo">
+        <h3 class="topo-title" data-i18n="topo.t1">One agent, many machines</h3>
+        <svg class="topo-svg" viewBox="0 0 1180 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="topo1t">
+          <title id="topo1t" data-i18n="topo.t1">One agent, many machines</title>
+          <defs>
+            <linearGradient id="topoWire" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#28E08C"/><stop offset="52%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#3B82F6"/>
+            </linearGradient>
+            <linearGradient id="topoCloudEdge" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#28E08C"/><stop offset="50%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#3B82F6"/>
+            </linearGradient>
+            <linearGradient id="topoCloudFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#22D3EE" stop-opacity=".10"/>
+              <stop offset="100%" stop-color="#3B82F6" stop-opacity=".03"/>
+            </linearGradient>
+          </defs>
+          <path d="M262 240 L553 240" stroke="url(#topoWire)" stroke-width="2.5"/>
+          <circle cx="340" cy="240" r="3.4" fill="#28E08C"/>
+          <circle cx="410" cy="240" r="3.4" fill="#22D3EE"/>
+          <circle cx="480" cy="240" r="3.4" fill="#22D3EE"/>
+          <rect x="323" y="196" width="168" height="24" rx="12" fill="#0E141A" stroke="#283441"/>
+          <text x="407" y="212" fill="#9DAAB6" font-size="11" font-family="Space Mono, monospace" text-anchor="middle">SSH · ed25519</text>
+          <path d="M734 222 C 800 222, 842 128, 892 128" fill="none" stroke="url(#topoWire)" stroke-width="2.5"/>
+          <path d="M764 240 L892 240" stroke="url(#topoWire)" stroke-width="2.5"/>
+          <path d="M770 272 C 818 272, 842 352, 892 352" fill="none" stroke="url(#topoWire)" stroke-width="2.5"/>
+          <rect x="806" y="140" width="52" height="22" rx="11" fill="#0E141A" stroke="#283441"/>
+          <text x="832" y="155" fill="#28E08C" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle">:22</text>
+          <rect x="807" y="218" width="52" height="22" rx="11" fill="#0E141A" stroke="#283441"/>
+          <text x="833" y="233" fill="#28E08C" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle">:22</text>
+          <rect x="806" y="316" width="52" height="22" rx="11" fill="#0E141A" stroke="#283441"/>
+          <text x="832" y="331" fill="#28E08C" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle">:22</text>
+          <rect x="40" y="178" width="222" height="124" rx="13" fill="#11181F" stroke="#283441"/>
+          <text x="60" y="204" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" letter-spacing="1.4" data-i18n="topo.you">YOUR MACHINE</text>
+          <circle cx="84" cy="252" r="19" fill="none" stroke="#28E08C" stroke-width="2"/>
+          <circle cx="84" cy="246" r="6" fill="none" stroke="#28E08C" stroke-width="2"/>
+          <path d="M72 265c3-6 7-8 12-8s9 2 12 8" fill="none" stroke="#28E08C" stroke-width="2" stroke-linecap="round"/>
+          <text x="116" y="248" fill="#E8EEF2" font-size="14.5" font-weight="600" data-i18n="tunnel.client">AI client</text>
+          <text x="116" y="267" fill="#9DAAB6" font-size="12" data-i18n="tunnel.client.sub">Claude · GPT · local</text>
+          <g transform="translate(452 150) scale(1.62)">
+            <path d="M70 100 a30 30 0 0 1 -6 -59 a45 45 0 0 1 86 -12 a32 32 0 0 1 50 30 a28 28 0 0 1 -8 41 z" fill="none" stroke="#22D3EE" stroke-width="7" opacity=".10"/>
+            <path d="M70 100 a30 30 0 0 1 -6 -59 a45 45 0 0 1 86 -12 a32 32 0 0 1 50 30 a28 28 0 0 1 -8 41 z" fill="url(#topoCloudFill)" stroke="url(#topoCloudEdge)" stroke-width="2.2" stroke-linejoin="round"/>
+          </g>
+          <text x="666" y="256" fill="#E8EEF2" font-size="15" font-weight="600" text-anchor="middle">INTERNET</text>
+          <text x="666" y="277" fill="#5E6B77" font-size="11" font-family="Space Mono, monospace" text-anchor="middle" data-i18n="topo.e2e">end-to-end encrypted</text>
+          <rect x="892" y="92" width="248" height="72" rx="11" fill="#11181F" stroke="#283441"/>
+          <rect x="912" y="112" width="32" height="24" rx="3" fill="none" stroke="#22D3EE" stroke-width="1.8"/>
+          <path d="M912 120h32" stroke="#22D3EE" stroke-width="1.8"/>
+          <circle cx="917" cy="116" r="1.5" fill="#22D3EE"/>
+          <text x="958" y="122" fill="#E8EEF2" font-size="13.5" font-weight="600" data-i18n="topo.browser">Remote browser</text>
+          <text x="958" y="140" fill="#9DAAB6" font-size="11.5" data-i18n="topo.browser.sub">already signed in as you</text>
+          <rect x="892" y="204" width="248" height="72" rx="11" fill="#11181F" stroke="#283441"/>
+          <rect x="912" y="222" width="32" height="24" rx="3" fill="none" stroke="#28E08C" stroke-width="1.8"/>
+          <path d="M921 252h14M928 246v6" stroke="#28E08C" stroke-width="1.8" stroke-linecap="round"/>
+          <text x="958" y="234" fill="#E8EEF2" font-size="13.5" font-weight="600" data-i18n="topo.desktop">Remote desktop</text>
+          <text x="958" y="252" fill="#9DAAB6" font-size="11.5" data-i18n="topo.desktop.sub">any Windows app</text>
+          <rect x="892" y="316" width="248" height="72" rx="11" fill="#11181F" stroke="#283441"/>
+          <rect x="912" y="334" width="32" height="24" rx="3" fill="none" stroke="#3B82F6" stroke-width="1.8"/>
+          <path d="M921 364h14M928 358v6" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round"/>
+          <text x="958" y="346" fill="#E8EEF2" font-size="13.5" font-weight="600" data-i18n="topo.more">Another machine</text>
+          <text x="958" y="364" fill="#9DAAB6" font-size="11.5" data-i18n="topo.more.sub">and any you add</text>
+          <text x="1016" y="424" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle" data-i18n="topo.each">each with its own Verdesk</text>
+        </svg>
+        <p class="topo-note" data-i18n="topo.n1">The agent lives on your machine. Each remote machine runs its own Verdesk, and the work goes in through port 22, inside the tunnel. The keys are yours: no broker in between.</p>
+
+        <h3 class="topo-title" data-i18n="topo.t2">What happens inside one machine</h3>
+        <svg class="topo-svg" viewBox="0 0 1180 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="topo2t">
+          <title id="topo2t" data-i18n="topo.t2">What happens inside one machine</title>
+          <defs>
+            <marker id="topoAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#28E08C"/></marker>
+            <marker id="topoArDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#5E6B77"/></marker>
+          </defs>
+          <text x="98" y="66" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" letter-spacing="1.4" text-anchor="middle" data-i18n="topo.from">FROM THE INTERNET</text>
+          <path d="M40 139 L226 139" stroke="#28E08C" stroke-width="2.5" marker-end="url(#topoAr)"/>
+          <path d="M40 249 L226 249" stroke="#5E6B77" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#topoArDim)"/>
+          <rect x="228" y="52" width="700" height="300" rx="14" fill="#11181F" stroke="#283441"/>
+          <text x="252" y="80" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" letter-spacing="1.4" data-i18n="topo.machine">THE REMOTE MACHINE</text>
+          <rect x="252" y="106" width="166" height="66" rx="10" fill="#0E141A" stroke="#28E08C"/>
+          <text x="335" y="132" fill="#28E08C" font-size="13" font-weight="600" data-i18n="topo.port22" text-anchor="middle">port 22</text>
+          <text x="335" y="152" fill="#9DAAB6" font-size="11" text-anchor="middle" font-family="Space Mono, monospace" data-i18n="topo.port22.sub">sshd · the tunnel</text>
+          <text x="335" y="190" fill="#5E6B77" font-size="11" text-anchor="middle" data-i18n="topo.port22.note">the work comes in here</text>
+          <rect x="252" y="216" width="166" height="66" rx="10" fill="#0E141A" stroke="#283441"/>
+          <text x="335" y="242" fill="#9DAAB6" font-size="13" font-weight="600" data-i18n="topo.port47804" text-anchor="middle">port 47804</text>
+          <text x="335" y="262" fill="#5E6B77" font-size="11" text-anchor="middle" font-family="Space Mono, monospace" data-i18n="topo.port47804.sub">registering your key</text>
+          <text x="335" y="300" fill="#5E6B77" font-size="11" text-anchor="middle" data-i18n="topo.port47804.note">once only, at the start</text>
+          <path d="M418 139 L494 139" stroke="#28E08C" stroke-width="2" marker-end="url(#topoAr)"/>
+          <path d="M418 249 C 452 249, 464 162, 494 154" fill="none" stroke="#5E6B77" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#topoArDim)"/>
+          <rect x="496" y="108" width="176" height="66" rx="10" fill="#0E141A" stroke="#283441"/>
+          <text x="584" y="134" fill="#E8EEF2" font-size="13" font-weight="600" text-anchor="middle">Verdesk</text>
+          <text x="584" y="155" fill="#22D3EE" font-size="11" text-anchor="middle" font-family="Space Mono, monospace">127.0.0.1:47802</text>
+          <text x="584" y="192" fill="#5E6B77" font-size="11" text-anchor="middle" data-i18n="topo.inward">only listens inward</text>
+          <path d="M672 141 L744 141" stroke="#22D3EE" stroke-width="2"/>
+          <path d="M744 141 L744 120 L802 120" fill="none" stroke="#22D3EE" stroke-width="2"/>
+          <path d="M744 141 L744 232 L802 232" fill="none" stroke="#22D3EE" stroke-width="2"/>
+          <circle cx="744" cy="141" r="3.4" fill="#22D3EE"/>
+          <rect x="802" y="98" width="112" height="44" rx="9" fill="#0E141A" stroke="#283441"/>
+          <text x="858" y="125" fill="#E8EEF2" font-size="12.5" text-anchor="middle" data-i18n="topo.browser.s">browser</text>
+          <rect x="802" y="210" width="112" height="44" rx="9" fill="#0E141A" stroke="#283441"/>
+          <text x="858" y="237" fill="#E8EEF2" font-size="12.5" text-anchor="middle" data-i18n="topo.desktop.s">desktop</text>
+          <path d="M928 176 L1140 176" stroke="#1C262F" stroke-width="2" stroke-dasharray="5 5"/>
+          <circle cx="1046" cy="176" r="17" fill="none" stroke="#F2B544" stroke-width="2"/>
+          <path d="M1035 165 L1057 187" stroke="#F2B544" stroke-width="2"/>
+          <text x="1046" y="220" fill="#F2B544" font-size="11" text-anchor="middle" font-family="Space Mono, monospace" data-i18n="topo.never">47802 never leaves</text>
+        </svg>
+        <p class="topo-note" data-i18n="topo.n2">Two ports stay reachable, and neither is Verdesk's: 22, where the tunnel goes, and 47804, which only serves to register your key the first time — you approve that with a prompt on screen. The port Verdesk works on listens inward only and is never published. If your connection accepts no inbound traffic, Verdesk detects Tailscale and uses that route.</p>
+      </div>
     </section>
 
     <!-- ===================== CLOSER ===================== -->
@@ -667,5 +778,9 @@
       <span data-i18n="footer.noTelemetry">No telemetry</span>
     </div>
   </footer>
+  <!-- ct-2026-09-19 beta gratuita: script del checkout comentado junto con el CTA. -->
+  <!--
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+  -->
 </body>
 </html>

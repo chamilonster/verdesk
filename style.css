@@ -879,11 +879,22 @@ main, .nav, .footer { position: relative; z-index: 2; }
   border: 1px solid rgba(242, 181, 68, 0.4);
   color: var(--amber);
 }
-.plan-team .plan-cta[disabled] {
+/* ct-2026-09-23: el disabled valia SOLO para Team, asi que el boton
+   "proximamente" de la tarjeta Pro heredaba el gradiente del CTA principal y
+   competia con el de descarga que va arriba. Ahora aplica a cualquier plan y
+   el de Pro se ve como lo que es: secundario y apagado. */
+.plan-cta[disabled] {
   cursor: not-allowed;
   opacity: 0.55;
   pointer-events: none;
 }
+.plan-pro .plan-cta[disabled] {
+  background: transparent;
+  color: var(--ink-2);
+  border: 1px solid var(--line-2);
+  box-shadow: none;
+}
+.plan-cta + .plan-cta { margin-top: 10px; }
 
 /* ============================================================
    Closer soon + footer soon badges
@@ -1691,3 +1702,36 @@ html { scrollbar-color: var(--line-2) var(--bg); scrollbar-width: thin; }
    ============================================================ */
 @media (min-width: 2000px) { :root { zoom: 1.2; } }
 @media (min-width: 3400px) { :root { zoom: 1.8; } }
+
+/* ============================================================
+   ct-2026-09-23 — Topologia del modo Pro (2 diagramas SVG inline)
+   ============================================================ */
+.topo { margin-top: 52px; }
+.topo-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+.topo-title + .topo-svg { margin-bottom: 0; }
+.topo-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.topo-note {
+  border-left: 3px solid var(--green);
+  padding: 10px 14px;
+  margin: 14px 0 38px;
+  color: var(--ink-2);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+.topo-note:last-child { margin-bottom: 0; }
+@media (max-width: 720px) {
+  .topo { margin-top: 34px; }
+  .topo-title { font-size: 16px; }
+}
