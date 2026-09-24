@@ -104,7 +104,7 @@
   ol.steps li::before { content: counter(st); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border: 1px solid var(--line-2); color: #28E08C; font-family: var(--mono); font-size: 13px; display: grid; place-items: center; }
   .plans { align-items: stretch; }
   .card { border: 1px solid var(--line-2); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
-  .card.pro-card { border-color: #28E08C55; }
+  .card.pro-card { border: 2px solid #28E08C; box-shadow: 0 0 0 1px #28E08C22, 0 0 28px #28E08C40, inset 0 0 22px #28E08C14; }
   .card h3 { margin: 0; }
   .card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; color: var(--ink-2); font-size: 15px; }
   .card li { padding-left: 18px; position: relative; }
