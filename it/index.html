@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verdesk — Lo strato modulato di visione e controllo per agenti IA</title>
-  <meta name="description" content="Un server MCP locale e gratuito che dà alla tua IA occhi e mani su qualsiasi scheda del browser e qualsiasi app Windows — controllando il web tramite il DOM, senza indovinare pixel, e inviando solo ciò che è cambiato. 100% sul tuo PC, qualsiasi modello." />
+  <title>Verdesk — I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina</title>
+  <meta name="description" content="Server MCP locale per Windows. I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina: modalità DOM, modalità non rilevabile, OCR nativo, e si invia solo ciò che è cambiato. Gratis per uso personale." />
   <meta name="theme-color" content="#0A0E12" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta property="og:title" content="Verdesk — Lo strato modulato di visione e controllo per agenti IA" />
-  <meta property="og:description" content="Un server MCP locale e gratuito che dà alla tua IA occhi e mani su qualsiasi scheda del browser e qualsiasi app Windows — controllando il web tramite il DOM, senza indovinare pixel, e inviando solo ciò che è cambiato. 100% sul tuo PC, qualsiasi modello." />
+  <meta property="og:title" content="Verdesk — I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina" />
+  <meta property="og:description" content="Server MCP locale per Windows. I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina: modalità DOM, modalità non rilevabile, OCR nativo, e si invia solo ciò che è cambiato. Gratis per uso personale." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://verdesk.app/it/" />
   <meta property="og:image" content="https://verdesk.app/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Verdesk — Lo strato modulato di visione e controllo per agenti IA" />
-  <meta name="twitter:description" content="Un server MCP locale e gratuito che dà alla tua IA occhi e mani su qualsiasi scheda del browser e qualsiasi app Windows — controllando il web tramite il DOM, senza indovinare pixel, e inviando solo ciò che è cambiato. 100% sul tuo PC, qualsiasi modello." />
+  <meta name="twitter:title" content="Verdesk — I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina" />
+  <meta name="twitter:description" content="Server MCP locale per Windows. I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina: modalità DOM, modalità non rilevabile, OCR nativo, e si invia solo ciò che è cambiato. Gratis per uso personale." />
   <meta name="twitter:image" content="https://verdesk.app/og-image.png" />
-  <link rel="stylesheet" href="/fonts.css" />
-  <link rel="stylesheet" href="/style.css?v=22" />
-  <script src="/i18n.js?v=22" defer></script>
+  <link rel="stylesheet" href="/fonts.css?v=23" />
+  <link rel="stylesheet" href="/style.css?v=23" />
+  <script src="/i18n.js?v=23" defer></script>
   <!-- I18N-SEO:START -->
   <link rel="canonical" href="https://verdesk.app/it/" />
   <meta property="og:locale" content="it_IT" />
@@ -40,747 +40,92 @@
   <!-- I18N-SEO:END -->
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <!-- Icons: Tabler Icons (https://tabler.io/icons), MIT License, (c) 2020-2024 Pawel Kuna -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></symbol>
+    <symbol id="i-stack-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l-8 4l8 4l8 -4l-8 -4" /><path d="M4 12l8 4l8 -4" /><path d="M4 16l8 4l8 -4" /></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1" /><path d="M12 7v10" /></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" /><path d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87" /><path d="M3 3l18 18" /></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.785 6l8.215 8.215l-2.054 2.054a5.81 5.81 0 1 1 -8.215 -8.215l2.054 -2.054z" /><path d="M4 20l3.5 -3.5" /><path d="M15 4l-3.5 3.5" /><path d="M20 9l-3.5 3.5" /></symbol>
+    <symbol id="i-text-recognition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8v-2a2 2 0 0 1 2 -2h2" /><path d="M4 16v2a2 2 0 0 0 2 2h2" /><path d="M16 4h2a2 2 0 0 1 2 2v2" /><path d="M16 20h2a2 2 0 0 0 2 -2v-2" /><path d="M12 16v-7" /><path d="M9 9h6" /></symbol>
+    <symbol id="i-crop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5v10a1 1 0 0 0 1 1h10" /><path d="M5 8h10a1 1 0 0 1 1 1v10" /></symbol>
+    <symbol id="i-arrows-diff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 16h10" /><path d="M11 16l4 4" /><path d="M11 16l4 -4" /><path d="M13 8h-10" /><path d="M13 8l-4 4" /><path d="M13 8l-4 -4" /></symbol>
+    <symbol id="i-list-details" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" /><path d="M13 9h5" /><path d="M13 15h8" /><path d="M13 19h5" /><path d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3" /><path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3 -3l3 -3" /></symbol>
+    <symbol id="i-click" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l3 0" /><path d="M12 3l0 3" /><path d="M7.8 7.8l-2.2 -2.2" /><path d="M16.2 7.8l2.2 -2.2" /><path d="M7.8 16.2l-2.2 2.2" /><path d="M12 12l9 3l-4 2l-2 4l-3 -9" /></symbol>
+    <symbol id="i-arrows-exchange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h14l-4 -4" /><path d="M17 14h-14l4 4" /></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></symbol>
+    <symbol id="i-app-window" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M6 8h.01" /><path d="M9 8h.01" /></symbol>
+    <symbol id="i-file-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5" /><path d="M16.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" /><path d="M18.5 19.5l2.5 2.5" /></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9v-1a3 3 0 0 1 6 0v1" /><path d="M8 9h8a6 6 0 0 1 1 3v3a5 5 0 0 1 -10 0v-3a6 6 0 0 1 1 -3" /><path d="M3 13l4 0" /><path d="M17 13l4 0" /><path d="M12 20l0 -6" /><path d="M4 19l3.35 -2" /><path d="M20 19l-3.35 -2" /><path d="M4 7l3.75 2.4" /><path d="M20 7l-3.75 2.4" /></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z" /><path d="M12 8l0 13" /><path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" /></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></symbol>
+    <symbol id="logo-d2" viewBox="0 2 64 44" fill="none" stroke-linecap="round" stroke-linejoin="round"><g transform="matrix(1 0 0 -1 0 48)"><path d="M4.00 29.35L16.00 21.86" stroke="#9DAAB6" stroke-width="2.4"/><path d="M16.00 21.86L30.87 19.90" stroke="#28E08C" stroke-width="1.4"/><path d="M16.00 21.86L31.08 20.26" stroke="#22D3EE" stroke-width="1.4"/><path d="M16.00 21.86L31.31 20.66" stroke="#3B82F6" stroke-width="1.4"/><path d="M24.00 8.00L40.00 35.71H8.00Z" stroke="#E8EEF2" stroke-width="2.4"/><path d="M30.87 19.90L63.00 21.96" stroke="#28E08C" stroke-width="2.4"/><path d="M31.08 20.26L63.00 24.46" stroke="#22D3EE" stroke-width="2.4"/><path d="M31.31 20.66L63.00 27.54" stroke="#3B82F6" stroke-width="2.4"/></g></symbol>
+  </svg>
 
-  <!-- ===================== NAV ===================== -->
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="Verdesk home">
-      <img src="/logo.svg" alt="" class="brand-mark" width="32" height="32" />
-      <span class="brand-name">Verdesk</span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#loop" data-i18n="nav.how">How it works</a>
-      <a href="#tree" data-i18n="nav.capabilities">Capabilities</a>
-      <a href="#versus" data-i18n="nav.compare">Compare</a>
-      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
-    </nav>
-    <div class="nav-right">
-      <select class="lang-select" id="lang-select" aria-label="Language">
-        <!-- Fallback visible mientras i18n.js (defer) no carga; el JS lo
-             reemplaza al boot con las 14 opciones del SUPPORTED array. -->
-        <option value="en" selected>English</option>
-      </select>
-      <a class="btn nav-cta" href="https://github.com/chamilonster/verdesk/releases/latest" aria-label="Download free for Windows">
-        <svg class="nav-cta-win" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4l8-1.2v8.6H3V4zm9-1.35L21 1.4v9.66H12V2.65zM3 12.6h8v8.6L3 20V12.6zm9 0h9V22.6L12 21.25V12.6z" fill="currentColor"/></svg>
-        <span data-i18n="nav.downloadFree">Download free</span>
-      </a>
-    </div>
-  </header>
+  <select class="lang-select lang-top" id="lang-select" aria-label="Language">
+    <option value="en" selected>English</option>
+  </select>
 
-  <main id="top">
-    <!-- ===================== HERO ===================== -->
+  <main class="wrap" id="top">
+    <div class="beam" role="img" aria-label="Verdesk"><div class="beam-inner"><svg><path d="M-3318.6 -2022.4L73.6 97.3" stroke="#C9D2DA" stroke-width="5"/><path d="M73.6 97.3L136.0 105.5" stroke="#28E08C" stroke-width="3"/><path d="M73.6 97.3L136.9 104.0" stroke="#22D3EE" stroke-width="3"/><path d="M73.6 97.3L137.9 102.3" stroke="#3B82F6" stroke-width="3"/><path d="M136.0 105.5L4127.8 -151.5" stroke="#28E08C" stroke-width="5"/><path d="M136.9 104.0L4102.8 -417.6" stroke="#22D3EE" stroke-width="5"/><path d="M137.9 102.3L4046.9 -746.1" stroke="#3B82F6" stroke-width="5"/><path d="M107.2 155.5L174.4 39.1L40.0 39.1Z" stroke="#E8EEF2" stroke-width="5" stroke-linejoin="round"/><text x="201.9" y="105.6" class="beam-word">VERDESK</text></svg></div></div>
     <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span data-i18n="hero.eyebrow">Vision + control for AI agents</span>
-        </div>
-        <h1 class="hero-title" data-i18n-html="hero.h1">
-          Give your AI the <span class="grad">whole machine</span> — browser and desktop.
-        </h1>
-        <p class="hero-lede" data-i18n-html="hero.sub">
-          A <strong>free, local MCP server</strong> that gives your AI eyes and hands on <strong>any browser tab and any Windows app</strong> — driving the web by the <strong>DOM</strong>, not pixel-guessing, and sending only <strong>what changed</strong>. 100% on your PC, any model.
-        </p>
-        <div class="hero-badges" aria-label="Trust signals">
-          <a class="badge-vt" href="https://www.virustotal.com/gui/url/f37914798183b410f59b6f8d9f3163dbd8a1b7edc382f666fbac66edbec6bd60" target="_blank" rel="noopener" title="Verdesk 2.49.0 — installer scanned clean on VirusTotal">
-            <img class="vt-mark" src="/virustotal.svg" alt="" width="22" height="22" />
-            <span class="badge-text" data-i18n-html="hero.badge.vt">Scanned clean by <strong>VirusTotal</strong></span>
-          </a>
-          <span class="badge-platform">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h8v8H3V4zm10 0h8v8h-8V4zM3 14h8v8H3v-8zm10 0h8v8h-8v-8z" fill="currentColor"/></svg>
-            <span data-i18n="hero.badge.windows">Windows 10/11</span>
-            <span class="badge-soon" data-i18n="hero.badge.soon">macOS &amp; Linux soon</span>
-          </span>
-          <span class="badge-tested">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span data-i18n-html="hero.badge.tested">Tested on <strong>Claude Code</strong></span>
-          </span>
-        </div>
-      </div>
-
-      <!-- prism diagram -->
-      <div class="hero-viz">
-        <div class="viz-frame" aria-hidden="true">
-          <span class="viz-tag" data-i18n="hero.viz.tag">modulated vision</span>
-          <div class="prism-stage">
-            <span class="beam-in"></span>
-            <svg class="prism-svg" viewBox="0 0 120 120" fill="none">
-              <defs>
-                <linearGradient id="hp" x1="20" y1="100" x2="100" y2="20" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#28E08C"/>
-                  <stop offset="0.5" stop-color="#22D3EE"/>
-                  <stop offset="1" stop-color="#3B82F6"/>
-                </linearGradient>
-              </defs>
-              <path d="M60 14 L106 100 L14 100 Z" fill="url(#hp)" fill-opacity="0.12"
-                    stroke="url(#hp)" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            <span class="band band-1"></span>
-            <span class="band band-2"></span>
-            <span class="band band-3"></span>
-            <span class="band band-4"></span>
-          </div>
-          <div class="eff-wow">
-            <div class="eff-figure">
-              <span class="eff-num">93<span class="eff-pct">%</span></span>
-            </div>
-            <div class="eff-opt">
-              <span class="eff-opt-arrow">→</span>
-              <span class="eff-opt-num">99<span class="eff-pct">%</span></span>
-              <span class="eff-opt-cond" data-i18n="hero.eff.train">when it's a recorded train</span>
-            </div>
-            <span class="eff-lbl" data-i18n="hero.eff.lbl">less vision sent — deltas, not a screenshot every turn</span>
-          </div>
-        </div>
-      </div>
+      <h1 data-i18n="hero.h1">I tuoi agenti usano il tuo PC e navigano su qualsiasi pagina.</h1>
+      <p class="lede" data-i18n="hero.sub">MCP locale per Windows.</p>
     </section>
 
-    <!-- ===================== 01 — THE LOOP (see · act · remember · repeat) ===================== -->
-    <section class="loop" id="loop">
-      <div class="section-head">
-        <span class="kicker" data-i18n="loop.kicker">How it works</span>
-        <h2 data-i18n-html="loop.title">One loop: <span class="grad">see · act · remember · repeat</span>.</h2>
-        <p class="section-sub" data-i18n="loop.sub">Everything Verdesk does is the same four-step loop. Each step costs the model less than a screenshot tool would.</p>
-      </div>
-
-      <!-- 1 · SEE -->
-      <article class="pillar">
-        <div class="pillar-text">
-          <div class="pillar-head">
-            <span class="pillar-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-            </span>
-            <h3 data-i18n="loop.see.k">See</h3>
-          </div>
-          <p data-i18n-html="loop.see.t">The screen arrives as <strong>text and layout</strong>, not raw pixels. Every region is <strong>perceptually hashed</strong> each turn — only the <b class="hl-new">new</b> and <b class="hl-chg">changed</b> ones travel, <strong>deduplicated and compressed</strong>; the rest stays cached.</p>
-        </div>
-        <div class="pillar-viz" aria-hidden="true">
-          <span class="pv-tag" data-i18n="hero.viz.tag">modulated vision</span>
-          <div class="viz-grille">
-            <span class="cell c-new"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span>
-            <span class="cell"></span><span class="cell c-chg"></span><span class="cell"></span><span class="cell"></span>
-            <span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell c-new"></span>
-            <span class="cell c-chg"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span>
-          </div>
-          <div class="viz-legend">
-            <span><i class="dot dot-new"></i><span data-i18n="hero.viz.new">new</span></span>
-            <span><i class="dot dot-chg"></i><span data-i18n="hero.viz.changed">changed</span></span>
-            <span><i class="dot dot-unc"></i><span data-i18n="hero.viz.cached">cached</span></span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2 · ACT -->
-      <article class="pillar pillar-rev">
-        <div class="pillar-text">
-          <div class="pillar-head">
-            <span class="pillar-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-            </span>
-            <h3 data-i18n="loop.act.k">Act</h3>
-          </div>
-          <p data-i18n-html="loop.act.t">You say <em>what</em>; the engine finds the pixel. It steps down from a semantic control to the exact point and operates <strong>any</strong> Windows app — Win32, WPF, UWP, Electron, browsers, even games and canvas UIs.</p>
-          <p class="pillar-note" data-i18n="loop.act.note">You never do coordinate math to find a button.</p>
-        </div>
-        <div class="pillar-viz" aria-hidden="true">
-          <ol class="ladder">
-            <li><code>act_uia</code><span data-i18n="loop.act.l1">semantic control</span></li>
-            <li><code>click_text</code><span data-i18n="loop.act.l2">on-screen text</span></li>
-            <li><code>click_in_rect</code><span data-i18n="loop.act.l3">a box</span></li>
-            <li><code>click_at</code><span data-i18n="loop.act.l4">exact pixel</span></li>
-          </ol>
-          <span class="ladder-tag" data-i18n="loop.act.tag">the engine walks it for you, top → down</span>
-        </div>
-      </article>
-
-      <!-- 3 · REMEMBER -->
-      <article class="pillar">
-        <div class="pillar-text">
-          <div class="pillar-head">
-            <span class="pillar-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.4" fill="currentColor"/></svg>
-            </span>
-            <h3 data-i18n="loop.rec.k">Remember</h3>
-          </div>
-          <p data-i18n-html="loop.rec.t">Teach a button by its <strong>visual fingerprint</strong> and Verdesk re-finds it later — <em>even after the window moved</em>. A live index links every object to the actions that use it.</p>
-          <p class="pillar-note" data-i18n="loop.rec.note">Deterministic, on CPU — works where the accessibility tree is blind (games, custom UIs).</p>
-        </div>
-        <div class="pillar-viz" aria-hidden="true">
-          <div class="obj-card">
-            <div class="obj-card-row">
-              <span class="obj-thumb">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#28E08C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 20h3.6L18.6 9a1.8 1.8 0 0 0-2.6-2.6L5 16.4z"/>
-                  <path d="M13.4 7 17 10.6"/>
-                </svg>
-              </span>
-              <div class="obj-meta">
-                <div class="obj-id">brush_tool <span class="obj-anchor">Pixel</span></div>
-                <div class="obj-sub">🪟 Paint · 36 × 26 px</div>
-              </div>
-            </div>
-            <div class="obj-trains">
-              <span class="obj-trains-lbl">used by</span>
-              <span class="obj-chip">smiley in paint</span>
-              <span class="obj-chip">draw logo</span>
-            </div>
-          </div>
-          <span class="track-tag" data-i18n="loop.rec.tag">re-found · pixel match 100%</span>
-        </div>
-      </article>
-
-      <!-- 4 · REPEAT -->
-      <article class="pillar pillar-rev">
-        <div class="pillar-text">
-          <div class="pillar-head">
-            <span class="pillar-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-            </span>
-            <h3 data-i18n="loop.rep.k">Repeat</h3>
-          </div>
-          <p data-i18n-html="loop.rep.t">Record a task <strong>once</strong>, with the real timing between steps. From then on a <strong>cheaper model</strong> replays it on its own — and it keeps working even if the window moves or resizes.</p>
-          <p class="pillar-note" data-i18n="loop.rep.note">Trains are functions with slots — pass arguments, edit one step, no re-recording.</p>
-        </div>
-        <div class="pillar-viz" aria-hidden="true">
-          <div class="train">
-            <span class="train-row"><i class="tr-step">1</i><code>focus_window</code></span>
-            <span class="train-row"><i class="tr-step">2</i><code>click_button</code></span>
-            <span class="train-row"><i class="tr-step">3</i><code>type_text</code><em>{slot}</em></span>
-            <span class="train-row"><i class="tr-step">4</i><code>press_key</code></span>
-          </div>
-          <span class="train-tag"><span class="train-rec" data-i18n="loop.rep.rec">recorded once</span><span class="train-arrow">→</span><span class="train-play" data-i18n="loop.rep.play">replayed by a cheap model</span></span>
-        </div>
-      </article>
-    </section>
-
-    <!-- ===================== 05 — VERSUS ===================== -->
-    <section class="versus" id="versus">
-      <div class="section-head">
-        <span class="kicker" data-i18n="versus.kicker">How it compares</span>
-        <h2 data-i18n-html="versus.title">Everything they do — <span class="grad">plus what only Verdesk brings</span>.</h2>
-        <p class="section-sub" data-i18n="versus.sub">The browser control of Playwright and Browser Use, the whole-desktop reach of Computer Use, and a stack of things none of them have — on a local MCP server, with any model, free.</p>
-      </div>
-
-      <div class="cmp-wrap">
-        <table class="cmp">
-          <thead>
-            <tr>
-              <th class="cmp-cap" data-i18n="versus.col.cap">Capability</th>
-              <th><span class="cmp-eng">Puppeteer</span><span class="cmp-desc" data-i18n="versus.h.pup">Google · Chrome</span></th>
-              <th><span class="cmp-eng">Playwright</span><span class="cmp-desc" data-i18n="versus.h.pw">Microsoft · cross-browser</span></th>
-              <th><span class="cmp-eng">Browser Use</span><span class="cmp-desc" data-i18n="versus.h.bu">open source · web</span></th>
-              <th><span class="cmp-eng">agent-browser</span><span class="cmp-desc" data-i18n="versus.h.ab">Vercel · web</span></th>
-              <th><span class="cmp-eng">Computer Use</span><span class="cmp-desc" data-i18n="versus.h.cu">Anthropic · full screen</span></th>
-              <th class="vt-us"><span class="cmp-eng">Verdesk</span><span class="cmp-desc" data-i18n="versus.h.vk">indie · browser + desktop</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="versus.r.browser">Drives a real browser</td>
-              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.dom">Navigates by DOM, not pixel-guessing</td>
-              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.xb">Cross-browser — Firefox &amp; WebKit</td>
-              <td class="n">✗</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us n">✗</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.desk">Any desktop app — Win32, Electron, games</td>
-              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="y">✓</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.delta">Sends deltas, not a screenshot each turn</td>
-              <td class="na">—</td><td class="na">—</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.ocr">Reads text for free — native OCR</td>
-              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.train">Record once, replay with a cheaper model</td>
-              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.secret">Moves secrets the model never sees</td>
-              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.profile">A browser profile per project</td>
-              <td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.local">Runs 100% local — no vendor cloud</td>
-              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.model">Works with any AI model</td>
-              <td class="na">—</td><td class="na">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-            <tr>
-              <td data-i18n="versus.r.free">Free</td>
-              <td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">✗</td><td class="vt-us y">✓</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="versus-foot" data-i18n-html="versus.foot"><span class="y">✓</span> yes&nbsp;·&nbsp; <span class="n">✗</span> no&nbsp;·&nbsp; <span class="na">—</span> not applicable. Each tool is great at its job; Verdesk is the only one that does all of it.</p>
-    </section>
-
-    <!-- ===================== 05 — CAPABILITY TREE ===================== -->
-    <section class="captree" id="tree">
-      <div class="section-head">
-        <span class="kicker" data-i18n="tree.kicker">The toolbox, as a tree</span>
-        <h2 data-i18n-html="tree.title">Everything your agent can <span class="grad">do</span>.</h2>
-        <p class="section-sub" data-i18n="tree.sub">~60 tools, organized as a tree so even a small model jumps straight to the one it needs — no scanning a flat list.</p>
-      </div>
-      <div class="tree-layout">
-        <div class="tree">
-          <ul class="tree-branches">
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.see.k">See</b> <span data-i18n="tree.see.v">— the screen, only what changed</span>
-                <span class="tw-tools"><code>look</code><code>capture</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.read.k">Read</b> <span data-i18n="tree.read.v">— plain text from any region</span>
-                <span class="tw-tools"><code>read_text</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><path d="M6 3.5 18.5 10l-5 1.6 2.7 5.2-2.3 1.2-2.7-5.2L7 16.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.click.k">Click</b> <span data-i18n="tree.click.v">— left, right, scroll, drag</span>
-                <span class="tw-tools"><code>click_at</code><code>click_text</code><code>drag_path</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10h.01M9.5 10h.01M13 10h.01M16.5 10h.01M6 14h.01M9.5 14h5M18 14h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.type.k">Type</b> <span data-i18n="tree.type.v">— text &amp; key combos</span>
-                <span class="tw-tools"><code>type_text</code><code>press_key</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="6.7" r=".7" fill="currentColor"/><circle cx="8.4" cy="6.7" r=".7" fill="currentColor"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.win.k">Windows</b> <span data-i18n="tree.win.v">— pick, focus, resize</span>
-                <span class="tw-tools"><code>focus_window</code><code>set_window_size</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.browser.k">Browser</b> <span data-i18n="tree.browser.v">— navigate, switch tabs, read the page</span>
-                <span class="tw-tools"><code>navigate</code><code>browser_tabs</code><code>browser_snapshot</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico tw-ico-rec"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.train.k">Record &amp; replay</b> <span data-i18n="tree.train.v">— a task, once, then free</span>
-                <span class="tw-tools"><code>playbook_record</code><code>playbook_replay</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.obj.k">Learn &amp; track</b> <span data-i18n="tree.obj.v">— objects, even if they moved</span>
-                <span class="tw-tools"><code>learn_button</code><code>track_object</code></span></span>
-            </li>
-            <li>
-              <span class="tw-ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10.3 9.6 12.5 7 14.7M12.6 14.7h4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span class="tw-body"><b data-i18n="tree.run.k">Open apps</b> <span data-i18n="tree.run.v">— apps &amp; CLIs, via Win+R</span>
-                <span class="tw-tools"><code>execute</code></span></span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- support visual: a vertical Windows window, Matrix-green, inside the theme grid -->
-        <aside class="tree-viz" aria-hidden="true">
-          <div class="win-stage">
-            <div class="win-frame">
-              <div class="win-bar">
-                <span class="win-bar-title">Windows</span>
-                <svg class="win-ctrls" viewBox="0 0 46 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true">
-                  <line x1="2" y1="9" x2="11" y2="9"/>
-                  <rect x="18" y="2" width="8" height="8" rx="1"/>
-                  <path d="M34 2.5 41.5 9.5M41.5 2.5 34 9.5"/>
-                </svg>
-              </div>
-              <div class="win-body">
-                <span class="mx-line" style="width:86%"></span>
-                <span class="mx-line" style="width:62%"></span>
-                <span class="mx-line" style="width:92%"></span>
-                <span class="mx-line" style="width:48%"></span>
-                <span class="mx-line" style="width:74%"></span>
-                <span class="mx-line" style="width:58%"></span>
-                <span class="mx-line" style="width:82%"></span>
-                <span class="mx-line" style="width:40%"></span>
-                <span class="mx-line" style="width:70%"></span>
-                <span class="mx-line" style="width:54%"></span>
-                <span class="mx-line" style="width:88%"></span>
-                <span class="mx-line" style="width:46%"></span>
-                <span class="mx-line" style="width:66%"></span>
-                <span class="mx-line" style="width:50%"></span>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ===================== MEASURED — evidence ===================== -->
-    <section class="instruments" id="instruments">
-      <div class="section-head">
-        <span class="kicker" data-i18n="inst.kicker">Measured, not promised</span>
-        <h2 data-i18n-html="inst.title">The savings, <span class="grad">on instruments</span>.</h2>
-        <p class="section-sub" data-i18n="inst.sub">Real figures from a reproducible benchmark — concrete numbers, not adjectives.</p>
-      </div>
-      <div class="inst-grid">
-        <div class="inst-gauge">
-          <div class="inst-ring" aria-hidden="true">
-            <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" cx="60" cy="60" r="52"/></svg>
-            <div class="inst-ring-num">89–93<span class="inst-pct">%</span></div>
-          </div>
-          <span class="inst-gauge-cap" data-i18n="inst.gauge.cap">vision tokens saved</span>
-        </div>
-        <div class="inst-chart">
-          <span class="inst-chart-cap" data-i18n="inst.chart.cap">vision tokens per turn</span>
-          <div class="ibar">
-            <div class="ibar-head">
-              <span class="ibar-name" data-i18n="inst.chart.base">baseline</span>
-              <span class="ibar-sub" data-i18n="inst.base.sub">full screenshot, every turn</span>
-            </div>
-            <div class="ibar-track"><span class="ibar-fill ibar-base" style="width:100%"><span class="ibar-val">~1,500</span></span></div>
-          </div>
-          <div class="ibar">
-            <div class="ibar-head">
-              <span class="ibar-name ibar-us-name">Verdesk</span>
-              <span class="ibar-sub" data-i18n="inst.scope.cap">visual deltas — only what moved</span>
-            </div>
-            <div class="ibar-track"><span class="ibar-fill ibar-us" style="width:7.3%"><span class="ibar-val">~110</span></span></div>
-          </div>
-        </div>
-      </div>
-      <p class="inst-method" data-i18n="inst.method">Vision tokens for a 1080p screenshot, measured on Claude — paid every turn. Verdesk sends only the cells that changed; other vision models scale the same way.</p>
-    </section>
-
-    <!-- ===================== 06 — PRICING ===================== -->
-    <section class="pricing" id="pricing">
-      <div class="section-head">
-        <span class="kicker" data-i18n="pricing.kicker">Plans</span>
-        <h2 data-i18n="pricing.title">Free to run. Pro to ship.</h2>
-      </div>
+    <section class="plans-top" id="plans">
       <div class="plans">
-
-        <article class="plan plan-free">
-          <div class="plan-top">
-            <span class="plan-name" data-i18n="pricing.free.name">Free</span>
-            <span class="plan-price">$0</span>
-          </div>
-          <p class="plan-desc" data-i18n="pricing.free.desc">The complete Verdesk vision layer, free for personal and non-commercial use.</p>
-          <ul class="plan-list">
-            <li data-i18n="pricing.free.item1">Full modulated vision pipeline</li>
-            <li data-i18n="pricing.free.item2">Local-mode MCP server</li>
-            <li data-i18n="pricing.free.item3">Delta capture — only what changed, never the whole screen</li>
-            <li data-i18n="pricing.free.item4">Modulation profiles</li>
-            <li data-i18n="pricing.free.item5">Offline installer · no account · no telemetry</li>
-            <li data-i18n="pricing.free.item6">Visual memory — search everything you've seen, across sessions</li>
-          </ul>
-          <a class="btn btn-primary plan-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="pricing.free.cta">Download free</a>
-        </article>
-
-        <article class="plan plan-pro">
-          <div class="plan-flag" data-i18n="pricing.pro.flag">For shipping</div>
-          <div class="plan-top">
-            <span class="plan-name" data-i18n="pricing.pro.name">Pro</span>
-            <span class="plan-price">$49<span class="plan-period" data-i18n="pricing.period.year">/year</span></span>
-          </div>
-          <p class="plan-desc" data-i18n="pricing.pro.desc">Yearly subscription, one developer. Everything in Free, plus what you need to ship.</p>
-          <ul class="plan-list">
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item1">Remote access over LAN / WAN</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.trains">Action trains — record a task once, replay it cheaply (even with a smaller model)</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.objects">Mapped, editable screen objects — an interconnected network of actions you tweak without re-recording</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item3">Commercial-use license — 1 developer</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item4">Up to 3 device activations</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.pro.item5">Updates included while subscribed</span></li>
-          </ul>
-          <!-- ct-2026-09-19 beta gratuita: LemonSqueezy deshabilitado por ahora (boss verbatim). CTA comentado, no borrado. Ver docs/contracts/2026-09-19-diseno-beta-gratuita-caducidad.md -->
-          <!--
-          <a class="btn btn-line plan-cta lemonsqueezy-button" href="https://clevercat.lemonsqueezy.com/checkout/buy/785996c1-daa0-47e1-a720-4fd1e660e496?embed=1&amp;media=0&amp;logo=0&amp;desc=0&amp;discount=0" target="_blank" rel="noopener" data-i18n="pricing.pro.buy">Buy Verdesk Pro</a>
-          -->
-          <a class="btn btn-primary plan-cta" href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="pricing.pro.cta">Download and try Pro</a>
-          <button class="btn btn-line plan-cta" type="button" disabled data-i18n="pricing.pro.soon">Buying &mdash; coming soon</button>
-        </article>
-
-        <article class="plan plan-team">
-          <div class="plan-flag plan-flag-soon" data-i18n="pricing.team.flag">Coming soon</div>
-          <div class="plan-top">
-            <span class="plan-name" data-i18n="pricing.team.name">Team</span>
-            <span class="plan-price">$199<span class="plan-period" data-i18n="pricing.period.year">/year</span></span>
-          </div>
-          <p class="plan-desc" data-i18n="pricing.team.desc">Yearly subscription, up to 5 developers. Shared license keys and centralized billing.</p>
-          <ul class="plan-list">
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item1">Everything in Pro</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item2">Up to 5 developer seats</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item3">Centralized billing &amp; activations</span></li>
-            <li><span class="plan-plus">+</span> <span data-i18n="pricing.team.item4">Priority email support</span></li>
-          </ul>
-          <button class="btn btn-line plan-cta" type="button" disabled data-i18n="pricing.team.cta">Notify me</button>
-        </article>
-
+        <div class="card"><svg class="ic plan-ic"><use href="#i-user"/></svg><h3 data-i18n="plan.free.t">Gratis</h3><span class="use" data-i18n="plan.free.personal">Uso personale</span><ul><li><span data-i18n="f.dom.t">Browser in modalità DOM</span></li><li><span data-i18n="f.stealth.t">Navigazione in modalità non rilevabile</span></li><li><span data-i18n="f.ocr.t">OCR nativo</span></li><li><span data-i18n="f.zone.t">Zone di cattura</span></li><li><span data-i18n="f.diff.t">Rilevamento delle modifiche</span></li><li><span data-i18n="f.log.t">Registro delle azioni e suoni</span></li></ul><div class="cta"><a class="btn primary" href="https://github.com/chamilonster/verdesk/releases/latest"><svg class="ic"><use href="#i-download"/></svg><span data-i18n="hero.download">Scarica gratis</span></a><a class="note" href="https://www.virustotal.com/gui/url/f37914798183b410f59b6f8d9f3163dbd8a1b7edc382f666fbac66edbec6bd60" data-i18n="hero.note">Windows 10 / 11 · analizzato da VirusTotal</a></div></div>
+        <div class="card pro-card"><svg class="ic plan-ic"><use href="#i-briefcase"/></svg><h3>Pro</h3><span class="use" data-i18n="plan.pro.commercial">Uso commerciale</span><ul><li><span data-i18n="plan.pro.all">Tutto il piano gratuito</span></li><li><span data-i18n="f.script.t">Scripting delle azioni</span></li><li><span data-i18n="f.btn.t">Mini catture di pulsanti</span></li><li><span data-i18n="f.remote.t">Controlla anche i tuoi PC remoti</span></li></ul><p class="card-foot trial"><svg class="ic"><use href="#i-gift"/></svg><span data-i18n="hero.trial">Pro completo gratis per i primi 60 giorni.</span></p><button class="btn buy-btn" type="button" disabled><span data-i18n="plan.pro.buy">Acquista</span><span class="soon" data-i18n="plan.pro.soon">presto</span></button></div>
       </div>
     </section>
 
-    <!-- ===================== QUICKSTART ===================== -->
-    <section class="quickstart" id="quickstart">
-      <div class="section-head">
-        <span class="kicker" data-i18n="quickstart.kicker">Ultrafast install</span>
-        <h2 data-i18n-html="quickstart.title">Running in 60 seconds. <span class="grad">4 steps.</span></h2>
-      </div>
-      <ol class="qs-steps">
-        <li class="qs-step">
-          <span class="qs-num">1</span>
-          <h3 data-i18n="quickstart.step1.title">Download</h3>
-          <p data-i18n-html="quickstart.step1.body">Grab the setup from <a href="https://github.com/chamilonster/verdesk/releases/latest">GitHub Releases</a> — 210 MB, single .exe, WebView2 bundled offline.</p>
-        </li>
-        <li class="qs-step">
-          <span class="qs-num">2</span>
-          <h3 data-i18n="quickstart.step2.title">Install</h3>
-          <p data-i18n-html="quickstart.step2.body">Run <code>Verdesk_x.y.z_x64-setup.exe</code>. No admin needed, no telemetry. The tray icon lands quietly in the system tray.</p>
-        </li>
-        <li class="qs-step">
-          <span class="qs-num">3</span>
-          <h3 data-i18n="quickstart.step3.title">Copy the prompt</h3>
-          <p data-i18n-html="quickstart.step3.body">Tray icon → <em>Settings</em> → <em>Connection</em>. One button copies the MCP server config to your clipboard — paste it into your AI client.</p>
-        </li>
-        <li class="qs-step">
-          <span class="qs-num">4</span>
-          <h3 data-i18n="quickstart.step4.title">Restart the terminal</h3>
-          <p data-i18n="quickstart.step4.body">Close and reopen your terminal (Claude Code, etc.) so it picks up the new MCP server. Done.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===================== 03 — REMOTE / TUNNEL ===================== -->
-    <section class="tunnel-section" id="tunnel">
-      <div class="section-head">
-        <span class="kicker" data-i18n="tunnel.kicker">Remote</span>
-        <h2 data-i18n-html="tunnel.title">Remote vision and control. <span class="grad">Through an encrypted tunnel.</span></h2>
-        <p class="section-sub" data-i18n="tunnel.sub">Your AI agent on one machine, Verdesk on another — everything travels end-to-end encrypted. You generate the keys; no SaaS broker in the middle. Under the hood: an SSH port-forward, with Tailscale as an optional fallback for CGNAT.</p>
-      </div>
-      <div class="tunnel-stage" aria-hidden="true">
-        <div class="t-endpoint t-client">
-          <div class="t-ep-glow"></div>
-          <svg class="t-ep-icon" viewBox="0 0 32 32"><circle cx="16" cy="11" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 26c2-5 6-7 11-7s9 2 11 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-          <span class="t-ep-label" data-i18n="tunnel.client">AI client</span>
-          <span class="t-ep-sub" data-i18n="tunnel.client.sub">Claude · GPT · local</span>
-        </div>
-        <div class="t-pipe">
-          <span class="t-pipe-edge t-pipe-top"></span>
-          <span class="t-pipe-edge t-pipe-bottom"></span>
-          <span class="t-pipe-shimmer"></span>
-          <span class="t-packet t-packet-1"></span>
-          <span class="t-packet t-packet-2"></span>
-          <span class="t-packet t-packet-3"></span>
-          <span class="t-packet t-packet-4"></span>
-          <span class="t-pipe-tag" data-i18n="tunnel.pipe.tag">encrypted · SSH port-forward · ed25519</span>
-        </div>
-        <div class="t-endpoint t-server">
-          <div class="t-ep-glow t-ep-glow-server"></div>
-          <svg class="t-ep-icon" viewBox="0 0 32 32"><path d="M6 10h20v5H6zM6 18h20v5H6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="10" cy="12.5" r="0.8" fill="currentColor"/><circle cx="10" cy="20.5" r="0.8" fill="currentColor"/></svg>
-          <span class="t-ep-label" data-i18n="tunnel.server">Verdesk</span>
-          <span class="t-ep-sub">localhost:47802</span>
-        </div>
-      </div>
-      <ul class="tunnel-bullets">
-        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet1">One-button setup — Verdesk audits SSH, firewall and config in 15 checks</span></li>
-        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet2">Your keys stay yours · no third-party broker, no telemetry</span></li>
-        <li><span class="t-check">✓</span> <span data-i18n="tunnel.bullet3">Tailscale fallback for CGNAT — Verdesk picks the route automatically</span></li>
+    <section class="band" id="features">
+      <h2 class="label" data-i18n="sec.features">Funzioni</h2>
+      <ul class="six">
+      <li style="--i:0"><svg class="ic"><use href="#i-stack-2"/></svg><h2 data-i18n="f.all.t">Tutto in uno</h2><p data-i18n="f.all.d">Browser e desktop in un solo server.</p></li>
+      <li style="--i:1"><svg class="ic"><use href="#i-coin"/></svg><h2 data-i18n="f.cheap.t">Più economico di Computer Use</h2><p data-i18n="f.cheap.d">89% di token di visione in meno: invia solo ciò che è cambiato.</p><span class="src" data-i18n="f.cheap.s">Benchmark simulato di 20 turni</span></li>
+      <li style="--i:2"><svg class="ic"><use href="#i-plug"/></svg><h2 data-i18n="f.mcp.t">MCP standard</h2><p data-i18n="f.mcp.d">Qualsiasi modello. Testato su Claude Code.</p></li>
+      <li style="--i:3"><svg class="ic"><use href="#i-code"/></svg><h2 data-i18n="f.dom.t">Browser in modalità DOM</h2><p data-i18n="f.dom.d">Legge la pagina dal suo codice, senza immagini. Per i siti che consentono l'automazione.</p><span class="src" data-i18n="f.dom.s">Lettura completa: 24–34 ms</span></li>
+      <li style="--i:4"><svg class="ic"><use href="#i-eye-off"/></svg><h2 data-i18n="f.stealth.t">Navigazione in modalità non rilevabile</h2><p data-i18n="f.stealth.d">Il tuo browser di sempre, con mouse e tastiera reali. Per i siti più esigenti.</p><span class="src">navigator.webdriver = false</span></li>
+      <li style="--i:5"><svg class="ic"><use href="#i-text-recognition"/></svg><h2 data-i18n="f.ocr.t">OCR nativo</h2><p data-i18n="f.ocr.d">Legge il testo sullo schermo senza inviare immagini all'agente.</p></li>
+      <li style="--i:6"><svg class="ic"><use href="#i-crop"/></svg><h2 data-i18n="f.zone.t">Zone di cattura</h2><p data-i18n="f.zone.d">Guarda solo la parte dello schermo che conta, non lo schermo intero.</p></li>
+      <li style="--i:7"><svg class="ic"><use href="#i-arrows-diff"/></svg><h2 data-i18n="f.diff.t">Rilevamento delle modifiche</h2><p data-i18n="f.diff.d">Invia solo ciò che è cambiato dall'ultimo sguardo e può attendere che qualcosa cambi.</p></li>
+      <li style="--i:8"><svg class="ic"><use href="#i-list-details"/></svg><h2 data-i18n="f.log.t">Registro delle azioni e suoni</h2><p data-i18n="f.log.d">Ogni azione viene registrata; avvisi sonori opzionali.</p></li>
+      <li style="--i:9"><svg class="ic"><use href="#i-repeat"/></svg><h2 data-i18n="f.script.t">Scripting delle azioni</h2><span class="pro">PRO</span><p data-i18n="f.script.d">Registra un'attività desktop come Macro e ripetila con una sola chiamata.</p></li>
+      <li style="--i:10"><svg class="ic"><use href="#i-click"/></svg><h2 data-i18n="f.btn.t">Mini catture di pulsanti</h2><span class="pro">PRO</span><p data-i18n="f.btn.d">Salva un pulsante una volta in Elementi; l'agente lo trova e lo preme.</p></li>
+      <li style="--i:11"><svg class="ic"><use href="#i-arrows-exchange"/></svg><h2 data-i18n="f.remote.t">Controlla anche i tuoi PC remoti</h2><span class="pro">PRO</span><p data-i18n="f.remote.d">Tramite tunnel SSH, con le tue chiavi.</p></li>
       </ul>
-      <div class="topo">
-        <h3 class="topo-title" data-i18n="topo.t1">One agent, many machines</h3>
-        <svg class="topo-svg" viewBox="0 0 1180 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="topo1t">
-          <title id="topo1t" data-i18n="topo.t1">One agent, many machines</title>
-          <defs>
-            <linearGradient id="topoWire" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#28E08C"/><stop offset="52%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#3B82F6"/>
-            </linearGradient>
-            <linearGradient id="topoCloudEdge" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#28E08C"/><stop offset="50%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#3B82F6"/>
-            </linearGradient>
-            <linearGradient id="topoCloudFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#22D3EE" stop-opacity=".10"/>
-              <stop offset="100%" stop-color="#3B82F6" stop-opacity=".03"/>
-            </linearGradient>
-          </defs>
-          <path d="M262 240 L553 240" stroke="url(#topoWire)" stroke-width="2.5"/>
-          <circle cx="340" cy="240" r="3.4" fill="#28E08C"/>
-          <circle cx="410" cy="240" r="3.4" fill="#22D3EE"/>
-          <circle cx="480" cy="240" r="3.4" fill="#22D3EE"/>
-          <rect x="323" y="196" width="168" height="24" rx="12" fill="#0E141A" stroke="#283441"/>
-          <text x="407" y="212" fill="#9DAAB6" font-size="11" font-family="Space Mono, monospace" text-anchor="middle">SSH · ed25519</text>
-          <path d="M734 222 C 800 222, 842 128, 892 128" fill="none" stroke="url(#topoWire)" stroke-width="2.5"/>
-          <path d="M764 240 L892 240" stroke="url(#topoWire)" stroke-width="2.5"/>
-          <path d="M770 272 C 818 272, 842 352, 892 352" fill="none" stroke="url(#topoWire)" stroke-width="2.5"/>
-          <rect x="806" y="140" width="52" height="22" rx="11" fill="#0E141A" stroke="#283441"/>
-          <text x="832" y="155" fill="#28E08C" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle">:22</text>
-          <rect x="807" y="218" width="52" height="22" rx="11" fill="#0E141A" stroke="#283441"/>
-          <text x="833" y="233" fill="#28E08C" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle">:22</text>
-          <rect x="806" y="316" width="52" height="22" rx="11" fill="#0E141A" stroke="#283441"/>
-          <text x="832" y="331" fill="#28E08C" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle">:22</text>
-          <rect x="40" y="178" width="222" height="124" rx="13" fill="#11181F" stroke="#283441"/>
-          <text x="60" y="204" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" letter-spacing="1.4" data-i18n="topo.you">YOUR MACHINE</text>
-          <circle cx="84" cy="252" r="19" fill="none" stroke="#28E08C" stroke-width="2"/>
-          <circle cx="84" cy="246" r="6" fill="none" stroke="#28E08C" stroke-width="2"/>
-          <path d="M72 265c3-6 7-8 12-8s9 2 12 8" fill="none" stroke="#28E08C" stroke-width="2" stroke-linecap="round"/>
-          <text x="116" y="248" fill="#E8EEF2" font-size="14.5" font-weight="600" data-i18n="tunnel.client">AI client</text>
-          <text x="116" y="267" fill="#9DAAB6" font-size="12" data-i18n="tunnel.client.sub">Claude · GPT · local</text>
-          <g transform="translate(452 150) scale(1.62)">
-            <path d="M70 100 a30 30 0 0 1 -6 -59 a45 45 0 0 1 86 -12 a32 32 0 0 1 50 30 a28 28 0 0 1 -8 41 z" fill="none" stroke="#22D3EE" stroke-width="7" opacity=".10"/>
-            <path d="M70 100 a30 30 0 0 1 -6 -59 a45 45 0 0 1 86 -12 a32 32 0 0 1 50 30 a28 28 0 0 1 -8 41 z" fill="url(#topoCloudFill)" stroke="url(#topoCloudEdge)" stroke-width="2.2" stroke-linejoin="round"/>
-          </g>
-          <text x="666" y="256" fill="#E8EEF2" font-size="15" font-weight="600" text-anchor="middle">INTERNET</text>
-          <text x="666" y="277" fill="#5E6B77" font-size="11" font-family="Space Mono, monospace" text-anchor="middle" data-i18n="topo.e2e">end-to-end encrypted</text>
-          <rect x="892" y="92" width="248" height="72" rx="11" fill="#11181F" stroke="#283441"/>
-          <rect x="912" y="112" width="32" height="24" rx="3" fill="none" stroke="#22D3EE" stroke-width="1.8"/>
-          <path d="M912 120h32" stroke="#22D3EE" stroke-width="1.8"/>
-          <circle cx="917" cy="116" r="1.5" fill="#22D3EE"/>
-          <text x="958" y="122" fill="#E8EEF2" font-size="13.5" font-weight="600" data-i18n="topo.browser">Remote browser</text>
-          <text x="958" y="140" fill="#9DAAB6" font-size="11.5" data-i18n="topo.browser.sub">already signed in as you</text>
-          <rect x="892" y="204" width="248" height="72" rx="11" fill="#11181F" stroke="#283441"/>
-          <rect x="912" y="222" width="32" height="24" rx="3" fill="none" stroke="#28E08C" stroke-width="1.8"/>
-          <path d="M921 252h14M928 246v6" stroke="#28E08C" stroke-width="1.8" stroke-linecap="round"/>
-          <text x="958" y="234" fill="#E8EEF2" font-size="13.5" font-weight="600" data-i18n="topo.desktop">Remote desktop</text>
-          <text x="958" y="252" fill="#9DAAB6" font-size="11.5" data-i18n="topo.desktop.sub">any Windows app</text>
-          <rect x="892" y="316" width="248" height="72" rx="11" fill="#11181F" stroke="#283441"/>
-          <rect x="912" y="334" width="32" height="24" rx="3" fill="none" stroke="#3B82F6" stroke-width="1.8"/>
-          <path d="M921 364h14M928 358v6" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round"/>
-          <text x="958" y="346" fill="#E8EEF2" font-size="13.5" font-weight="600" data-i18n="topo.more">Another machine</text>
-          <text x="958" y="364" fill="#9DAAB6" font-size="11.5" data-i18n="topo.more.sub">and any you add</text>
-          <text x="1016" y="424" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" text-anchor="middle" data-i18n="topo.each">each with its own Verdesk</text>
-        </svg>
-        <p class="topo-note" data-i18n="topo.n1">The agent lives on your machine. Each remote machine runs its own Verdesk, and the work goes in through port 22, inside the tunnel. The keys are yours: no broker in between.</p>
-
-        <h3 class="topo-title" data-i18n="topo.t2">What happens inside one machine</h3>
-        <svg class="topo-svg" viewBox="0 0 1180 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="topo2t">
-          <title id="topo2t" data-i18n="topo.t2">What happens inside one machine</title>
-          <defs>
-            <marker id="topoAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#28E08C"/></marker>
-            <marker id="topoArDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#5E6B77"/></marker>
-          </defs>
-          <text x="98" y="66" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" letter-spacing="1.4" text-anchor="middle" data-i18n="topo.from">FROM THE INTERNET</text>
-          <path d="M40 139 L226 139" stroke="#28E08C" stroke-width="2.5" marker-end="url(#topoAr)"/>
-          <path d="M40 249 L226 249" stroke="#5E6B77" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#topoArDim)"/>
-          <rect x="228" y="52" width="700" height="300" rx="14" fill="#11181F" stroke="#283441"/>
-          <text x="252" y="80" fill="#5E6B77" font-size="10.5" font-family="Space Mono, monospace" letter-spacing="1.4" data-i18n="topo.machine">THE REMOTE MACHINE</text>
-          <rect x="252" y="106" width="166" height="66" rx="10" fill="#0E141A" stroke="#28E08C"/>
-          <text x="335" y="132" fill="#28E08C" font-size="13" font-weight="600" data-i18n="topo.port22" text-anchor="middle">port 22</text>
-          <text x="335" y="152" fill="#9DAAB6" font-size="11" text-anchor="middle" font-family="Space Mono, monospace" data-i18n="topo.port22.sub">sshd · the tunnel</text>
-          <text x="335" y="190" fill="#5E6B77" font-size="11" text-anchor="middle" data-i18n="topo.port22.note">the work comes in here</text>
-          <rect x="252" y="216" width="166" height="66" rx="10" fill="#0E141A" stroke="#283441"/>
-          <text x="335" y="242" fill="#9DAAB6" font-size="13" font-weight="600" data-i18n="topo.port47804" text-anchor="middle">port 47804</text>
-          <text x="335" y="262" fill="#5E6B77" font-size="11" text-anchor="middle" font-family="Space Mono, monospace" data-i18n="topo.port47804.sub">registering your key</text>
-          <text x="335" y="300" fill="#5E6B77" font-size="11" text-anchor="middle" data-i18n="topo.port47804.note">once only, at the start</text>
-          <path d="M418 139 L494 139" stroke="#28E08C" stroke-width="2" marker-end="url(#topoAr)"/>
-          <path d="M418 249 C 452 249, 464 162, 494 154" fill="none" stroke="#5E6B77" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#topoArDim)"/>
-          <rect x="496" y="108" width="176" height="66" rx="10" fill="#0E141A" stroke="#283441"/>
-          <text x="584" y="134" fill="#E8EEF2" font-size="13" font-weight="600" text-anchor="middle">Verdesk</text>
-          <text x="584" y="155" fill="#22D3EE" font-size="11" text-anchor="middle" font-family="Space Mono, monospace">127.0.0.1:47802</text>
-          <text x="584" y="192" fill="#5E6B77" font-size="11" text-anchor="middle" data-i18n="topo.inward">only listens inward</text>
-          <path d="M672 141 L744 141" stroke="#22D3EE" stroke-width="2"/>
-          <path d="M744 141 L744 120 L802 120" fill="none" stroke="#22D3EE" stroke-width="2"/>
-          <path d="M744 141 L744 232 L802 232" fill="none" stroke="#22D3EE" stroke-width="2"/>
-          <circle cx="744" cy="141" r="3.4" fill="#22D3EE"/>
-          <rect x="802" y="98" width="112" height="44" rx="9" fill="#0E141A" stroke="#283441"/>
-          <text x="858" y="125" fill="#E8EEF2" font-size="12.5" text-anchor="middle" data-i18n="topo.browser.s">browser</text>
-          <rect x="802" y="210" width="112" height="44" rx="9" fill="#0E141A" stroke="#283441"/>
-          <text x="858" y="237" fill="#E8EEF2" font-size="12.5" text-anchor="middle" data-i18n="topo.desktop.s">desktop</text>
-          <path d="M928 176 L1140 176" stroke="#1C262F" stroke-width="2" stroke-dasharray="5 5"/>
-          <circle cx="1046" cy="176" r="17" fill="none" stroke="#F2B544" stroke-width="2"/>
-          <path d="M1035 165 L1057 187" stroke="#F2B544" stroke-width="2"/>
-          <text x="1046" y="220" fill="#F2B544" font-size="11" text-anchor="middle" font-family="Space Mono, monospace" data-i18n="topo.never">47802 never leaves</text>
-        </svg>
-        <p class="topo-note" data-i18n="topo.n2">Two ports stay reachable, and neither is Verdesk's: 22, where the tunnel goes, and 47804, which only serves to register your key the first time — you approve that with a prompt on screen. The port Verdesk works on listens inward only and is never published. If your connection accepts no inbound traffic, Verdesk detects Tailscale and uses that route.</p>
-      </div>
     </section>
 
-    <!-- ===================== CLOSER ===================== -->
-    <section class="closer">
-      <div class="closer-inner">
-        <h2 data-i18n="closer.title">Your AI. Your machine. Free.</h2>
-        <a class="btn btn-primary btn-lg" href="https://github.com/chamilonster/verdesk/releases/latest">
-          <span data-i18n="closer.cta">Download free</span>
-          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M8 1.5v9m0 0L4.5 7M8 10.5 11.5 7M2 13.5h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <p class="closer-meta">
-          <span data-i18n="closer.meta">Windows 10 / 11 · 64-bit · single executable</span>
-          <span class="closer-soon" data-i18n="closer.soon">· macOS &amp; Linux soon</span>
-        </p>
-      </div>
+    <section class="band" id="examples">
+      <h2 class="label" data-i18n="sec.examples">Esempi</h2>
+      <ul class="ex">
+      <li style="--i:13"><svg class="ic"><use href="#i-file-text"/></svg><span data-i18n="ex.1">Pratiche su portali web</span></li>
+      <li style="--i:14"><svg class="ic"><use href="#i-app-window"/></svg><span data-i18n="ex.2">Programmi Windows senza API</span></li>
+      <li style="--i:15"><svg class="ic"><use href="#i-file-search"/></svg><span data-i18n="ex.3">Estrarre dati da pagine web</span></li>
+      <li style="--i:16"><svg class="ic"><use href="#i-bug"/></svg><span data-i18n="ex.4">Testare la tua applicazione</span></li>
+      <li style="--i:17"><svg class="ic"><use href="#i-settings"/></svg><span data-i18n="ex.5">Cambiare le impostazioni di Windows</span></li>
+      <li style="--i:18"><svg class="ic"><use href="#i-refresh"/></svg><span data-i18n="ex.6">Ripetere attività desktop</span><span class="pro">PRO</span></li>
+      </ul>
     </section>
 
-    <!-- ===================== MAKER ===================== -->
-    <section class="maker" id="maker" aria-label="The developer behind Verdesk">
-      <div class="maker-card">
-        <div class="maker-photo-wrap">
-          <img class="maker-photo" src="/founder.jpg" alt="Camilo Brossard" width="112" height="112" loading="lazy" />
-        </div>
-        <div class="maker-body">
-          <span class="maker-kicker" data-i18n="maker.kicker">Built by one developer</span>
-          <h2 class="maker-name">Camilo Brossard</h2>
-          <p class="maker-line" data-i18n="maker.line">A network engineer building Verdesk solo, in the open — no team, no VC, no telemetry. Questions, ideas or bug reports? Write me directly; I read every one.</p>
-          <div class="maker-links">
-            <a class="maker-link" href="mailto:chamilonster@gmail.com" aria-label="Email Camilo">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="m4.5 7.5 7.5 5.5 7.5-5.5" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              chamilonster@gmail.com
-            </a>
-            <a class="maker-link" href="https://instagram.com/electrogaticultor" target="_blank" rel="noopener" aria-label="Instagram @electrogaticultor">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.4" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor"/></svg>
-              @electrogaticultor
-            </a>
-            <a class="maker-link" href="https://github.com/chamilonster" target="_blank" rel="noopener" aria-label="GitHub chamilonster">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
-              GitHub
-            </a>
-            <a class="maker-link" href="https://clevercoder.app" target="_blank" rel="noopener" aria-label="CleverCoder — more software by Camilo">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M3 12h18M12 2.8c2.6 2.5 2.6 15.9 0 18.4M12 2.8c-2.6 2.5-2.6 15.9 0 18.4" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
-              clevercoder.app
-            </a>
-            <a class="maker-link" href="https://www.reddit.com/r/Verdesk/" target="_blank" rel="noopener" aria-label="Verdesk community on Reddit">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12c-.688 0-1.25.561-1.25 1.25 0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
-              r/Verdesk
-            </a>
-          </div>
-        </div>
-      </div>
+    <section class="band" id="install">
+      <h2 class="label" data-i18n="sec.install">Installare</h2>
+      <p class="steps" data-i18n="install.d">Installa, copia la configurazione dall'icona nell'area di notifica e riavvia il terminale.</p>
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="footer-brand">
-      <img src="/logo.svg" alt="" width="28" height="28" />
-      <div>
-        <span class="brand-name">Verdesk</span>
-        <span class="footer-tag" data-i18n="footer.tag">The modulated vision and control layer for AI agents</span>
-      </div>
-    </div>
-    <div class="footer-links">
-      <a href="https://github.com/chamilonster/verdesk/releases/latest" data-i18n="footer.download">Download</a>
-      <a href="https://github.com/chamilonster/verdesk" data-i18n="footer.github">GitHub</a>
-      <a href="https://github.com/chamilonster/verdesk-skill" data-i18n="footer.skill">Skill</a>
-      <a href="https://www.reddit.com/r/Verdesk/" target="_blank" rel="noopener">r/Verdesk</a>
-      <a href="#tree" data-i18n="footer.capabilities">Capabilities</a>
-      <a href="#pricing" data-i18n="footer.pricing">Pricing</a>
-    </div>
-    <div class="footer-meta">
-      <span>verdesk.app</span>
-      <span class="footer-sep">·</span>
-      <span data-i18n="footer.windows">Windows 10 / 11</span>
-      <span class="footer-soon" data-i18n="footer.soon">macOS &amp; Linux soon</span>
-      <span class="footer-sep">·</span>
-      <span data-i18n="footer.noTelemetry">No telemetry</span>
+  <footer>
+    <div class="wrap">
+      <span><a class="cc" href="https://clever.cat" data-i18n-html="nav.by">Un prodotto <b>CLEVER.CAT</b></a> · Camilo Brossard · <span class="sel">chamilonster@gmail.com</span></span>
+      <span><span data-i18n="footer.icons">Icone: Tabler Icons, licenza MIT</span>, © 2020-2024 Paweł Kuna</span>
     </div>
   </footer>
-  <!-- ct-2026-09-19 beta gratuita: script del checkout comentado junto con el CTA. -->
-  <!--
-  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
-  -->
 </body>
 </html>

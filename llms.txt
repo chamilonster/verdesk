@@ -1,32 +1,31 @@
 # Verdesk
 
-> Modulated vision and control layer for AI agents on Windows. A local MCP server that sends agents visual deltas (instead of full screenshots) plus plain text and UI Automation — same control, 89–93% fewer vision tokens per session.
+> Local MCP server for Windows. Your AI agents use your PC and browse any page. Free for personal use; Pro adds action scripting, remote PCs and commercial use (full Pro free for the first 60 days).
 
-Verdesk is a single-executable, locally-installed MCP server. It maps the desktop onto a deterministic 12×8 grid and exposes it to AI agents as three independent layers: visual (image cells modulated by region — resolution, quality, color), plain text (direct screen-text reading without spending vision tokens) and layout (UIA-based structural information). Perceptual hashing tags every cell as new, changed or cached so only deltas travel.
+Verdesk is a single-executable MCP server that runs on your own Windows 10/11 machine and works with any MCP client and any model (tested on Claude Code). It drives both the browser and desktop programs.
 
-Verdesk is built for AI agents that need to actually see and operate a Windows desktop — debugging in real IDEs, smoke-testing real apps, filling government and tax portals, navigating cookie-walled web pages, walking OS settings dialogs, and acting as eyes-and-hands assistants for users with accessibility needs.
+## Features
 
-Free for personal and non-commercial use. Pro ($49/year) unlocks remote access over LAN / WAN (SSH tunnel, Tailscale optional) and the `run_command` tool. Windows 10 / 11. macOS and Linux coming soon. No account, no telemetry. Open EULA. VirusTotal-scanned clean.
+- All in one: browser and desktop in a single server.
+- Cheaper than Computer Use: sends only what changed instead of a full screenshot every turn — 89% fewer vision tokens in a simulated 20-turn benchmark (6 of 96 screen cells changing per turn; 47% when half the screen changes).
+- Browser in DOM mode: reads the page through its code, without images (full read measured at 24–34 ms). For sites that allow automation.
+- Undetectable browsing mode: drives your everyday browser with a real mouse and keyboard, without an automation connection (navigator.webdriver = false). For demanding sites.
+- Standard MCP: any model, any MCP client.
+- Native OCR: reads the text on screen without sending images to the agent.
+- Capture zones: looks only at the part of the screen that matters.
+- Change detection: sends only what changed since the last look, and can wait for something to change.
+- Action log: every agent action is recorded and visible.
+- Optional sounds: a cue when an agent connects or acts; can be turned off in Settings.
+- Action scripting (Pro): record a desktop task once and repeat it with a single call.
+- Mini button captures (Pro): save a button once; the agent finds it on screen and presses it, even without text.
+- Remote PCs (Pro): control other machines over an SSH tunnel with your own keys, no third-party broker.
 
-## Product
+## Examples
 
-- [Landing page (this site)](https://verdesk.app): overview, capabilities, pricing.
-- [Latest release (download)](https://github.com/chamilonster/verdesk/releases/latest): NSIS installer + portable .exe + SHA256SUMS.
-- [GitHub repository](https://github.com/chamilonster/verdesk): public release-only repo with README, EULA (LICENSE), SECURITY.md.
-- [VirusTotal scan report](https://www.virustotal.com/gui/url/7adc1f04948e8a3c9485f8060714c0eaff9ecc7813fc467ceabf5093d4801520): clean.
+Paperwork on web portals; Windows programs without an API; extracting data from web pages; testing your own application; changing Windows settings; repeating desktop tasks.
 
-## How agents use it
+## Links
 
-- [Skill for Claude Code](https://github.com/chamilonster/verdesk-skill): a ready-to-install skill that teaches an AI client the ~40 MCP tools Verdesk exposes (`look`, `capture`, `act_uia`, `click_text`, `extract_text`, `wait_for_uia`, `run_command`, etc.).
-- Connect from any MCP-compatible client (Claude Code, Codex, local models) via `http://127.0.0.1:47802/mcp` once installed. Settings → Acceso has a one-click prompt copy for the local config.
-
-## Pricing
-
-- **Free** — Full modulated vision pipeline, local-mode MCP server, all base tools, modulation profiles. Personal and non-commercial use.
-- **Pro $49/year** — Everything in Free + remote access over LAN/WAN + `run_command` tool + commercial use (1 developer, up to 3 device activations) + updates while subscribed.
-- **Team $199/year** — Coming soon. Up to 5 developers, shared license keys, centralized billing, priority email support.
-
-## Optional
-
-- [Skill repository](https://github.com/chamilonster/verdesk-skill): SKILL.md with the operating manual for AI clients.
-- [Security policy](https://github.com/chamilonster/verdesk/blob/main/.github/SECURITY.md): vulnerability disclosure address.
+- Download: https://github.com/chamilonster/verdesk/releases/latest
+- Skill for AI agents: https://github.com/chamilonster/verdesk-skill
+- Made by CLEVER.CAT (Camilo Brossard): https://clever.cat
