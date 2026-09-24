@@ -75,7 +75,7 @@
     <div class="beam" role="img" aria-label="Verdesk"><div class="beam-inner"><svg><path d="M-3318.6 -2022.4L73.6 97.3" stroke="#C9D2DA" stroke-width="5"/><path d="M73.6 97.3L136.0 105.5" stroke="#28E08C" stroke-width="3"/><path d="M73.6 97.3L136.9 104.0" stroke="#22D3EE" stroke-width="3"/><path d="M73.6 97.3L137.9 102.3" stroke="#3B82F6" stroke-width="3"/><path d="M136.0 105.5L4127.8 -151.5" stroke="#28E08C" stroke-width="5"/><path d="M136.9 104.0L4102.8 -417.6" stroke="#22D3EE" stroke-width="5"/><path d="M137.9 102.3L4046.9 -746.1" stroke="#3B82F6" stroke-width="5"/><path d="M107.2 155.5L174.4 39.1L40.0 39.1Z" stroke="#E8EEF2" stroke-width="5" stroke-linejoin="round"/><text x="201.9" y="105.6" class="beam-word">VERDESK</text></svg></div></div>
     <section class="hero">
       <h1 data-i18n="hero.h1">Ajanlarınız bilgisayarınızı kullanır ve her sayfada gezinir.</h1>
-      <p class="lede" data-i18n="hero.sub">Windows için yerel MCP.</p>
+      <p class="lede" data-i18n="hero.sub">Windows için yerel MCP, Rust ile yazıldı.</p>
     </section>
 
     <section class="plans-top" id="plans">
@@ -117,7 +117,12 @@
 
     <section class="band" id="install">
       <h2 class="label" data-i18n="sec.install">Kurulum</h2>
-      <p class="steps" data-i18n="install.d">Kurun, yapılandırmayı sistem tepsisindeki simgeden kopyalayın ve terminalinizi yeniden başlatın.</p>
+      <ol class="steps">
+        <li><span data-i18n="install.1">Kurulum dosyasını (Verdesk_x.y.z_x64-setup.exe) GitHub Releases'ten indirin.</span></li>
+        <li><span data-i18n="install.2">Çalıştırın. Yönetici izni istemez; bitince Verdesk simgesi sistem tepsisinde olur.</span></li>
+        <li><span data-i18n="install.3">Tepsideki simgeye çift tıklayın → Bağlantı → Local → Kopyala, ve komut istemini ajanınıza yapıştırın (Claude Code veya başka bir MCP istemcisi).</span></li>
+        <li><span data-i18n="install.4">MCP sunucusunu yüklemesi için ajanınızın terminalini kapatıp yeniden açın.</span></li>
+      </ol>
     </section>
   </main>
 

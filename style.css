@@ -95,6 +95,13 @@
   body { overflow-x: hidden; }
   .brand svg { width: 46px; height: 32px; }
   body { position: relative; }
+  /* redondeo pequeño y parejo (boss) */
+  .card { border-radius: 10px; }
+  .btn, .buy-btn { border-radius: 6px; }
+  .use, .pro, .buy-btn .soon, ol.steps li::before, .lang-select { border-radius: 4px; }
+  ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: st; display: grid; gap: 14px; max-width: 72ch; }
+  ol.steps li { counter-increment: st; position: relative; padding-left: 40px; color: var(--ink-2); font-size: 16px; }
+  ol.steps li::before { content: counter(st); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border: 1px solid var(--line-2); color: #28E08C; font-family: var(--mono); font-size: 13px; display: grid; place-items: center; }
   .plans { align-items: stretch; }
   .card { border: 1px solid var(--line-2); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
   .card.pro-card { border-color: #28E08C55; }

@@ -75,7 +75,7 @@
     <div class="beam" role="img" aria-label="Verdesk"><div class="beam-inner"><svg><path d="M-3318.6 -2022.4L73.6 97.3" stroke="#C9D2DA" stroke-width="5"/><path d="M73.6 97.3L136.0 105.5" stroke="#28E08C" stroke-width="3"/><path d="M73.6 97.3L136.9 104.0" stroke="#22D3EE" stroke-width="3"/><path d="M73.6 97.3L137.9 102.3" stroke="#3B82F6" stroke-width="3"/><path d="M136.0 105.5L4127.8 -151.5" stroke="#28E08C" stroke-width="5"/><path d="M136.9 104.0L4102.8 -417.6" stroke="#22D3EE" stroke-width="5"/><path d="M137.9 102.3L4046.9 -746.1" stroke="#3B82F6" stroke-width="5"/><path d="M107.2 155.5L174.4 39.1L40.0 39.1Z" stroke="#E8EEF2" stroke-width="5" stroke-linejoin="round"/><text x="201.9" y="105.6" class="beam-word">VERDESK</text></svg></div></div>
     <section class="hero">
       <h1 data-i18n="hero.h1">你的智能体使用你的电脑，浏览任何网页。</h1>
-      <p class="lede" data-i18n="hero.sub">适用于 Windows 的本地 MCP。</p>
+      <p class="lede" data-i18n="hero.sub">适用于 Windows 的本地 MCP，使用 Rust 编写。</p>
     </section>
 
     <section class="plans-top" id="plans">
@@ -117,7 +117,12 @@
 
     <section class="band" id="install">
       <h2 class="label" data-i18n="sec.install">安装</h2>
-      <p class="steps" data-i18n="install.d">安装后，从托盘图标复制配置，然后重启终端。</p>
+      <ol class="steps">
+        <li><span data-i18n="install.1">从 GitHub Releases 下载安装程序（Verdesk_x.y.z_x64-setup.exe）。</span></li>
+        <li><span data-i18n="install.2">运行它。不需要管理员权限；完成后，Verdesk 图标会出现在系统托盘中。</span></li>
+        <li><span data-i18n="install.3">双击托盘图标 → 连接 → Local → 复制，然后把提示词粘贴到你的智能体（Claude Code 或其他 MCP 客户端）。</span></li>
+        <li><span data-i18n="install.4">关闭并重新打开智能体的终端，让它加载 MCP 服务器。</span></li>
+      </ol>
     </section>
   </main>
 

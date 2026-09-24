@@ -75,7 +75,7 @@
     <div class="beam" role="img" aria-label="Verdesk"><div class="beam-inner"><svg><path d="M-3318.6 -2022.4L73.6 97.3" stroke="#C9D2DA" stroke-width="5"/><path d="M73.6 97.3L136.0 105.5" stroke="#28E08C" stroke-width="3"/><path d="M73.6 97.3L136.9 104.0" stroke="#22D3EE" stroke-width="3"/><path d="M73.6 97.3L137.9 102.3" stroke="#3B82F6" stroke-width="3"/><path d="M136.0 105.5L4127.8 -151.5" stroke="#28E08C" stroke-width="5"/><path d="M136.9 104.0L4102.8 -417.6" stroke="#22D3EE" stroke-width="5"/><path d="M137.9 102.3L4046.9 -746.1" stroke="#3B82F6" stroke-width="5"/><path d="M107.2 155.5L174.4 39.1L40.0 39.1Z" stroke="#E8EEF2" stroke-width="5" stroke-linejoin="round"/><text x="201.9" y="105.6" class="beam-word">VERDESK</text></svg></div></div>
     <section class="hero">
       <h1 data-i18n="hero.h1">에이전트가 당신의 PC를 사용하고 어떤 페이지든 탐색합니다.</h1>
-      <p class="lede" data-i18n="hero.sub">Windows용 로컬 MCP.</p>
+      <p class="lede" data-i18n="hero.sub">Windows용 로컬 MCP, Rust로 제작.</p>
     </section>
 
     <section class="plans-top" id="plans">
@@ -117,7 +117,12 @@
 
     <section class="band" id="install">
       <h2 class="label" data-i18n="sec.install">설치</h2>
-      <p class="steps" data-i18n="install.d">설치한 뒤 트레이 아이콘에서 설정을 복사하고 터미널을 다시 시작하세요.</p>
+      <ol class="steps">
+        <li><span data-i18n="install.1">GitHub Releases에서 설치 프로그램(Verdesk_x.y.z_x64-setup.exe)을 다운로드합니다.</span></li>
+        <li><span data-i18n="install.2">실행합니다. 관리자 권한이 필요 없으며, 설치가 끝나면 Verdesk 아이콘이 시스템 트레이에 표시됩니다.</span></li>
+        <li><span data-i18n="install.3">트레이 아이콘 더블 클릭 → 연결 → Local → 복사 후, 프롬프트를 에이전트(Claude Code 또는 다른 MCP 클라이언트)에 붙여넣습니다.</span></li>
+        <li><span data-i18n="install.4">에이전트의 터미널을 닫았다가 다시 열어 MCP 서버를 불러옵니다.</span></li>
+      </ol>
     </section>
   </main>
 
