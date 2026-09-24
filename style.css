@@ -104,7 +104,13 @@
   ol.steps li::before { content: counter(st); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border: 1px solid var(--line-2); color: #28E08C; font-family: var(--mono); font-size: 13px; display: grid; place-items: center; }
   .plans { align-items: stretch; }
   .card { border: 1px solid var(--line-2); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
-  .card.pro-card { border: 2px solid #28E08C; box-shadow: 0 0 0 1px #28E08C22, 0 0 28px #28E08C40, inset 0 0 22px #28E08C14; }
+  .card.pro-card { border: 2px solid #28E08C; box-shadow: 0 0 16px #28E08C26; animation: haz-glow 9s ease-in-out infinite; }
+  @keyframes haz-glow {
+    0%, 100% { border-color: #28E08C; box-shadow: 0 0 16px #28E08C26; }
+    33.3%    { border-color: #22D3EE; box-shadow: 0 0 16px #22D3EE26; }
+    66.6%    { border-color: #3B82F6; box-shadow: 0 0 16px #3B82F626; }
+  }
+  @media (prefers-reduced-motion: reduce) { .card.pro-card { animation: none; } }
   .card h3 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: -.02em; }
   .card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
   .card .plan-ic { width: 42px; height: 42px; margin: 0; }
