@@ -60,7 +60,7 @@
       "plan.free.personal": "Personal use",
       "install.1": "Download the installer (Verdesk_x.y.z_x64-setup.exe) from GitHub Releases.",
       "install.2": "Run it. It doesn't ask for administrator rights; when it finishes, the Verdesk icon sits in the system tray.",
-      "install.3": "Click the tray icon → Settings → Connection → Copy prompt, and paste it into your agent (Claude Code, Codex, OpenCode or another MCP client).",
+      "install.3": "Click the tray icon → Settings → Connection → Copy prompt, and paste it into your agent's terminal (Claude Code, Codex, OpenCode, etc.).",
       "install.4": "Close and reopen your agent's terminal so it loads the MCP server.",
     },
     es: {
@@ -119,7 +119,7 @@
       "plan.free.personal": "Uso personal",
       "install.1": "Descarga el instalador (Verdesk_x.y.z_x64-setup.exe) desde GitHub Releases.",
       "install.2": "Ejecútalo. No pide permisos de administrador; al terminar, el ícono de Verdesk queda en la bandeja del sistema.",
-      "install.3": "Clic en el ícono de la bandeja → Configuración → Conexión → Copiar prompt, y pégalo en tu agente (Claude Code, Codex, OpenCode u otro cliente MCP).",
+      "install.3": "Clic en el ícono de la bandeja → Configuración → Conexión → Copiar prompt, y pégalo en el terminal de tu agente (Claude Code, Codex, OpenCode, etc.).",
       "install.4": "Cierra y vuelve a abrir el terminal de tu agente para que cargue el servidor MCP.",
     },
     pt: {
@@ -178,7 +178,7 @@
       "plan.free.personal": "Uso pessoal",
       "install.1": "Baixe o instalador (Verdesk_x.y.z_x64-setup.exe) no GitHub Releases.",
       "install.2": "Execute-o. Não pede permissão de administrador; ao terminar, o ícone do Verdesk fica na bandeja do sistema.",
-      "install.3": "Clique no ícone da bandeja → Configurações → Conexão → Copiar prompt, e cole no seu agente (Claude Code, Codex, OpenCode ou outro cliente MCP).",
+      "install.3": "Clique no ícone da bandeja → Configurações → Conexão → Copiar prompt, e cole no terminal do seu agente (Claude Code, Codex, OpenCode etc.).",
       "install.4": "Feche e abra de novo o terminal do seu agente para que ele carregue o servidor MCP.",
     },
     fr: {
@@ -237,7 +237,7 @@
       "plan.free.personal": "Usage personnel",
       "install.1": "Téléchargez l'installateur (Verdesk_x.y.z_x64-setup.exe) depuis GitHub Releases.",
       "install.2": "Lancez-le. Il ne demande pas de droits administrateur ; à la fin, l'icône de Verdesk se trouve dans la zone de notification.",
-      "install.3": "Cliquez sur l'icône → Paramètres → Connexion → Copier le prompt, puis collez-le dans votre agent (Claude Code, Codex, OpenCode ou un autre client MCP).",
+      "install.3": "Cliquez sur l'icône → Paramètres → Connexion → Copier le prompt, puis collez-le dans le terminal de votre agent (Claude Code, Codex, OpenCode, etc.).",
       "install.4": "Fermez puis rouvrez le terminal de votre agent pour qu'il charge le serveur MCP.",
     },
     de: {
@@ -296,7 +296,7 @@
       "plan.free.personal": "Privater Gebrauch",
       "install.1": "Laden Sie das Installationsprogramm (Verdesk_x.y.z_x64-setup.exe) von GitHub Releases herunter.",
       "install.2": "Führen Sie es aus. Es braucht keine Administratorrechte; danach liegt das Verdesk-Symbol im Infobereich.",
-      "install.3": "Klick auf das Tray-Symbol → Einstellungen → Verbindung → Prompt kopieren, dann in Ihren Agenten einfügen (Claude Code, Codex, OpenCode oder ein anderer MCP-Client).",
+      "install.3": "Klick auf das Tray-Symbol → Einstellungen → Verbindung → Prompt kopieren, dann im Terminal Ihres Agenten einfügen (Claude Code, Codex, OpenCode usw.).",
       "install.4": "Schließen Sie das Terminal Ihres Agenten und öffnen Sie es erneut, damit es den MCP-Server lädt.",
     },
     it: {
@@ -355,7 +355,7 @@
       "plan.free.personal": "Uso personale",
       "install.1": "Scarica il programma di installazione (Verdesk_x.y.z_x64-setup.exe) da GitHub Releases.",
       "install.2": "Eseguilo. Non chiede permessi di amministratore; al termine, l'icona di Verdesk è nell'area di notifica.",
-      "install.3": "Clic sull'icona → Impostazioni → Connessione → Copia il prompt, e incollalo nel tuo agente (Claude Code, Codex, OpenCode o un altro client MCP).",
+      "install.3": "Clic sull'icona → Impostazioni → Connessione → Copia il prompt, e incollalo nel terminale del tuo agente (Claude Code, Codex, OpenCode, ecc.).",
       "install.4": "Chiudi e riapri il terminale del tuo agente perché carichi il server MCP.",
     },
     nl: {
@@ -414,7 +414,7 @@
       "plan.free.personal": "Persoonlijk gebruik",
       "install.1": "Download het installatieprogramma (Verdesk_x.y.z_x64-setup.exe) van GitHub Releases.",
       "install.2": "Voer het uit. Het vraagt geen beheerdersrechten; daarna staat het Verdesk-pictogram in het systeemvak.",
-      "install.3": "Klik op het pictogram → Instellingen → Verbinding → Prompt kopiëren, en plak hem in je agent (Claude Code, Codex, OpenCode of een andere MCP-client).",
+      "install.3": "Klik op het pictogram → Instellingen → Verbinding → Prompt kopiëren, en plak hem in de terminal van je agent (Claude Code, Codex, OpenCode, enz.).",
       "install.4": "Sluit de terminal van je agent en open hem opnieuw, zodat hij de MCP-server laadt.",
     },
     pl: {
@@ -473,7 +473,7 @@
       "plan.free.personal": "Użytek osobisty",
       "install.1": "Pobierz instalator (Verdesk_x.y.z_x64-setup.exe) z GitHub Releases.",
       "install.2": "Uruchom go. Nie wymaga uprawnień administratora; po zakończeniu ikona Verdesk jest w zasobniku systemowym.",
-      "install.3": "Kliknij ikonę w zasobniku → Ustawienia → Połączenie → Kopiuj prompt i wklej go do agenta (Claude Code, Codex, OpenCode lub inny klient MCP).",
+      "install.3": "Kliknij ikonę w zasobniku → Ustawienia → Połączenie → Kopiuj prompt i wklej go w terminalu agenta (Claude Code, Codex, OpenCode itd.).",
       "install.4": "Zamknij i otwórz ponownie terminal agenta, żeby wczytał serwer MCP.",
     },
     tr: {
@@ -532,7 +532,7 @@
       "plan.free.personal": "Kişisel kullanım",
       "install.1": "Kurulum dosyasını (Verdesk_x.y.z_x64-setup.exe) GitHub Releases'ten indirin.",
       "install.2": "Çalıştırın. Yönetici izni istemez; bitince Verdesk simgesi sistem tepsisinde olur.",
-      "install.3": "Tepsideki simgeye tıklayın → Ayarlar → Bağlantı → Komut istemini kopyala, ve ajanınıza yapıştırın (Claude Code, Codex, OpenCode veya başka bir MCP istemcisi).",
+      "install.3": "Tepsideki simgeye tıklayın → Ayarlar → Bağlantı → Komut istemini kopyala, ve ajanınızın terminaline yapıştırın (Claude Code, Codex, OpenCode vb.).",
       "install.4": "MCP sunucusunu yüklemesi için ajanınızın terminalini kapatıp yeniden açın.",
     },
     ru: {
@@ -591,7 +591,7 @@
       "plan.free.personal": "Личное использование",
       "install.1": "Скачайте установщик (Verdesk_x.y.z_x64-setup.exe) с GitHub Releases.",
       "install.2": "Запустите его. Права администратора не нужны; после установки значок Verdesk появится в трее.",
-      "install.3": "Клик по значку в трее → Настройки → Подключение → Копировать промпт, и вставьте его в агента (Claude Code, Codex, OpenCode или другой MCP-клиент).",
+      "install.3": "Клик по значку в трее → Настройки → Подключение → Копировать промпт, и вставьте его в терминал агента (Claude Code, Codex, OpenCode и т. д.).",
       "install.4": "Закройте и снова откройте терминал агента, чтобы он загрузил MCP-сервер.",
     },
     uk: {
@@ -650,7 +650,7 @@
       "plan.free.personal": "Особисте використання",
       "install.1": "Завантажте інсталятор (Verdesk_x.y.z_x64-setup.exe) з GitHub Releases.",
       "install.2": "Запустіть його. Права адміністратора не потрібні; після встановлення значок Verdesk з'явиться в треї.",
-      "install.3": "Клік по значку в треї → Налаштування → Підключення → Копіювати промпт, і вставте його в агента (Claude Code, Codex, OpenCode або інший MCP-клієнт).",
+      "install.3": "Клік по значку в треї → Налаштування → Підключення → Копіювати промпт, і вставте його в термінал агента (Claude Code, Codex, OpenCode тощо).",
       "install.4": "Закрийте й знову відкрийте термінал агента, щоб він завантажив MCP-сервер.",
     },
     zh: {
@@ -709,7 +709,7 @@
       "plan.free.personal": "个人使用",
       "install.1": "从 GitHub Releases 下载安装程序（Verdesk_x.y.z_x64-setup.exe）。",
       "install.2": "运行它。不需要管理员权限；完成后，Verdesk 图标会出现在系统托盘中。",
-      "install.3": "点击托盘图标 → 设置 → 连接 → 复制提示词，然后粘贴到你的智能体（Claude Code、Codex、OpenCode 或其他 MCP 客户端）。",
+      "install.3": "点击托盘图标 → 设置 → 连接 → 复制提示词，然后粘贴到智能体的终端（Claude Code、Codex、OpenCode 等）。",
       "install.4": "关闭并重新打开智能体的终端，让它加载 MCP 服务器。",
     },
     ja: {
@@ -768,7 +768,7 @@
       "plan.free.personal": "個人利用",
       "install.1": "GitHub Releases からインストーラー（Verdesk_x.y.z_x64-setup.exe）をダウンロードします。",
       "install.2": "実行します。管理者権限は不要です。完了すると、Verdesk のアイコンがシステムトレイに表示されます。",
-      "install.3": "トレイアイコンをクリック → 設定 → 接続 → プロンプトをコピー。エージェント（Claude Code、Codex、OpenCode などの MCP クライアント）に貼り付けます。",
+      "install.3": "トレイアイコンをクリック → 設定 → 接続 → プロンプトをコピー。エージェントのターミナル（Claude Code、Codex、OpenCode など）に貼り付けます。",
       "install.4": "エージェントのターミナルを閉じて開き直し、MCP サーバーを読み込ませます。",
     },
     ko: {
@@ -827,7 +827,7 @@
       "plan.free.personal": "개인 용도",
       "install.1": "GitHub Releases에서 설치 프로그램(Verdesk_x.y.z_x64-setup.exe)을 다운로드합니다.",
       "install.2": "실행합니다. 관리자 권한이 필요 없으며, 설치가 끝나면 Verdesk 아이콘이 시스템 트레이에 표시됩니다.",
-      "install.3": "트레이 아이콘 클릭 → 설정 → 연결 → 프롬프트 복사 후, 에이전트(Claude Code, Codex, OpenCode 또는 다른 MCP 클라이언트)에 붙여넣습니다.",
+      "install.3": "트레이 아이콘 클릭 → 설정 → 연결 → 프롬프트 복사 후, 에이전트의 터미널(Claude Code, Codex, OpenCode 등)에 붙여넣습니다.",
       "install.4": "에이전트의 터미널을 닫았다가 다시 열어 MCP 서버를 불러옵니다.",
     }
   };
