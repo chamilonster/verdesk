@@ -26,6 +26,6 @@ Paperwork on web portals; Windows programs without an API; extracting data from 
 
 ## Links
 
-- Download: https://github.com/chamilonster/verdesk/releases/latest
-- Skill for AI agents: https://github.com/chamilonster/verdesk-skill
+- Download: https://github.com/clevercat64/verdesk/releases/latest
+- Skill for AI agents: https://github.com/clevercat64/verdesk-skill
 - Made by CLEVER.CAT (Camilo Brossard): https://clever.cat
